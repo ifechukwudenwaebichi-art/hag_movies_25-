@@ -1,0 +1,17 @@
+[2025-09-09T07:45:38.461+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: my_second_dag.load scheduled__2025-09-09T03:45:28.593791+00:00 [queued]>
+[2025-09-09T07:45:38.472+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: my_second_dag.load scheduled__2025-09-09T03:45:28.593791+00:00 [queued]>
+[2025-09-09T07:45:38.472+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 3
+[2025-09-09T07:45:38.490+0000] {taskinstance.py:1327} INFO - Executing <Task(BashOperator): load> on 2025-09-09 03:45:28.593791+00:00
+[2025-09-09T07:45:38.497+0000] {standard_task_runner.py:57} INFO - Started process 532 to run task
+[2025-09-09T07:45:38.502+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'my_second_dag', 'load', 'scheduled__2025-09-09T03:45:28.593791+00:00', '--job-id', '216', '--raw', '--subdir', 'DAGS_FOLDER/my_demo_dag_1.py', '--cfg-path', '/tmp/tmp52jn83yo']
+[2025-09-09T07:45:38.504+0000] {standard_task_runner.py:85} INFO - Job 216: Subtask load
+[2025-09-09T07:45:38.566+0000] {task_command.py:410} INFO - Running <TaskInstance: my_second_dag.load scheduled__2025-09-09T03:45:28.593791+00:00 [running]> on host 7b23436a6b61
+[2025-09-09T07:45:38.671+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='trialmail@randommail.com' AIRFLOW_CTX_DAG_OWNER='Dav_E_vangel' AIRFLOW_CTX_DAG_ID='my_second_dag' AIRFLOW_CTX_TASK_ID='load' AIRFLOW_CTX_EXECUTION_DATE='2025-09-09T03:45:28.593791+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-09-09T03:45:28.593791+00:00'
+[2025-09-09T07:45:38.673+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-09-09T07:45:38.674+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'echo "Loading processed data to destination"']
+[2025-09-09T07:45:38.684+0000] {subprocess.py:86} INFO - Output:
+[2025-09-09T07:45:38.686+0000] {subprocess.py:93} INFO - Loading processed data to destination
+[2025-09-09T07:45:38.687+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-09-09T07:45:38.719+0000] {taskinstance.py:1350} INFO - Marking task as SUCCESS. dag_id=my_second_dag, task_id=load, execution_date=20250909T034528, start_date=20250909T074538, end_date=20250909T074538
+[2025-09-09T07:45:38.766+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 0
+[2025-09-09T07:45:38.789+0000] {taskinstance.py:2653} INFO - 0 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,1630 @@
+[2025-09-22T01:14:48.202+0000] {processor.py:157} INFO - Started process (PID=430) to work on /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:14:48.203+0000] {processor.py:826} INFO - Processing file /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py for tasks to queue
+[2025-09-22T01:14:48.205+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:14:48.204+0000] {dagbag.py:541} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:14:48.211+0000] {processor.py:836} INFO - DAG(s) dict_keys(['example_trigger_controller_dag']) retrieved from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:14:49.052+0000] {processor.py:182} ERROR - Got an exception! Propagating...
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3366, in _wrap_pool_connect
+    return fn()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 327, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 894, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 493, in checkout
+    rec = pool._do_get()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 146, in _do_get
+    self._dec_overflow()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 143, in _do_get
+    return self._create_connection()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 273, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 388, in __init__
+    self.__connect()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 691, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 686, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/create.py", line 574, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 598, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/home/airflow/.local/lib/python3.7/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "postgres" (172.22.0.8), port 5432 failed: FATAL:  password authentication failed for user "airflow"
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/dag_processing/processor.py", line 178, in _run_file_processor
+    _handle_dag_file_processing()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/dag_processing/processor.py", line 162, in _handle_dag_file_processing
+    callback_requests=callback_requests,
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/session.py", line 76, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/dag_processing/processor.py", line 857, in process_file
+    pickle_dags=pickle_dags,
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/api_internal/internal_api_call.py", line 112, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/session.py", line 76, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/dag_processing/processor.py", line 890, in save_dag_to_db
+    import_errors = DagBag._sync_to_db(dags=dags, processor_subdir=dag_directory, session=session)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/session.py", line 73, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 659, in _sync_to_db
+    for attempt in run_with_db_retries(logger=log):
+  File "/home/airflow/.local/lib/python3.7/site-packages/tenacity/__init__.py", line 347, in __iter__
+    do = self.iter(retry_state=retry_state)
+  File "/home/airflow/.local/lib/python3.7/site-packages/tenacity/__init__.py", line 325, in iter
+    raise retry_exc.reraise()
+  File "/home/airflow/.local/lib/python3.7/site-packages/tenacity/__init__.py", line 158, in reraise
+    raise self.last_attempt.result()
+  File "/usr/local/lib/python3.7/concurrent/futures/_base.py", line 428, in result
+    return self.__get_result()
+  File "/usr/local/lib/python3.7/concurrent/futures/_base.py", line 384, in __get_result
+    raise self._exception
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 671, in _sync_to_db
+    serialize_errors.extend(_serialize_dag_capturing_errors(dag, session))
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 641, in _serialize_dag_capturing_errors
+    session=session,
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/session.py", line 73, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/serialized_dag.py", line 149, in write_dag
+    (timezone.utcnow() - timedelta(seconds=min_update_interval)) < cls.last_updated,
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/orm/query.py", line 2893, in scalar
+    ret = self.one()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/orm/query.py", line 2870, in one
+    return self._iter().one()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/orm/query.py", line 2919, in _iter
+    execution_options={"_sa_orm_load_options": self.load_options},
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 1716, in execute
+    conn = self._connection_for_bind(bind)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 1556, in _connection_for_bind
+    engine, execution_options
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 750, in _connection_for_bind
+    conn = bind.connect()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3320, in connect
+    return self._connection_cls(self, close_with_result=close_with_result)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 96, in __init__
+    else engine.raw_connection()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3399, in raw_connection
+    return self._wrap_pool_connect(self.pool.connect, _connection)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3370, in _wrap_pool_connect
+    e, dialect, self
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 2204, in _handle_dbapi_exception_noconnection
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3366, in _wrap_pool_connect
+    return fn()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 327, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 894, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 493, in checkout
+    rec = pool._do_get()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 146, in _do_get
+    self._dec_overflow()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 143, in _do_get
+    return self._create_connection()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 273, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 388, in __init__
+    self.__connect()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 691, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 686, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/create.py", line 574, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 598, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/home/airflow/.local/lib/python3.7/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+sqlalchemy.exc.OperationalError: (psycopg2.OperationalError) connection to server at "postgres" (172.22.0.8), port 5432 failed: FATAL:  password authentication failed for user "airflow"
+
+(Background on this error at: https://sqlalche.me/e/14/e3q8)
+[2025-09-22T01:15:20.140+0000] {processor.py:157} INFO - Started process (PID=711) to work on /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:15:20.142+0000] {processor.py:826} INFO - Processing file /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py for tasks to queue
+[2025-09-22T01:15:20.143+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:15:20.143+0000] {dagbag.py:541} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:15:20.148+0000] {processor.py:836} INFO - DAG(s) dict_keys(['example_trigger_controller_dag']) retrieved from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:15:20.227+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:15:20.226+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-22T01:15:20.405+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:15:20.405+0000] {dag.py:3490} INFO - Setting next_dagrun for example_trigger_controller_dag to 2021-01-01T00:00:00+00:00, run_after=2021-01-01T00:00:00+00:00
+[2025-09-22T01:15:20.435+0000] {processor.py:179} INFO - Processing /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py took 0.300 seconds
+[2025-09-22T01:15:51.722+0000] {processor.py:157} INFO - Started process (PID=992) to work on /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:15:51.724+0000] {processor.py:826} INFO - Processing file /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py for tasks to queue
+[2025-09-22T01:15:51.725+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:15:51.724+0000] {dagbag.py:541} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:15:51.730+0000] {processor.py:836} INFO - DAG(s) dict_keys(['example_trigger_controller_dag']) retrieved from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:15:51.768+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:15:51.767+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-22T01:15:51.805+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:15:51.805+0000] {dag.py:3490} INFO - Setting next_dagrun for example_trigger_controller_dag to 2021-01-01T00:00:00+00:00, run_after=2021-01-01T00:00:00+00:00
+[2025-09-22T01:15:51.832+0000] {processor.py:179} INFO - Processing /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py took 0.117 seconds
+[2025-09-22T01:16:22.300+0000] {processor.py:157} INFO - Started process (PID=1268) to work on /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:16:22.302+0000] {processor.py:826} INFO - Processing file /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py for tasks to queue
+[2025-09-22T01:16:22.303+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:16:22.303+0000] {dagbag.py:541} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:16:22.309+0000] {processor.py:836} INFO - DAG(s) dict_keys(['example_trigger_controller_dag']) retrieved from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:16:23.436+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:16:23.436+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-22T01:16:23.475+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:16:23.475+0000] {dag.py:3490} INFO - Setting next_dagrun for example_trigger_controller_dag to 2021-01-01T00:00:00+00:00, run_after=2021-01-01T00:00:00+00:00
+[2025-09-22T01:16:23.506+0000] {processor.py:179} INFO - Processing /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py took 1.213 seconds
+[2025-09-22T01:16:53.794+0000] {processor.py:157} INFO - Started process (PID=1554) to work on /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:16:53.796+0000] {processor.py:826} INFO - Processing file /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py for tasks to queue
+[2025-09-22T01:16:53.798+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:16:53.797+0000] {dagbag.py:541} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:16:53.806+0000] {processor.py:836} INFO - DAG(s) dict_keys(['example_trigger_controller_dag']) retrieved from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:16:54.724+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:16:54.724+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-22T01:16:54.767+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:16:54.767+0000] {dag.py:3490} INFO - Setting next_dagrun for example_trigger_controller_dag to 2021-01-01T00:00:00+00:00, run_after=2021-01-01T00:00:00+00:00
+[2025-09-22T01:16:54.817+0000] {processor.py:179} INFO - Processing /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py took 1.028 seconds
+[2025-09-22T01:17:25.435+0000] {processor.py:157} INFO - Started process (PID=1850) to work on /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:17:25.437+0000] {processor.py:826} INFO - Processing file /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py for tasks to queue
+[2025-09-22T01:17:25.439+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:17:25.438+0000] {dagbag.py:541} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:17:25.446+0000] {processor.py:836} INFO - DAG(s) dict_keys(['example_trigger_controller_dag']) retrieved from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:17:25.643+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:17:25.642+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-22T01:17:25.701+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:17:25.699+0000] {dag.py:3490} INFO - Setting next_dagrun for example_trigger_controller_dag to 2021-01-01T00:00:00+00:00, run_after=2021-01-01T00:00:00+00:00
+[2025-09-22T01:17:25.764+0000] {processor.py:179} INFO - Processing /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py took 0.335 seconds
+[2025-09-22T01:17:55.987+0000] {processor.py:157} INFO - Started process (PID=2136) to work on /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:17:55.988+0000] {processor.py:826} INFO - Processing file /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py for tasks to queue
+[2025-09-22T01:17:55.989+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:17:55.989+0000] {dagbag.py:541} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:17:55.995+0000] {processor.py:836} INFO - DAG(s) dict_keys(['example_trigger_controller_dag']) retrieved from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:17:56.031+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:17:56.030+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-22T01:17:56.085+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:17:56.085+0000] {dag.py:3490} INFO - Setting next_dagrun for example_trigger_controller_dag to 2021-01-01T00:00:00+00:00, run_after=2021-01-01T00:00:00+00:00
+[2025-09-22T01:17:56.129+0000] {processor.py:179} INFO - Processing /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py took 0.148 seconds
+[2025-09-22T01:18:27.327+0000] {processor.py:157} INFO - Started process (PID=2397) to work on /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:18:27.329+0000] {processor.py:826} INFO - Processing file /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py for tasks to queue
+[2025-09-22T01:18:27.330+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:18:27.330+0000] {dagbag.py:541} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:18:27.335+0000] {processor.py:836} INFO - DAG(s) dict_keys(['example_trigger_controller_dag']) retrieved from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:18:27.822+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:18:27.822+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-22T01:18:27.889+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:18:27.888+0000] {dag.py:3490} INFO - Setting next_dagrun for example_trigger_controller_dag to 2021-01-01T00:00:00+00:00, run_after=2021-01-01T00:00:00+00:00
+[2025-09-22T01:18:27.956+0000] {processor.py:179} INFO - Processing /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py took 0.634 seconds
+[2025-09-22T01:18:59.231+0000] {processor.py:157} INFO - Started process (PID=2678) to work on /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:18:59.232+0000] {processor.py:826} INFO - Processing file /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py for tasks to queue
+[2025-09-22T01:18:59.234+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:18:59.234+0000] {dagbag.py:541} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:18:59.240+0000] {processor.py:836} INFO - DAG(s) dict_keys(['example_trigger_controller_dag']) retrieved from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:18:59.534+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:18:59.534+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-22T01:18:59.586+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:18:59.586+0000] {dag.py:3490} INFO - Setting next_dagrun for example_trigger_controller_dag to 2021-01-01T00:00:00+00:00, run_after=2021-01-01T00:00:00+00:00
+[2025-09-22T01:18:59.624+0000] {processor.py:179} INFO - Processing /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py took 0.400 seconds
+[2025-09-22T01:19:30.433+0000] {processor.py:157} INFO - Started process (PID=2959) to work on /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:19:30.434+0000] {processor.py:826} INFO - Processing file /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py for tasks to queue
+[2025-09-22T01:19:30.435+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:19:30.435+0000] {dagbag.py:541} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:19:30.444+0000] {processor.py:836} INFO - DAG(s) dict_keys(['example_trigger_controller_dag']) retrieved from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:19:30.496+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:19:30.496+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-22T01:19:30.558+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:19:30.557+0000] {dag.py:3490} INFO - Setting next_dagrun for example_trigger_controller_dag to 2021-01-01T00:00:00+00:00, run_after=2021-01-01T00:00:00+00:00
+[2025-09-22T01:19:30.594+0000] {processor.py:179} INFO - Processing /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py took 0.169 seconds
+[2025-09-22T01:20:01.899+0000] {processor.py:157} INFO - Started process (PID=3240) to work on /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:20:01.901+0000] {processor.py:826} INFO - Processing file /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py for tasks to queue
+[2025-09-22T01:20:01.903+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:20:01.902+0000] {dagbag.py:541} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:20:01.909+0000] {processor.py:836} INFO - DAG(s) dict_keys(['example_trigger_controller_dag']) retrieved from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:20:01.945+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:20:01.945+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-22T01:20:01.988+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:20:01.988+0000] {dag.py:3490} INFO - Setting next_dagrun for example_trigger_controller_dag to 2021-01-01T00:00:00+00:00, run_after=2021-01-01T00:00:00+00:00
+[2025-09-22T01:20:02.025+0000] {processor.py:179} INFO - Processing /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py took 0.131 seconds
+[2025-09-22T01:20:32.316+0000] {processor.py:157} INFO - Started process (PID=3521) to work on /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:20:32.317+0000] {processor.py:826} INFO - Processing file /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py for tasks to queue
+[2025-09-22T01:20:32.319+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:20:32.318+0000] {dagbag.py:541} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:20:32.324+0000] {processor.py:836} INFO - DAG(s) dict_keys(['example_trigger_controller_dag']) retrieved from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:20:32.364+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:20:32.364+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-22T01:20:32.407+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:20:32.407+0000] {dag.py:3490} INFO - Setting next_dagrun for example_trigger_controller_dag to 2021-01-01T00:00:00+00:00, run_after=2021-01-01T00:00:00+00:00
+[2025-09-22T01:20:32.441+0000] {processor.py:179} INFO - Processing /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py took 0.134 seconds
+[2025-09-22T01:21:03.354+0000] {processor.py:157} INFO - Started process (PID=3802) to work on /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:21:03.355+0000] {processor.py:826} INFO - Processing file /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py for tasks to queue
+[2025-09-22T01:21:03.357+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:21:03.357+0000] {dagbag.py:541} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:21:03.365+0000] {processor.py:836} INFO - DAG(s) dict_keys(['example_trigger_controller_dag']) retrieved from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:21:03.421+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:21:03.421+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-22T01:21:03.471+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:21:03.470+0000] {dag.py:3490} INFO - Setting next_dagrun for example_trigger_controller_dag to 2021-01-01T00:00:00+00:00, run_after=2021-01-01T00:00:00+00:00
+[2025-09-22T01:21:03.513+0000] {processor.py:179} INFO - Processing /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py took 0.164 seconds
+[2025-09-22T01:21:34.302+0000] {processor.py:157} INFO - Started process (PID=4083) to work on /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:21:34.304+0000] {processor.py:826} INFO - Processing file /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py for tasks to queue
+[2025-09-22T01:21:34.305+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:21:34.305+0000] {dagbag.py:541} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:21:34.313+0000] {processor.py:836} INFO - DAG(s) dict_keys(['example_trigger_controller_dag']) retrieved from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:21:34.826+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:21:34.826+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-22T01:21:34.869+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:21:34.869+0000] {dag.py:3490} INFO - Setting next_dagrun for example_trigger_controller_dag to 2021-01-01T00:00:00+00:00, run_after=2021-01-01T00:00:00+00:00
+[2025-09-22T01:21:34.898+0000] {processor.py:179} INFO - Processing /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py took 0.601 seconds
+[2025-09-22T01:22:05.235+0000] {processor.py:157} INFO - Started process (PID=4366) to work on /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:22:05.237+0000] {processor.py:826} INFO - Processing file /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py for tasks to queue
+[2025-09-22T01:22:05.241+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:22:05.240+0000] {dagbag.py:541} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:22:05.248+0000] {processor.py:836} INFO - DAG(s) dict_keys(['example_trigger_controller_dag']) retrieved from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:22:05.300+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:22:05.300+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-22T01:22:05.344+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:22:05.343+0000] {dag.py:3490} INFO - Setting next_dagrun for example_trigger_controller_dag to 2021-01-01T00:00:00+00:00, run_after=2021-01-01T00:00:00+00:00
+[2025-09-22T01:22:05.377+0000] {processor.py:179} INFO - Processing /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py took 0.149 seconds
+[2025-09-22T01:22:35.940+0000] {processor.py:157} INFO - Started process (PID=4645) to work on /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:22:35.941+0000] {processor.py:826} INFO - Processing file /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py for tasks to queue
+[2025-09-22T01:22:35.943+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:22:35.942+0000] {dagbag.py:541} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:22:35.948+0000] {processor.py:836} INFO - DAG(s) dict_keys(['example_trigger_controller_dag']) retrieved from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:22:36.457+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:22:36.457+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-22T01:22:36.510+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:22:36.510+0000] {dag.py:3490} INFO - Setting next_dagrun for example_trigger_controller_dag to 2021-01-01T00:00:00+00:00, run_after=2021-01-01T00:00:00+00:00
+[2025-09-22T01:22:36.553+0000] {processor.py:179} INFO - Processing /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py took 0.618 seconds
+[2025-09-22T01:23:07.208+0000] {processor.py:157} INFO - Started process (PID=4928) to work on /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:23:07.209+0000] {processor.py:826} INFO - Processing file /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py for tasks to queue
+[2025-09-22T01:23:07.210+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:23:07.210+0000] {dagbag.py:541} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:23:07.217+0000] {processor.py:836} INFO - DAG(s) dict_keys(['example_trigger_controller_dag']) retrieved from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:23:07.260+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:23:07.259+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-22T01:23:07.306+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:23:07.305+0000] {dag.py:3490} INFO - Setting next_dagrun for example_trigger_controller_dag to 2021-01-01T00:00:00+00:00, run_after=2021-01-01T00:00:00+00:00
+[2025-09-22T01:23:07.353+0000] {processor.py:179} INFO - Processing /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py took 0.150 seconds
+[2025-09-22T01:23:37.782+0000] {processor.py:157} INFO - Started process (PID=5215) to work on /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:23:37.784+0000] {processor.py:826} INFO - Processing file /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py for tasks to queue
+[2025-09-22T01:23:37.785+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:23:37.784+0000] {dagbag.py:541} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:23:37.790+0000] {processor.py:836} INFO - DAG(s) dict_keys(['example_trigger_controller_dag']) retrieved from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:23:37.853+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:23:37.853+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-22T01:23:37.888+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:23:37.887+0000] {dag.py:3490} INFO - Setting next_dagrun for example_trigger_controller_dag to 2021-01-01T00:00:00+00:00, run_after=2021-01-01T00:00:00+00:00
+[2025-09-22T01:23:37.915+0000] {processor.py:179} INFO - Processing /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py took 0.138 seconds
+[2025-09-22T01:24:08.425+0000] {processor.py:157} INFO - Started process (PID=5494) to work on /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:24:08.426+0000] {processor.py:826} INFO - Processing file /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py for tasks to queue
+[2025-09-22T01:24:08.427+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:24:08.427+0000] {dagbag.py:541} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:24:08.432+0000] {processor.py:836} INFO - DAG(s) dict_keys(['example_trigger_controller_dag']) retrieved from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:24:08.461+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:24:08.461+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-22T01:24:08.495+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:24:08.495+0000] {dag.py:3490} INFO - Setting next_dagrun for example_trigger_controller_dag to 2021-01-01T00:00:00+00:00, run_after=2021-01-01T00:00:00+00:00
+[2025-09-22T01:24:08.521+0000] {processor.py:179} INFO - Processing /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py took 0.101 seconds
+[2025-09-22T01:24:38.684+0000] {processor.py:157} INFO - Started process (PID=5770) to work on /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:24:38.685+0000] {processor.py:826} INFO - Processing file /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py for tasks to queue
+[2025-09-22T01:24:38.686+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:24:38.686+0000] {dagbag.py:541} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:24:38.690+0000] {processor.py:836} INFO - DAG(s) dict_keys(['example_trigger_controller_dag']) retrieved from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:24:39.557+0000] {processor.py:182} ERROR - Got an exception! Propagating...
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3366, in _wrap_pool_connect
+    return fn()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 327, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 894, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 493, in checkout
+    rec = pool._do_get()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 146, in _do_get
+    self._dec_overflow()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 143, in _do_get
+    return self._create_connection()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 273, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 388, in __init__
+    self.__connect()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 691, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 686, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/create.py", line 574, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 598, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/home/airflow/.local/lib/python3.7/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "postgres" (172.22.0.8), port 5432 failed: FATAL:  password authentication failed for user "airflow"
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/dag_processing/processor.py", line 178, in _run_file_processor
+    _handle_dag_file_processing()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/dag_processing/processor.py", line 162, in _handle_dag_file_processing
+    callback_requests=callback_requests,
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/session.py", line 76, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/dag_processing/processor.py", line 857, in process_file
+    pickle_dags=pickle_dags,
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/api_internal/internal_api_call.py", line 112, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/session.py", line 76, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/dag_processing/processor.py", line 890, in save_dag_to_db
+    import_errors = DagBag._sync_to_db(dags=dags, processor_subdir=dag_directory, session=session)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/session.py", line 73, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 659, in _sync_to_db
+    for attempt in run_with_db_retries(logger=log):
+  File "/home/airflow/.local/lib/python3.7/site-packages/tenacity/__init__.py", line 347, in __iter__
+    do = self.iter(retry_state=retry_state)
+  File "/home/airflow/.local/lib/python3.7/site-packages/tenacity/__init__.py", line 325, in iter
+    raise retry_exc.reraise()
+  File "/home/airflow/.local/lib/python3.7/site-packages/tenacity/__init__.py", line 158, in reraise
+    raise self.last_attempt.result()
+  File "/usr/local/lib/python3.7/concurrent/futures/_base.py", line 428, in result
+    return self.__get_result()
+  File "/usr/local/lib/python3.7/concurrent/futures/_base.py", line 384, in __get_result
+    raise self._exception
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 671, in _sync_to_db
+    serialize_errors.extend(_serialize_dag_capturing_errors(dag, session))
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 641, in _serialize_dag_capturing_errors
+    session=session,
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/session.py", line 73, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/serialized_dag.py", line 149, in write_dag
+    (timezone.utcnow() - timedelta(seconds=min_update_interval)) < cls.last_updated,
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/orm/query.py", line 2893, in scalar
+    ret = self.one()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/orm/query.py", line 2870, in one
+    return self._iter().one()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/orm/query.py", line 2919, in _iter
+    execution_options={"_sa_orm_load_options": self.load_options},
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 1716, in execute
+    conn = self._connection_for_bind(bind)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 1556, in _connection_for_bind
+    engine, execution_options
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 750, in _connection_for_bind
+    conn = bind.connect()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3320, in connect
+    return self._connection_cls(self, close_with_result=close_with_result)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 96, in __init__
+    else engine.raw_connection()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3399, in raw_connection
+    return self._wrap_pool_connect(self.pool.connect, _connection)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3370, in _wrap_pool_connect
+    e, dialect, self
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 2204, in _handle_dbapi_exception_noconnection
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3366, in _wrap_pool_connect
+    return fn()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 327, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 894, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 493, in checkout
+    rec = pool._do_get()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 146, in _do_get
+    self._dec_overflow()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 143, in _do_get
+    return self._create_connection()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 273, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 388, in __init__
+    self.__connect()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 691, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 686, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/create.py", line 574, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 598, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/home/airflow/.local/lib/python3.7/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+sqlalchemy.exc.OperationalError: (psycopg2.OperationalError) connection to server at "postgres" (172.22.0.8), port 5432 failed: FATAL:  password authentication failed for user "airflow"
+
+(Background on this error at: https://sqlalche.me/e/14/e3q8)
+[2025-09-22T01:25:11.401+0000] {processor.py:157} INFO - Started process (PID=6056) to work on /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:25:11.402+0000] {processor.py:826} INFO - Processing file /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py for tasks to queue
+[2025-09-22T01:25:11.403+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:25:11.402+0000] {dagbag.py:541} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:25:11.407+0000] {processor.py:836} INFO - DAG(s) dict_keys(['example_trigger_controller_dag']) retrieved from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:25:11.435+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:25:11.435+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-22T01:25:11.465+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:25:11.465+0000] {dag.py:3490} INFO - Setting next_dagrun for example_trigger_controller_dag to 2021-01-01T00:00:00+00:00, run_after=2021-01-01T00:00:00+00:00
+[2025-09-22T01:25:11.485+0000] {processor.py:179} INFO - Processing /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py took 0.088 seconds
+[2025-09-22T01:25:43.518+0000] {processor.py:157} INFO - Started process (PID=6338) to work on /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:25:43.521+0000] {processor.py:826} INFO - Processing file /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py for tasks to queue
+[2025-09-22T01:25:43.522+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:25:43.522+0000] {dagbag.py:541} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:25:43.527+0000] {processor.py:836} INFO - DAG(s) dict_keys(['example_trigger_controller_dag']) retrieved from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:25:44.940+0000] {processor.py:182} ERROR - Got an exception! Propagating...
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3366, in _wrap_pool_connect
+    return fn()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 327, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 894, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 493, in checkout
+    rec = pool._do_get()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 146, in _do_get
+    self._dec_overflow()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 143, in _do_get
+    return self._create_connection()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 273, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 388, in __init__
+    self.__connect()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 691, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 686, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/create.py", line 574, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 598, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/home/airflow/.local/lib/python3.7/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "postgres" (172.22.0.8), port 5432 failed: FATAL:  password authentication failed for user "airflow"
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/dag_processing/processor.py", line 178, in _run_file_processor
+    _handle_dag_file_processing()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/dag_processing/processor.py", line 162, in _handle_dag_file_processing
+    callback_requests=callback_requests,
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/session.py", line 76, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/dag_processing/processor.py", line 857, in process_file
+    pickle_dags=pickle_dags,
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/api_internal/internal_api_call.py", line 112, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/session.py", line 76, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/dag_processing/processor.py", line 890, in save_dag_to_db
+    import_errors = DagBag._sync_to_db(dags=dags, processor_subdir=dag_directory, session=session)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/session.py", line 73, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 659, in _sync_to_db
+    for attempt in run_with_db_retries(logger=log):
+  File "/home/airflow/.local/lib/python3.7/site-packages/tenacity/__init__.py", line 347, in __iter__
+    do = self.iter(retry_state=retry_state)
+  File "/home/airflow/.local/lib/python3.7/site-packages/tenacity/__init__.py", line 325, in iter
+    raise retry_exc.reraise()
+  File "/home/airflow/.local/lib/python3.7/site-packages/tenacity/__init__.py", line 158, in reraise
+    raise self.last_attempt.result()
+  File "/usr/local/lib/python3.7/concurrent/futures/_base.py", line 428, in result
+    return self.__get_result()
+  File "/usr/local/lib/python3.7/concurrent/futures/_base.py", line 384, in __get_result
+    raise self._exception
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 671, in _sync_to_db
+    serialize_errors.extend(_serialize_dag_capturing_errors(dag, session))
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 641, in _serialize_dag_capturing_errors
+    session=session,
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/session.py", line 73, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/serialized_dag.py", line 149, in write_dag
+    (timezone.utcnow() - timedelta(seconds=min_update_interval)) < cls.last_updated,
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/orm/query.py", line 2893, in scalar
+    ret = self.one()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/orm/query.py", line 2870, in one
+    return self._iter().one()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/orm/query.py", line 2919, in _iter
+    execution_options={"_sa_orm_load_options": self.load_options},
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 1716, in execute
+    conn = self._connection_for_bind(bind)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 1556, in _connection_for_bind
+    engine, execution_options
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 750, in _connection_for_bind
+    conn = bind.connect()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3320, in connect
+    return self._connection_cls(self, close_with_result=close_with_result)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 96, in __init__
+    else engine.raw_connection()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3399, in raw_connection
+    return self._wrap_pool_connect(self.pool.connect, _connection)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3370, in _wrap_pool_connect
+    e, dialect, self
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 2204, in _handle_dbapi_exception_noconnection
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3366, in _wrap_pool_connect
+    return fn()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 327, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 894, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 493, in checkout
+    rec = pool._do_get()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 146, in _do_get
+    self._dec_overflow()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 143, in _do_get
+    return self._create_connection()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 273, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 388, in __init__
+    self.__connect()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 691, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 686, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/create.py", line 574, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 598, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/home/airflow/.local/lib/python3.7/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+sqlalchemy.exc.OperationalError: (psycopg2.OperationalError) connection to server at "postgres" (172.22.0.8), port 5432 failed: FATAL:  password authentication failed for user "airflow"
+
+(Background on this error at: https://sqlalche.me/e/14/e3q8)
+[2025-09-22T01:26:15.067+0000] {processor.py:157} INFO - Started process (PID=6618) to work on /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:26:15.068+0000] {processor.py:826} INFO - Processing file /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py for tasks to queue
+[2025-09-22T01:26:15.069+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:26:15.069+0000] {dagbag.py:541} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:26:15.073+0000] {processor.py:836} INFO - DAG(s) dict_keys(['example_trigger_controller_dag']) retrieved from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:26:16.139+0000] {processor.py:182} ERROR - Got an exception! Propagating...
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3366, in _wrap_pool_connect
+    return fn()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 327, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 894, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 493, in checkout
+    rec = pool._do_get()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 146, in _do_get
+    self._dec_overflow()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 143, in _do_get
+    return self._create_connection()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 273, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 388, in __init__
+    self.__connect()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 691, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 686, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/create.py", line 574, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 598, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/home/airflow/.local/lib/python3.7/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "postgres" (172.22.0.8), port 5432 failed: FATAL:  password authentication failed for user "airflow"
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/dag_processing/processor.py", line 178, in _run_file_processor
+    _handle_dag_file_processing()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/dag_processing/processor.py", line 162, in _handle_dag_file_processing
+    callback_requests=callback_requests,
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/session.py", line 76, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/dag_processing/processor.py", line 857, in process_file
+    pickle_dags=pickle_dags,
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/api_internal/internal_api_call.py", line 112, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/session.py", line 76, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/dag_processing/processor.py", line 890, in save_dag_to_db
+    import_errors = DagBag._sync_to_db(dags=dags, processor_subdir=dag_directory, session=session)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/session.py", line 73, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 659, in _sync_to_db
+    for attempt in run_with_db_retries(logger=log):
+  File "/home/airflow/.local/lib/python3.7/site-packages/tenacity/__init__.py", line 347, in __iter__
+    do = self.iter(retry_state=retry_state)
+  File "/home/airflow/.local/lib/python3.7/site-packages/tenacity/__init__.py", line 325, in iter
+    raise retry_exc.reraise()
+  File "/home/airflow/.local/lib/python3.7/site-packages/tenacity/__init__.py", line 158, in reraise
+    raise self.last_attempt.result()
+  File "/usr/local/lib/python3.7/concurrent/futures/_base.py", line 428, in result
+    return self.__get_result()
+  File "/usr/local/lib/python3.7/concurrent/futures/_base.py", line 384, in __get_result
+    raise self._exception
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 671, in _sync_to_db
+    serialize_errors.extend(_serialize_dag_capturing_errors(dag, session))
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 641, in _serialize_dag_capturing_errors
+    session=session,
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/session.py", line 73, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/serialized_dag.py", line 149, in write_dag
+    (timezone.utcnow() - timedelta(seconds=min_update_interval)) < cls.last_updated,
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/orm/query.py", line 2893, in scalar
+    ret = self.one()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/orm/query.py", line 2870, in one
+    return self._iter().one()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/orm/query.py", line 2919, in _iter
+    execution_options={"_sa_orm_load_options": self.load_options},
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 1716, in execute
+    conn = self._connection_for_bind(bind)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 1556, in _connection_for_bind
+    engine, execution_options
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 750, in _connection_for_bind
+    conn = bind.connect()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3320, in connect
+    return self._connection_cls(self, close_with_result=close_with_result)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 96, in __init__
+    else engine.raw_connection()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3399, in raw_connection
+    return self._wrap_pool_connect(self.pool.connect, _connection)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3370, in _wrap_pool_connect
+    e, dialect, self
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 2204, in _handle_dbapi_exception_noconnection
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3366, in _wrap_pool_connect
+    return fn()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 327, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 894, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 493, in checkout
+    rec = pool._do_get()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 146, in _do_get
+    self._dec_overflow()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 143, in _do_get
+    return self._create_connection()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 273, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 388, in __init__
+    self.__connect()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 691, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 686, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/create.py", line 574, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 598, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/home/airflow/.local/lib/python3.7/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+sqlalchemy.exc.OperationalError: (psycopg2.OperationalError) connection to server at "postgres" (172.22.0.8), port 5432 failed: FATAL:  password authentication failed for user "airflow"
+
+(Background on this error at: https://sqlalche.me/e/14/e3q8)
+[2025-09-22T01:26:46.268+0000] {processor.py:157} INFO - Started process (PID=6919) to work on /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:26:46.269+0000] {processor.py:826} INFO - Processing file /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py for tasks to queue
+[2025-09-22T01:26:46.270+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:26:46.270+0000] {dagbag.py:541} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:26:46.276+0000] {processor.py:836} INFO - DAG(s) dict_keys(['example_trigger_controller_dag']) retrieved from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:26:46.525+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:26:46.524+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-22T01:26:46.589+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:26:46.589+0000] {dag.py:3490} INFO - Setting next_dagrun for example_trigger_controller_dag to 2021-01-01T00:00:00+00:00, run_after=2021-01-01T00:00:00+00:00
+[2025-09-22T01:26:46.638+0000] {processor.py:179} INFO - Processing /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py took 0.376 seconds
+[2025-09-22T01:27:17.089+0000] {processor.py:157} INFO - Started process (PID=7200) to work on /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:27:17.090+0000] {processor.py:826} INFO - Processing file /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py for tasks to queue
+[2025-09-22T01:27:17.092+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:27:17.091+0000] {dagbag.py:541} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:27:17.097+0000] {processor.py:836} INFO - DAG(s) dict_keys(['example_trigger_controller_dag']) retrieved from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:27:17.464+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:27:17.464+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-22T01:27:17.497+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:27:17.497+0000] {dag.py:3490} INFO - Setting next_dagrun for example_trigger_controller_dag to 2021-01-01T00:00:00+00:00, run_after=2021-01-01T00:00:00+00:00
+[2025-09-22T01:27:17.523+0000] {processor.py:179} INFO - Processing /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py took 0.439 seconds
+[2025-09-22T01:27:48.407+0000] {processor.py:157} INFO - Started process (PID=7486) to work on /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:27:48.408+0000] {processor.py:826} INFO - Processing file /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py for tasks to queue
+[2025-09-22T01:27:48.410+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:27:48.409+0000] {dagbag.py:541} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:27:48.415+0000] {processor.py:836} INFO - DAG(s) dict_keys(['example_trigger_controller_dag']) retrieved from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:27:48.458+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:27:48.458+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-22T01:27:48.546+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:27:48.545+0000] {dag.py:3490} INFO - Setting next_dagrun for example_trigger_controller_dag to 2021-01-01T00:00:00+00:00, run_after=2021-01-01T00:00:00+00:00
+[2025-09-22T01:27:48.590+0000] {processor.py:179} INFO - Processing /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py took 0.189 seconds
+[2025-09-22T01:28:19.174+0000] {processor.py:157} INFO - Started process (PID=7769) to work on /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:28:19.176+0000] {processor.py:826} INFO - Processing file /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py for tasks to queue
+[2025-09-22T01:28:19.177+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:28:19.177+0000] {dagbag.py:541} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:28:19.183+0000] {processor.py:836} INFO - DAG(s) dict_keys(['example_trigger_controller_dag']) retrieved from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:28:19.222+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:28:19.222+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-22T01:28:19.261+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:28:19.261+0000] {dag.py:3490} INFO - Setting next_dagrun for example_trigger_controller_dag to 2021-01-01T00:00:00+00:00, run_after=2021-01-01T00:00:00+00:00
+[2025-09-22T01:28:19.291+0000] {processor.py:179} INFO - Processing /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py took 0.122 seconds
+[2025-09-22T01:28:49.612+0000] {processor.py:157} INFO - Started process (PID=8048) to work on /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:28:49.613+0000] {processor.py:826} INFO - Processing file /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py for tasks to queue
+[2025-09-22T01:28:49.614+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:28:49.614+0000] {dagbag.py:541} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:28:49.619+0000] {processor.py:836} INFO - DAG(s) dict_keys(['example_trigger_controller_dag']) retrieved from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:28:49.999+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:28:49.998+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-22T01:28:50.032+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:28:50.031+0000] {dag.py:3490} INFO - Setting next_dagrun for example_trigger_controller_dag to 2021-01-01T00:00:00+00:00, run_after=2021-01-01T00:00:00+00:00
+[2025-09-22T01:28:50.055+0000] {processor.py:179} INFO - Processing /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py took 0.447 seconds
+[2025-09-22T01:29:20.857+0000] {processor.py:157} INFO - Started process (PID=8309) to work on /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:29:20.858+0000] {processor.py:826} INFO - Processing file /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py for tasks to queue
+[2025-09-22T01:29:20.860+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:29:20.859+0000] {dagbag.py:541} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:29:20.866+0000] {processor.py:836} INFO - DAG(s) dict_keys(['example_trigger_controller_dag']) retrieved from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:29:20.905+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:29:20.905+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-22T01:29:20.945+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:29:20.945+0000] {dag.py:3490} INFO - Setting next_dagrun for example_trigger_controller_dag to 2021-01-01T00:00:00+00:00, run_after=2021-01-01T00:00:00+00:00
+[2025-09-22T01:29:20.980+0000] {processor.py:179} INFO - Processing /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py took 0.128 seconds
+[2025-09-22T01:29:52.135+0000] {processor.py:157} INFO - Started process (PID=8590) to work on /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:29:52.137+0000] {processor.py:826} INFO - Processing file /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py for tasks to queue
+[2025-09-22T01:29:52.138+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:29:52.138+0000] {dagbag.py:541} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:29:52.146+0000] {processor.py:836} INFO - DAG(s) dict_keys(['example_trigger_controller_dag']) retrieved from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:29:52.196+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:29:52.196+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-22T01:29:52.250+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:29:52.250+0000] {dag.py:3490} INFO - Setting next_dagrun for example_trigger_controller_dag to 2021-01-01T00:00:00+00:00, run_after=2021-01-01T00:00:00+00:00
+[2025-09-22T01:29:52.288+0000] {processor.py:179} INFO - Processing /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py took 0.161 seconds
+[2025-09-22T01:30:22.521+0000] {processor.py:157} INFO - Started process (PID=8866) to work on /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:30:22.522+0000] {processor.py:826} INFO - Processing file /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py for tasks to queue
+[2025-09-22T01:30:22.523+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:30:22.523+0000] {dagbag.py:541} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:30:22.527+0000] {processor.py:836} INFO - DAG(s) dict_keys(['example_trigger_controller_dag']) retrieved from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:30:22.558+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:30:22.558+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-22T01:30:22.587+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:30:22.587+0000] {dag.py:3490} INFO - Setting next_dagrun for example_trigger_controller_dag to 2021-01-01T00:00:00+00:00, run_after=2021-01-01T00:00:00+00:00
+[2025-09-22T01:30:22.609+0000] {processor.py:179} INFO - Processing /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py took 0.091 seconds
+[2025-09-22T01:30:54.307+0000] {processor.py:157} INFO - Started process (PID=9147) to work on /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:30:54.308+0000] {processor.py:826} INFO - Processing file /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py for tasks to queue
+[2025-09-22T01:30:54.309+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:30:54.309+0000] {dagbag.py:541} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:30:54.315+0000] {processor.py:836} INFO - DAG(s) dict_keys(['example_trigger_controller_dag']) retrieved from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:30:54.346+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:30:54.346+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-22T01:30:54.378+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:30:54.378+0000] {dag.py:3490} INFO - Setting next_dagrun for example_trigger_controller_dag to 2021-01-01T00:00:00+00:00, run_after=2021-01-01T00:00:00+00:00
+[2025-09-22T01:30:54.402+0000] {processor.py:179} INFO - Processing /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py took 0.100 seconds
+[2025-09-22T01:31:24.732+0000] {processor.py:157} INFO - Started process (PID=9423) to work on /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:31:24.733+0000] {processor.py:826} INFO - Processing file /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py for tasks to queue
+[2025-09-22T01:31:24.734+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:31:24.734+0000] {dagbag.py:541} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:31:24.739+0000] {processor.py:836} INFO - DAG(s) dict_keys(['example_trigger_controller_dag']) retrieved from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:31:25.236+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:31:25.236+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-22T01:31:25.273+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:31:25.273+0000] {dag.py:3490} INFO - Setting next_dagrun for example_trigger_controller_dag to 2021-01-01T00:00:00+00:00, run_after=2021-01-01T00:00:00+00:00
+[2025-09-22T01:31:25.302+0000] {processor.py:179} INFO - Processing /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py took 0.574 seconds
+[2025-09-22T01:31:56.195+0000] {processor.py:157} INFO - Started process (PID=9704) to work on /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:31:56.196+0000] {processor.py:826} INFO - Processing file /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py for tasks to queue
+[2025-09-22T01:31:56.197+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:31:56.197+0000] {dagbag.py:541} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:31:56.203+0000] {processor.py:836} INFO - DAG(s) dict_keys(['example_trigger_controller_dag']) retrieved from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:31:56.234+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:31:56.234+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-22T01:31:56.272+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:31:56.272+0000] {dag.py:3490} INFO - Setting next_dagrun for example_trigger_controller_dag to 2021-01-01T00:00:00+00:00, run_after=2021-01-01T00:00:00+00:00
+[2025-09-22T01:31:56.300+0000] {processor.py:179} INFO - Processing /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py took 0.110 seconds
+[2025-09-22T01:32:27.404+0000] {processor.py:157} INFO - Started process (PID=9990) to work on /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:32:27.405+0000] {processor.py:826} INFO - Processing file /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py for tasks to queue
+[2025-09-22T01:32:27.406+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:32:27.406+0000] {dagbag.py:541} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:32:27.412+0000] {processor.py:836} INFO - DAG(s) dict_keys(['example_trigger_controller_dag']) retrieved from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:32:27.480+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:32:27.480+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-22T01:32:27.516+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:32:27.516+0000] {dag.py:3490} INFO - Setting next_dagrun for example_trigger_controller_dag to 2021-01-01T00:00:00+00:00, run_after=2021-01-01T00:00:00+00:00
+[2025-09-22T01:32:27.544+0000] {processor.py:179} INFO - Processing /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py took 0.144 seconds
+[2025-09-22T01:32:58.814+0000] {processor.py:157} INFO - Started process (PID=10271) to work on /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:32:58.815+0000] {processor.py:826} INFO - Processing file /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py for tasks to queue
+[2025-09-22T01:32:58.816+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:32:58.816+0000] {dagbag.py:541} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:32:58.820+0000] {processor.py:836} INFO - DAG(s) dict_keys(['example_trigger_controller_dag']) retrieved from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:32:59.288+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:32:59.288+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-22T01:32:59.318+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:32:59.317+0000] {dag.py:3490} INFO - Setting next_dagrun for example_trigger_controller_dag to 2021-01-01T00:00:00+00:00, run_after=2021-01-01T00:00:00+00:00
+[2025-09-22T01:32:59.338+0000] {processor.py:179} INFO - Processing /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py took 0.527 seconds
+[2025-09-22T01:33:29.632+0000] {processor.py:157} INFO - Started process (PID=10552) to work on /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:33:29.633+0000] {processor.py:826} INFO - Processing file /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py for tasks to queue
+[2025-09-22T01:33:29.634+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:33:29.634+0000] {dagbag.py:541} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:33:29.639+0000] {processor.py:836} INFO - DAG(s) dict_keys(['example_trigger_controller_dag']) retrieved from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:33:30.375+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:33:30.374+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-22T01:33:30.414+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:33:30.413+0000] {dag.py:3490} INFO - Setting next_dagrun for example_trigger_controller_dag to 2021-01-01T00:00:00+00:00, run_after=2021-01-01T00:00:00+00:00
+[2025-09-22T01:33:30.445+0000] {processor.py:179} INFO - Processing /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py took 0.816 seconds
+[2025-09-22T01:34:01.140+0000] {processor.py:157} INFO - Started process (PID=10838) to work on /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:34:01.142+0000] {processor.py:826} INFO - Processing file /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py for tasks to queue
+[2025-09-22T01:34:01.143+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:34:01.143+0000] {dagbag.py:541} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:34:01.150+0000] {processor.py:836} INFO - DAG(s) dict_keys(['example_trigger_controller_dag']) retrieved from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:34:01.193+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:34:01.193+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-22T01:34:01.237+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:34:01.237+0000] {dag.py:3490} INFO - Setting next_dagrun for example_trigger_controller_dag to 2021-01-01T00:00:00+00:00, run_after=2021-01-01T00:00:00+00:00
+[2025-09-22T01:34:01.264+0000] {processor.py:179} INFO - Processing /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py took 0.128 seconds
+[2025-09-22T01:34:31.955+0000] {processor.py:157} INFO - Started process (PID=11119) to work on /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:34:31.956+0000] {processor.py:826} INFO - Processing file /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py for tasks to queue
+[2025-09-22T01:34:31.957+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:34:31.957+0000] {dagbag.py:541} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:34:31.961+0000] {processor.py:836} INFO - DAG(s) dict_keys(['example_trigger_controller_dag']) retrieved from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:34:32.145+0000] {processor.py:182} ERROR - Got an exception! Propagating...
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3366, in _wrap_pool_connect
+    return fn()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 327, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 894, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 493, in checkout
+    rec = pool._do_get()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 146, in _do_get
+    self._dec_overflow()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 143, in _do_get
+    return self._create_connection()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 273, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 388, in __init__
+    self.__connect()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 691, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 686, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/create.py", line 574, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 598, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/home/airflow/.local/lib/python3.7/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "postgres" (172.22.0.8), port 5432 failed: FATAL:  password authentication failed for user "airflow"
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/dag_processing/processor.py", line 178, in _run_file_processor
+    _handle_dag_file_processing()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/dag_processing/processor.py", line 162, in _handle_dag_file_processing
+    callback_requests=callback_requests,
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/session.py", line 76, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/dag_processing/processor.py", line 857, in process_file
+    pickle_dags=pickle_dags,
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/api_internal/internal_api_call.py", line 112, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/session.py", line 76, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/dag_processing/processor.py", line 890, in save_dag_to_db
+    import_errors = DagBag._sync_to_db(dags=dags, processor_subdir=dag_directory, session=session)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/session.py", line 73, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 659, in _sync_to_db
+    for attempt in run_with_db_retries(logger=log):
+  File "/home/airflow/.local/lib/python3.7/site-packages/tenacity/__init__.py", line 347, in __iter__
+    do = self.iter(retry_state=retry_state)
+  File "/home/airflow/.local/lib/python3.7/site-packages/tenacity/__init__.py", line 325, in iter
+    raise retry_exc.reraise()
+  File "/home/airflow/.local/lib/python3.7/site-packages/tenacity/__init__.py", line 158, in reraise
+    raise self.last_attempt.result()
+  File "/usr/local/lib/python3.7/concurrent/futures/_base.py", line 428, in result
+    return self.__get_result()
+  File "/usr/local/lib/python3.7/concurrent/futures/_base.py", line 384, in __get_result
+    raise self._exception
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 671, in _sync_to_db
+    serialize_errors.extend(_serialize_dag_capturing_errors(dag, session))
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 641, in _serialize_dag_capturing_errors
+    session=session,
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/session.py", line 73, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/serialized_dag.py", line 149, in write_dag
+    (timezone.utcnow() - timedelta(seconds=min_update_interval)) < cls.last_updated,
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/orm/query.py", line 2893, in scalar
+    ret = self.one()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/orm/query.py", line 2870, in one
+    return self._iter().one()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/orm/query.py", line 2919, in _iter
+    execution_options={"_sa_orm_load_options": self.load_options},
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 1716, in execute
+    conn = self._connection_for_bind(bind)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 1556, in _connection_for_bind
+    engine, execution_options
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 750, in _connection_for_bind
+    conn = bind.connect()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3320, in connect
+    return self._connection_cls(self, close_with_result=close_with_result)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 96, in __init__
+    else engine.raw_connection()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3399, in raw_connection
+    return self._wrap_pool_connect(self.pool.connect, _connection)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3370, in _wrap_pool_connect
+    e, dialect, self
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 2204, in _handle_dbapi_exception_noconnection
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3366, in _wrap_pool_connect
+    return fn()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 327, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 894, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 493, in checkout
+    rec = pool._do_get()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 146, in _do_get
+    self._dec_overflow()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 143, in _do_get
+    return self._create_connection()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 273, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 388, in __init__
+    self.__connect()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 691, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 686, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/create.py", line 574, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 598, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/home/airflow/.local/lib/python3.7/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+sqlalchemy.exc.OperationalError: (psycopg2.OperationalError) connection to server at "postgres" (172.22.0.8), port 5432 failed: FATAL:  password authentication failed for user "airflow"
+
+(Background on this error at: https://sqlalche.me/e/14/e3q8)
+[2025-09-22T01:35:02.434+0000] {processor.py:157} INFO - Started process (PID=11396) to work on /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:35:02.435+0000] {processor.py:826} INFO - Processing file /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py for tasks to queue
+[2025-09-22T01:35:02.435+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:35:02.435+0000] {dagbag.py:541} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:35:02.440+0000] {processor.py:836} INFO - DAG(s) dict_keys(['example_trigger_controller_dag']) retrieved from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:35:03.919+0000] {processor.py:182} ERROR - Got an exception! Propagating...
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3366, in _wrap_pool_connect
+    return fn()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 327, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 894, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 493, in checkout
+    rec = pool._do_get()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 146, in _do_get
+    self._dec_overflow()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 143, in _do_get
+    return self._create_connection()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 273, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 388, in __init__
+    self.__connect()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 691, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 686, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/create.py", line 574, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 598, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/home/airflow/.local/lib/python3.7/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "postgres" (172.22.0.8), port 5432 failed: FATAL:  password authentication failed for user "airflow"
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/dag_processing/processor.py", line 178, in _run_file_processor
+    _handle_dag_file_processing()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/dag_processing/processor.py", line 162, in _handle_dag_file_processing
+    callback_requests=callback_requests,
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/session.py", line 76, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/dag_processing/processor.py", line 857, in process_file
+    pickle_dags=pickle_dags,
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/api_internal/internal_api_call.py", line 112, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/session.py", line 76, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/dag_processing/processor.py", line 890, in save_dag_to_db
+    import_errors = DagBag._sync_to_db(dags=dags, processor_subdir=dag_directory, session=session)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/session.py", line 73, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 659, in _sync_to_db
+    for attempt in run_with_db_retries(logger=log):
+  File "/home/airflow/.local/lib/python3.7/site-packages/tenacity/__init__.py", line 347, in __iter__
+    do = self.iter(retry_state=retry_state)
+  File "/home/airflow/.local/lib/python3.7/site-packages/tenacity/__init__.py", line 325, in iter
+    raise retry_exc.reraise()
+  File "/home/airflow/.local/lib/python3.7/site-packages/tenacity/__init__.py", line 158, in reraise
+    raise self.last_attempt.result()
+  File "/usr/local/lib/python3.7/concurrent/futures/_base.py", line 428, in result
+    return self.__get_result()
+  File "/usr/local/lib/python3.7/concurrent/futures/_base.py", line 384, in __get_result
+    raise self._exception
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 671, in _sync_to_db
+    serialize_errors.extend(_serialize_dag_capturing_errors(dag, session))
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 641, in _serialize_dag_capturing_errors
+    session=session,
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/session.py", line 73, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/serialized_dag.py", line 149, in write_dag
+    (timezone.utcnow() - timedelta(seconds=min_update_interval)) < cls.last_updated,
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/orm/query.py", line 2893, in scalar
+    ret = self.one()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/orm/query.py", line 2870, in one
+    return self._iter().one()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/orm/query.py", line 2919, in _iter
+    execution_options={"_sa_orm_load_options": self.load_options},
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 1716, in execute
+    conn = self._connection_for_bind(bind)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 1556, in _connection_for_bind
+    engine, execution_options
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 750, in _connection_for_bind
+    conn = bind.connect()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3320, in connect
+    return self._connection_cls(self, close_with_result=close_with_result)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 96, in __init__
+    else engine.raw_connection()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3399, in raw_connection
+    return self._wrap_pool_connect(self.pool.connect, _connection)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3370, in _wrap_pool_connect
+    e, dialect, self
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 2204, in _handle_dbapi_exception_noconnection
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3366, in _wrap_pool_connect
+    return fn()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 327, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 894, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 493, in checkout
+    rec = pool._do_get()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 146, in _do_get
+    self._dec_overflow()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 143, in _do_get
+    return self._create_connection()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 273, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 388, in __init__
+    self.__connect()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 691, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 686, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/create.py", line 574, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 598, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/home/airflow/.local/lib/python3.7/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+sqlalchemy.exc.OperationalError: (psycopg2.OperationalError) connection to server at "postgres" (172.22.0.8), port 5432 failed: FATAL:  password authentication failed for user "airflow"
+
+(Background on this error at: https://sqlalche.me/e/14/e3q8)
+[2025-09-22T01:35:34.108+0000] {processor.py:157} INFO - Started process (PID=11677) to work on /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:35:34.110+0000] {processor.py:826} INFO - Processing file /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py for tasks to queue
+[2025-09-22T01:35:34.111+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:35:34.110+0000] {dagbag.py:541} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:35:34.116+0000] {processor.py:836} INFO - DAG(s) dict_keys(['example_trigger_controller_dag']) retrieved from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:35:34.938+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:35:34.937+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-22T01:35:34.968+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:35:34.968+0000] {dag.py:3490} INFO - Setting next_dagrun for example_trigger_controller_dag to 2021-01-01T00:00:00+00:00, run_after=2021-01-01T00:00:00+00:00
+[2025-09-22T01:35:34.992+0000] {processor.py:179} INFO - Processing /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py took 0.888 seconds
+[2025-09-22T01:36:05.916+0000] {processor.py:157} INFO - Started process (PID=11971) to work on /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:36:05.918+0000] {processor.py:826} INFO - Processing file /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py for tasks to queue
+[2025-09-22T01:36:05.919+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:36:05.919+0000] {dagbag.py:541} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:36:05.928+0000] {processor.py:836} INFO - DAG(s) dict_keys(['example_trigger_controller_dag']) retrieved from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:36:06.196+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:36:06.196+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-22T01:36:06.229+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:36:06.229+0000] {dag.py:3490} INFO - Setting next_dagrun for example_trigger_controller_dag to 2021-01-01T00:00:00+00:00, run_after=2021-01-01T00:00:00+00:00
+[2025-09-22T01:36:06.256+0000] {processor.py:179} INFO - Processing /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py took 0.345 seconds
+[2025-09-22T01:36:36.636+0000] {processor.py:157} INFO - Started process (PID=12252) to work on /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:36:36.638+0000] {processor.py:826} INFO - Processing file /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py for tasks to queue
+[2025-09-22T01:36:36.638+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:36:36.638+0000] {dagbag.py:541} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:36:36.642+0000] {processor.py:836} INFO - DAG(s) dict_keys(['example_trigger_controller_dag']) retrieved from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:36:36.673+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:36:36.673+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-22T01:36:36.707+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:36:36.706+0000] {dag.py:3490} INFO - Setting next_dagrun for example_trigger_controller_dag to 2021-01-01T00:00:00+00:00, run_after=2021-01-01T00:00:00+00:00
+[2025-09-22T01:36:36.740+0000] {processor.py:179} INFO - Processing /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py took 0.107 seconds
+[2025-09-22T01:37:09.849+0000] {processor.py:157} INFO - Started process (PID=12524) to work on /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:37:09.855+0000] {processor.py:826} INFO - Processing file /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py for tasks to queue
+[2025-09-22T01:37:09.859+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:37:09.858+0000] {dagbag.py:541} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:37:09.879+0000] {processor.py:836} INFO - DAG(s) dict_keys(['example_trigger_controller_dag']) retrieved from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:37:10.037+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:37:10.035+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-22T01:37:10.218+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:37:10.217+0000] {dag.py:3490} INFO - Setting next_dagrun for example_trigger_controller_dag to 2021-01-01T00:00:00+00:00, run_after=2021-01-01T00:00:00+00:00
+[2025-09-22T01:37:10.316+0000] {processor.py:179} INFO - Processing /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py took 0.484 seconds
+[2025-09-22T01:37:40.772+0000] {processor.py:157} INFO - Started process (PID=12802) to work on /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:37:40.774+0000] {processor.py:826} INFO - Processing file /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py for tasks to queue
+[2025-09-22T01:37:40.776+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:37:40.775+0000] {dagbag.py:541} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:37:40.785+0000] {processor.py:836} INFO - DAG(s) dict_keys(['example_trigger_controller_dag']) retrieved from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:37:41.359+0000] {processor.py:182} ERROR - Got an exception! Propagating...
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3366, in _wrap_pool_connect
+    return fn()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 327, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 894, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 493, in checkout
+    rec = pool._do_get()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 146, in _do_get
+    self._dec_overflow()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 143, in _do_get
+    return self._create_connection()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 273, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 388, in __init__
+    self.__connect()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 691, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 686, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/create.py", line 574, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 598, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/home/airflow/.local/lib/python3.7/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "postgres" (172.22.0.8), port 5432 failed: FATAL:  password authentication failed for user "airflow"
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/dag_processing/processor.py", line 178, in _run_file_processor
+    _handle_dag_file_processing()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/dag_processing/processor.py", line 162, in _handle_dag_file_processing
+    callback_requests=callback_requests,
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/session.py", line 76, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/dag_processing/processor.py", line 857, in process_file
+    pickle_dags=pickle_dags,
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/api_internal/internal_api_call.py", line 112, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/session.py", line 76, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/dag_processing/processor.py", line 890, in save_dag_to_db
+    import_errors = DagBag._sync_to_db(dags=dags, processor_subdir=dag_directory, session=session)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/session.py", line 73, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 659, in _sync_to_db
+    for attempt in run_with_db_retries(logger=log):
+  File "/home/airflow/.local/lib/python3.7/site-packages/tenacity/__init__.py", line 347, in __iter__
+    do = self.iter(retry_state=retry_state)
+  File "/home/airflow/.local/lib/python3.7/site-packages/tenacity/__init__.py", line 325, in iter
+    raise retry_exc.reraise()
+  File "/home/airflow/.local/lib/python3.7/site-packages/tenacity/__init__.py", line 158, in reraise
+    raise self.last_attempt.result()
+  File "/usr/local/lib/python3.7/concurrent/futures/_base.py", line 428, in result
+    return self.__get_result()
+  File "/usr/local/lib/python3.7/concurrent/futures/_base.py", line 384, in __get_result
+    raise self._exception
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 671, in _sync_to_db
+    serialize_errors.extend(_serialize_dag_capturing_errors(dag, session))
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 641, in _serialize_dag_capturing_errors
+    session=session,
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/session.py", line 73, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/serialized_dag.py", line 149, in write_dag
+    (timezone.utcnow() - timedelta(seconds=min_update_interval)) < cls.last_updated,
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/orm/query.py", line 2893, in scalar
+    ret = self.one()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/orm/query.py", line 2870, in one
+    return self._iter().one()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/orm/query.py", line 2919, in _iter
+    execution_options={"_sa_orm_load_options": self.load_options},
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 1716, in execute
+    conn = self._connection_for_bind(bind)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 1556, in _connection_for_bind
+    engine, execution_options
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 750, in _connection_for_bind
+    conn = bind.connect()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3320, in connect
+    return self._connection_cls(self, close_with_result=close_with_result)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 96, in __init__
+    else engine.raw_connection()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3399, in raw_connection
+    return self._wrap_pool_connect(self.pool.connect, _connection)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3370, in _wrap_pool_connect
+    e, dialect, self
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 2204, in _handle_dbapi_exception_noconnection
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3366, in _wrap_pool_connect
+    return fn()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 327, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 894, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 493, in checkout
+    rec = pool._do_get()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 146, in _do_get
+    self._dec_overflow()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 143, in _do_get
+    return self._create_connection()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 273, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 388, in __init__
+    self.__connect()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 691, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 686, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/create.py", line 574, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 598, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/home/airflow/.local/lib/python3.7/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+sqlalchemy.exc.OperationalError: (psycopg2.OperationalError) connection to server at "postgres" (172.22.0.8), port 5432 failed: FATAL:  password authentication failed for user "airflow"
+
+(Background on this error at: https://sqlalche.me/e/14/e3q8)
+[2025-09-22T01:38:11.793+0000] {processor.py:157} INFO - Started process (PID=13090) to work on /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:38:11.795+0000] {processor.py:826} INFO - Processing file /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py for tasks to queue
+[2025-09-22T01:38:11.796+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:38:11.796+0000] {dagbag.py:541} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:38:11.802+0000] {processor.py:836} INFO - DAG(s) dict_keys(['example_trigger_controller_dag']) retrieved from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:38:13.083+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:38:13.083+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-22T01:38:13.121+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:38:13.121+0000] {dag.py:3490} INFO - Setting next_dagrun for example_trigger_controller_dag to 2021-01-01T00:00:00+00:00, run_after=2021-01-01T00:00:00+00:00
+[2025-09-22T01:38:13.145+0000] {processor.py:179} INFO - Processing /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py took 1.358 seconds
+[2025-09-22T01:38:43.339+0000] {processor.py:157} INFO - Started process (PID=13391) to work on /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:38:43.340+0000] {processor.py:826} INFO - Processing file /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py for tasks to queue
+[2025-09-22T01:38:43.341+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:38:43.341+0000] {dagbag.py:541} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:38:43.346+0000] {processor.py:836} INFO - DAG(s) dict_keys(['example_trigger_controller_dag']) retrieved from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:38:43.619+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:38:43.618+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-22T01:38:43.654+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:38:43.653+0000] {dag.py:3490} INFO - Setting next_dagrun for example_trigger_controller_dag to 2021-01-01T00:00:00+00:00, run_after=2021-01-01T00:00:00+00:00
+[2025-09-22T01:38:43.677+0000] {processor.py:179} INFO - Processing /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py took 0.342 seconds
+[2025-09-22T01:39:14.698+0000] {processor.py:157} INFO - Started process (PID=13680) to work on /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:39:14.699+0000] {processor.py:826} INFO - Processing file /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py for tasks to queue
+[2025-09-22T01:39:14.700+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:39:14.700+0000] {dagbag.py:541} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:39:14.705+0000] {processor.py:836} INFO - DAG(s) dict_keys(['example_trigger_controller_dag']) retrieved from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:39:15.599+0000] {processor.py:182} ERROR - Got an exception! Propagating...
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3366, in _wrap_pool_connect
+    return fn()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 327, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 894, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 493, in checkout
+    rec = pool._do_get()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 146, in _do_get
+    self._dec_overflow()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 143, in _do_get
+    return self._create_connection()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 273, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 388, in __init__
+    self.__connect()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 691, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 686, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/create.py", line 574, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 598, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/home/airflow/.local/lib/python3.7/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "postgres" (172.22.0.8), port 5432 failed: FATAL:  password authentication failed for user "airflow"
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/dag_processing/processor.py", line 178, in _run_file_processor
+    _handle_dag_file_processing()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/dag_processing/processor.py", line 162, in _handle_dag_file_processing
+    callback_requests=callback_requests,
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/session.py", line 76, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/dag_processing/processor.py", line 857, in process_file
+    pickle_dags=pickle_dags,
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/api_internal/internal_api_call.py", line 112, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/session.py", line 76, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/dag_processing/processor.py", line 890, in save_dag_to_db
+    import_errors = DagBag._sync_to_db(dags=dags, processor_subdir=dag_directory, session=session)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/session.py", line 73, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 659, in _sync_to_db
+    for attempt in run_with_db_retries(logger=log):
+  File "/home/airflow/.local/lib/python3.7/site-packages/tenacity/__init__.py", line 347, in __iter__
+    do = self.iter(retry_state=retry_state)
+  File "/home/airflow/.local/lib/python3.7/site-packages/tenacity/__init__.py", line 325, in iter
+    raise retry_exc.reraise()
+  File "/home/airflow/.local/lib/python3.7/site-packages/tenacity/__init__.py", line 158, in reraise
+    raise self.last_attempt.result()
+  File "/usr/local/lib/python3.7/concurrent/futures/_base.py", line 428, in result
+    return self.__get_result()
+  File "/usr/local/lib/python3.7/concurrent/futures/_base.py", line 384, in __get_result
+    raise self._exception
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 671, in _sync_to_db
+    serialize_errors.extend(_serialize_dag_capturing_errors(dag, session))
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 641, in _serialize_dag_capturing_errors
+    session=session,
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/session.py", line 73, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/serialized_dag.py", line 149, in write_dag
+    (timezone.utcnow() - timedelta(seconds=min_update_interval)) < cls.last_updated,
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/orm/query.py", line 2893, in scalar
+    ret = self.one()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/orm/query.py", line 2870, in one
+    return self._iter().one()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/orm/query.py", line 2919, in _iter
+    execution_options={"_sa_orm_load_options": self.load_options},
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 1716, in execute
+    conn = self._connection_for_bind(bind)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 1556, in _connection_for_bind
+    engine, execution_options
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 750, in _connection_for_bind
+    conn = bind.connect()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3320, in connect
+    return self._connection_cls(self, close_with_result=close_with_result)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 96, in __init__
+    else engine.raw_connection()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3399, in raw_connection
+    return self._wrap_pool_connect(self.pool.connect, _connection)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3370, in _wrap_pool_connect
+    e, dialect, self
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 2204, in _handle_dbapi_exception_noconnection
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3366, in _wrap_pool_connect
+    return fn()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 327, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 894, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 493, in checkout
+    rec = pool._do_get()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 146, in _do_get
+    self._dec_overflow()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 143, in _do_get
+    return self._create_connection()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 273, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 388, in __init__
+    self.__connect()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 691, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 686, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/create.py", line 574, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 598, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/home/airflow/.local/lib/python3.7/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+sqlalchemy.exc.OperationalError: (psycopg2.OperationalError) connection to server at "postgres" (172.22.0.8), port 5432 failed: FATAL:  password authentication failed for user "airflow"
+
+(Background on this error at: https://sqlalche.me/e/14/e3q8)
+[2025-09-22T01:39:45.772+0000] {processor.py:157} INFO - Started process (PID=13962) to work on /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:39:45.774+0000] {processor.py:826} INFO - Processing file /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py for tasks to queue
+[2025-09-22T01:39:45.776+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:39:45.775+0000] {dagbag.py:541} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:39:45.783+0000] {processor.py:836} INFO - DAG(s) dict_keys(['example_trigger_controller_dag']) retrieved from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:39:46.808+0000] {processor.py:182} ERROR - Got an exception! Propagating...
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3366, in _wrap_pool_connect
+    return fn()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 327, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 894, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 493, in checkout
+    rec = pool._do_get()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 146, in _do_get
+    self._dec_overflow()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 143, in _do_get
+    return self._create_connection()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 273, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 388, in __init__
+    self.__connect()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 691, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 686, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/create.py", line 574, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 598, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/home/airflow/.local/lib/python3.7/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "postgres" (172.22.0.8), port 5432 failed: FATAL:  password authentication failed for user "airflow"
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/dag_processing/processor.py", line 178, in _run_file_processor
+    _handle_dag_file_processing()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/dag_processing/processor.py", line 162, in _handle_dag_file_processing
+    callback_requests=callback_requests,
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/session.py", line 76, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/dag_processing/processor.py", line 857, in process_file
+    pickle_dags=pickle_dags,
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/api_internal/internal_api_call.py", line 112, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/session.py", line 76, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/dag_processing/processor.py", line 890, in save_dag_to_db
+    import_errors = DagBag._sync_to_db(dags=dags, processor_subdir=dag_directory, session=session)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/session.py", line 73, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 659, in _sync_to_db
+    for attempt in run_with_db_retries(logger=log):
+  File "/home/airflow/.local/lib/python3.7/site-packages/tenacity/__init__.py", line 347, in __iter__
+    do = self.iter(retry_state=retry_state)
+  File "/home/airflow/.local/lib/python3.7/site-packages/tenacity/__init__.py", line 325, in iter
+    raise retry_exc.reraise()
+  File "/home/airflow/.local/lib/python3.7/site-packages/tenacity/__init__.py", line 158, in reraise
+    raise self.last_attempt.result()
+  File "/usr/local/lib/python3.7/concurrent/futures/_base.py", line 428, in result
+    return self.__get_result()
+  File "/usr/local/lib/python3.7/concurrent/futures/_base.py", line 384, in __get_result
+    raise self._exception
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 671, in _sync_to_db
+    serialize_errors.extend(_serialize_dag_capturing_errors(dag, session))
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 641, in _serialize_dag_capturing_errors
+    session=session,
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/session.py", line 73, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/serialized_dag.py", line 149, in write_dag
+    (timezone.utcnow() - timedelta(seconds=min_update_interval)) < cls.last_updated,
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/orm/query.py", line 2893, in scalar
+    ret = self.one()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/orm/query.py", line 2870, in one
+    return self._iter().one()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/orm/query.py", line 2919, in _iter
+    execution_options={"_sa_orm_load_options": self.load_options},
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 1716, in execute
+    conn = self._connection_for_bind(bind)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 1556, in _connection_for_bind
+    engine, execution_options
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 750, in _connection_for_bind
+    conn = bind.connect()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3320, in connect
+    return self._connection_cls(self, close_with_result=close_with_result)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 96, in __init__
+    else engine.raw_connection()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3399, in raw_connection
+    return self._wrap_pool_connect(self.pool.connect, _connection)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3370, in _wrap_pool_connect
+    e, dialect, self
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 2204, in _handle_dbapi_exception_noconnection
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3366, in _wrap_pool_connect
+    return fn()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 327, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 894, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 493, in checkout
+    rec = pool._do_get()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 146, in _do_get
+    self._dec_overflow()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 143, in _do_get
+    return self._create_connection()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 273, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 388, in __init__
+    self.__connect()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 691, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 686, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/create.py", line 574, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 598, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/home/airflow/.local/lib/python3.7/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+sqlalchemy.exc.OperationalError: (psycopg2.OperationalError) connection to server at "postgres" (172.22.0.8), port 5432 failed: FATAL:  password authentication failed for user "airflow"
+
+(Background on this error at: https://sqlalche.me/e/14/e3q8)
+[2025-09-22T01:40:17.158+0000] {processor.py:157} INFO - Started process (PID=14245) to work on /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:40:17.159+0000] {processor.py:826} INFO - Processing file /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py for tasks to queue
+[2025-09-22T01:40:17.160+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:40:17.160+0000] {dagbag.py:541} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:40:17.164+0000] {processor.py:836} INFO - DAG(s) dict_keys(['example_trigger_controller_dag']) retrieved from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:40:17.191+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:40:17.190+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-22T01:40:17.220+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:40:17.220+0000] {dag.py:3490} INFO - Setting next_dagrun for example_trigger_controller_dag to 2021-01-01T00:00:00+00:00, run_after=2021-01-01T00:00:00+00:00
+[2025-09-22T01:40:17.349+0000] {processor.py:179} INFO - Processing /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py took 0.196 seconds
+[2025-09-22T01:40:47.381+0000] {processor.py:157} INFO - Started process (PID=14524) to work on /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:40:47.382+0000] {processor.py:826} INFO - Processing file /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py for tasks to queue
+[2025-09-22T01:40:47.383+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:40:47.383+0000] {dagbag.py:541} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:40:47.388+0000] {processor.py:836} INFO - DAG(s) dict_keys(['example_trigger_controller_dag']) retrieved from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:40:47.416+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:40:47.416+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-22T01:40:47.445+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:40:47.445+0000] {dag.py:3490} INFO - Setting next_dagrun for example_trigger_controller_dag to 2021-01-01T00:00:00+00:00, run_after=2021-01-01T00:00:00+00:00
+[2025-09-22T01:40:47.465+0000] {processor.py:179} INFO - Processing /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py took 0.088 seconds
+[2025-09-22T01:41:18.128+0000] {processor.py:157} INFO - Started process (PID=14805) to work on /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:41:18.129+0000] {processor.py:826} INFO - Processing file /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py for tasks to queue
+[2025-09-22T01:41:18.130+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:41:18.130+0000] {dagbag.py:541} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:41:18.134+0000] {processor.py:836} INFO - DAG(s) dict_keys(['example_trigger_controller_dag']) retrieved from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:41:18.364+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:41:18.364+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-22T01:41:18.393+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:41:18.393+0000] {dag.py:3490} INFO - Setting next_dagrun for example_trigger_controller_dag to 2021-01-01T00:00:00+00:00, run_after=2021-01-01T00:00:00+00:00
+[2025-09-22T01:41:18.414+0000] {processor.py:179} INFO - Processing /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py took 0.289 seconds
+[2025-09-22T01:41:49.023+0000] {processor.py:157} INFO - Started process (PID=15086) to work on /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:41:49.024+0000] {processor.py:826} INFO - Processing file /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py for tasks to queue
+[2025-09-22T01:41:49.024+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:41:49.024+0000] {dagbag.py:541} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:41:49.029+0000] {processor.py:836} INFO - DAG(s) dict_keys(['example_trigger_controller_dag']) retrieved from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:41:49.428+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:41:49.427+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-22T01:41:49.457+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:41:49.457+0000] {dag.py:3490} INFO - Setting next_dagrun for example_trigger_controller_dag to 2021-01-01T00:00:00+00:00, run_after=2021-01-01T00:00:00+00:00
+[2025-09-22T01:41:49.478+0000] {processor.py:179} INFO - Processing /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py took 0.458 seconds
+[2025-09-22T01:42:19.514+0000] {processor.py:157} INFO - Started process (PID=15364) to work on /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:42:19.515+0000] {processor.py:826} INFO - Processing file /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py for tasks to queue
+[2025-09-22T01:42:19.516+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:42:19.516+0000] {dagbag.py:541} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:42:19.520+0000] {processor.py:836} INFO - DAG(s) dict_keys(['example_trigger_controller_dag']) retrieved from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:42:20.401+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:42:20.401+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-22T01:42:20.429+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:42:20.429+0000] {dag.py:3490} INFO - Setting next_dagrun for example_trigger_controller_dag to 2021-01-01T00:00:00+00:00, run_after=2021-01-01T00:00:00+00:00
+[2025-09-22T01:42:20.451+0000] {processor.py:179} INFO - Processing /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py took 0.940 seconds
+[2025-09-22T01:42:51.063+0000] {processor.py:157} INFO - Started process (PID=15648) to work on /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:42:51.065+0000] {processor.py:826} INFO - Processing file /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py for tasks to queue
+[2025-09-22T01:42:51.066+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:42:51.066+0000] {dagbag.py:541} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:42:51.072+0000] {processor.py:836} INFO - DAG(s) dict_keys(['example_trigger_controller_dag']) retrieved from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:42:51.102+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:42:51.102+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-22T01:42:51.131+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:42:51.131+0000] {dag.py:3490} INFO - Setting next_dagrun for example_trigger_controller_dag to 2021-01-01T00:00:00+00:00, run_after=2021-01-01T00:00:00+00:00
+[2025-09-22T01:42:51.154+0000] {processor.py:179} INFO - Processing /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py took 0.094 seconds
+[2025-09-22T01:43:21.434+0000] {processor.py:157} INFO - Started process (PID=15929) to work on /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:43:21.437+0000] {processor.py:826} INFO - Processing file /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py for tasks to queue
+[2025-09-22T01:43:21.438+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:43:21.438+0000] {dagbag.py:541} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:43:21.443+0000] {processor.py:836} INFO - DAG(s) dict_keys(['example_trigger_controller_dag']) retrieved from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:43:21.583+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:43:21.583+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-22T01:43:21.614+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:43:21.614+0000] {dag.py:3490} INFO - Setting next_dagrun for example_trigger_controller_dag to 2021-01-01T00:00:00+00:00, run_after=2021-01-01T00:00:00+00:00
+[2025-09-22T01:43:21.640+0000] {processor.py:179} INFO - Processing /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py took 0.213 seconds
+[2025-09-22T01:43:51.940+0000] {processor.py:157} INFO - Started process (PID=16207) to work on /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:43:51.942+0000] {processor.py:826} INFO - Processing file /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py for tasks to queue
+[2025-09-22T01:43:51.943+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:43:51.943+0000] {dagbag.py:541} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:43:51.949+0000] {processor.py:836} INFO - DAG(s) dict_keys(['example_trigger_controller_dag']) retrieved from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:43:51.977+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:43:51.977+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-22T01:43:52.011+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:43:52.011+0000] {dag.py:3490} INFO - Setting next_dagrun for example_trigger_controller_dag to 2021-01-01T00:00:00+00:00, run_after=2021-01-01T00:00:00+00:00
+[2025-09-22T01:43:52.036+0000] {processor.py:179} INFO - Processing /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py took 0.100 seconds
+[2025-09-22T01:44:22.901+0000] {processor.py:157} INFO - Started process (PID=16488) to work on /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:44:22.902+0000] {processor.py:826} INFO - Processing file /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py for tasks to queue
+[2025-09-22T01:44:22.903+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:44:22.903+0000] {dagbag.py:541} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:44:22.907+0000] {processor.py:836} INFO - DAG(s) dict_keys(['example_trigger_controller_dag']) retrieved from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2025-09-22T01:44:22.935+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:44:22.934+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-22T01:44:22.963+0000] {logging_mixin.py:149} INFO - [2025-09-22T01:44:22.963+0000] {dag.py:3490} INFO - Setting next_dagrun for example_trigger_controller_dag to 2021-01-01T00:00:00+00:00, run_after=2021-01-01T00:00:00+00:00
+[2025-09-22T01:44:22.985+0000] {processor.py:179} INFO - Processing /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_trigger_controller_dag.py took 0.088 seconds

@@ -1,0 +1,17 @@
+[2025-09-08T11:36:00.698+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: my_second_dag.aggregation scheduled__2025-09-08T07:21:14.471255+00:00 [queued]>
+[2025-09-08T11:36:00.717+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: my_second_dag.aggregation scheduled__2025-09-08T07:21:14.471255+00:00 [queued]>
+[2025-09-08T11:36:00.718+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 3
+[2025-09-08T11:36:00.747+0000] {taskinstance.py:1327} INFO - Executing <Task(BashOperator): aggregation> on 2025-09-08 07:21:14.471255+00:00
+[2025-09-08T11:36:00.758+0000] {standard_task_runner.py:57} INFO - Started process 79558 to run task
+[2025-09-08T11:36:00.763+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'my_second_dag', 'aggregation', 'scheduled__2025-09-08T07:21:14.471255+00:00', '--job-id', '199', '--raw', '--subdir', 'DAGS_FOLDER/my_demo_dag_1.py', '--cfg-path', '/tmp/tmpfm_rg1h6']
+[2025-09-08T11:36:00.768+0000] {standard_task_runner.py:85} INFO - Job 199: Subtask aggregation
+[2025-09-08T11:36:00.848+0000] {task_command.py:410} INFO - Running <TaskInstance: my_second_dag.aggregation scheduled__2025-09-08T07:21:14.471255+00:00 [running]> on host 7b23436a6b61
+[2025-09-08T11:36:01.022+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='trialmail@randommail.com' AIRFLOW_CTX_DAG_OWNER='Dav_E_vangel' AIRFLOW_CTX_DAG_ID='my_second_dag' AIRFLOW_CTX_TASK_ID='aggregation' AIRFLOW_CTX_EXECUTION_DATE='2025-09-08T07:21:14.471255+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-09-08T07:21:14.471255+00:00'
+[2025-09-08T11:36:01.026+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-09-08T11:36:01.027+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'echo "Grouping and ranking data"']
+[2025-09-08T11:36:01.043+0000] {subprocess.py:86} INFO - Output:
+[2025-09-08T11:36:01.046+0000] {subprocess.py:93} INFO - Grouping and ranking data
+[2025-09-08T11:36:01.048+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-09-08T11:36:01.095+0000] {taskinstance.py:1350} INFO - Marking task as SUCCESS. dag_id=my_second_dag, task_id=aggregation, execution_date=20250908T072114, start_date=20250908T113600, end_date=20250908T113601
+[2025-09-08T11:36:01.193+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 0
+[2025-09-08T11:36:01.237+0000] {taskinstance.py:2653} INFO - 1 downstream tasks scheduled from follow-on schedule check

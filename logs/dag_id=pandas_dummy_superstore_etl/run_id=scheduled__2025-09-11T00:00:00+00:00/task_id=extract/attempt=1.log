@@ -1,0 +1,15 @@
+[2025-09-12T08:24:29.003+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: pandas_dummy_superstore_etl.extract scheduled__2025-09-11T00:00:00+00:00 [queued]>
+[2025-09-12T08:24:29.019+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: pandas_dummy_superstore_etl.extract scheduled__2025-09-11T00:00:00+00:00 [queued]>
+[2025-09-12T08:24:29.020+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 3
+[2025-09-12T08:24:29.067+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): extract> on 2025-09-11 00:00:00+00:00
+[2025-09-12T08:24:29.081+0000] {standard_task_runner.py:57} INFO - Started process 267 to run task
+[2025-09-12T08:24:29.091+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'pandas_dummy_superstore_etl', 'extract', 'scheduled__2025-09-11T00:00:00+00:00', '--job-id', '225', '--raw', '--subdir', 'DAGS_FOLDER/dummy_sperstore_dag.py', '--cfg-path', '/tmp/tmp4qm8mlwi']
+[2025-09-12T08:24:29.092+0000] {standard_task_runner.py:85} INFO - Job 225: Subtask extract
+[2025-09-12T08:24:29.209+0000] {task_command.py:410} INFO - Running <TaskInstance: pandas_dummy_superstore_etl.extract scheduled__2025-09-11T00:00:00+00:00 [running]> on host 7b23436a6b61
+[2025-09-12T08:24:29.395+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='random@gmail.com' AIRFLOW_CTX_DAG_OWNER='FarsH' AIRFLOW_CTX_DAG_ID='pandas_dummy_superstore_etl' AIRFLOW_CTX_TASK_ID='extract' AIRFLOW_CTX_EXECUTION_DATE='2025-09-11T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-09-11T00:00:00+00:00'
+[2025-09-12T08:24:29.399+0000] {logging_mixin.py:149} INFO - Extracting dummy_superstore data...
+[2025-09-12T08:24:29.432+0000] {logging_mixin.py:149} INFO - Extracted 100 records to input_data/dummy_superstore_raw.csv
+[2025-09-12T08:24:29.432+0000] {python.py:183} INFO - Done. Returned value was: Extracted 100 records
+[2025-09-12T08:24:29.493+0000] {taskinstance.py:1350} INFO - Marking task as SUCCESS. dag_id=pandas_dummy_superstore_etl, task_id=extract, execution_date=20250911T000000, start_date=20250912T082429, end_date=20250912T082429
+[2025-09-12T08:24:29.559+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 0
+[2025-09-12T08:24:29.623+0000] {taskinstance.py:2653} INFO - 1 downstream tasks scheduled from follow-on schedule check

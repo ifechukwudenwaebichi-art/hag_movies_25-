@@ -1,0 +1,237 @@
+from airflow import DAG
+from airflow.operators.python import PythonOperator
+from airflow.providers.postgres.operators.postgres import PostgresOperator
+from airflow.providers.postgres.hooks.postgres import PostgresHook
+from airflow.utils.dates import days_ago
+from datetime import timedelta
+import pandas as pd
+import numpy as np
+import warnings
+import os
+warnings.filterwarnings('ignore')
+
+# Default arguments
+default_args = {
+    "owner": "Dav_E_vangel",
+    "start_date": days_ago(0),
+    "email": "random@gmail.com",
+    "retries": 2,
+    "retry_delay": timedelta(minutes=5),
+    }
+
+# DAG definition
+dag = DAG(
+    dag_id='logistics_data_etl_pipeline_V1',
+    default_args=default_args,
+    description='ETL pipeline for logistics data from CSV to PostgreSQL',
+    schedule_interval='0 9 * * *',  # Daily at 9 AM
+    catchup=False,
+    tags=['etl', 'logistics', 'postgresql', 'pandas']
+)
+
+# File path
+INPUT_FILE_PATH = '/opt/airflow/input_data/mock_logistics.csv'
+
+def extract_and_clean_logistics_data(**context):
+    """Extract logistics data from CSV and perform initial cleaning"""
+    print(" EXTRACT & CLEAN PHASE")
+    
+    # Read the CSV file
+    df = pd.read_csv(INPUT_FILE_PATH, encoding='latin1')
+    print(f" Loaded {len(df)} records from {INPUT_FILE_PATH}")
+    
+    # Create a copy for cleaning
+    df_clean = df.copy()
+    
+    # 1. DATE CLEANING
+    print(" Cleaning date formats...")
+    df_clean['shipment_date'] = pd.to_datetime(df_clean['shipment_date'], format='mixed', errors='coerce')
+    df_clean['delivery_date'] = pd.to_datetime(df_clean['delivery_date'], format='mixed', errors='coerce')
+    
+    # Fix logical date issues (delivery before shipment)
+    invalid_dates = df_clean['delivery_date'] < df_clean['shipment_date']
+    print(f" Found {invalid_dates.sum()} records with delivery date before shipment date - fixing...")
+    df_clean.loc[invalid_dates, ['shipment_date', 'delivery_date']] = df_clean.loc[invalid_dates, ['delivery_date', 'shipment_date']].values
+    
+    # 2. HANDLE MISSING VALUES
+    print(" Handling missing values...")
+    print("Missing values before cleaning:")
+    print(df_clean.isnull().sum()[df_clean.isnull().sum() > 0])
+    
+    df_clean['recipient_city'] = df_clean['recipient_city'].fillna('Unknown')
+    df_clean['recipient_postal_code'] = df_clean['recipient_postal_code'].fillna('00000')
+    
+    # 3. STANDARDIZE TEXT FIELDS
+    print(" Standardizing text data...")
+    df_clean['origin_country'] = df_clean['origin_country'].str.title()
+    df_clean['destination_country'] = df_clean['destination_country'].str.title()
+    df_clean['shipping_company'] = df_clean['shipping_company'].str.title()
+    df_clean['delivery_status'] = df_clean['delivery_status'].str.lower()
+    
+    # 4. DATA TYPE CONVERSION
+    df_clean['package_weight'] = pd.to_numeric(df_clean['package_weight'], errors='coerce')
+    df_clean['estimated_delivery_time'] = pd.to_numeric(df_clean['estimated_delivery_time'], errors='coerce')
+    
+    # 5. BASIC VALIDATION - Remove invalid records
+    initial_count = len(df_clean)
+    df_clean = df_clean[
+        (df_clean['package_weight'] > 0) & 
+        (df_clean['estimated_delivery_time'] > 0) &
+        (df_clean['shipment_date'].notna()) &
+        (df_clean['delivery_date'].notna())
+    ]
+    removed_count = initial_count - len(df_clean)
+    print(f" Removed {removed_count} invalid records")
+    
+    # Save cleaned data to temporary location for next task
+    df_clean.to_csv('/tmp/cleaned_logistics.csv', index=False)
+    print(f" Cleaned data saved: {len(df_clean)} records")
+    
+    return f"Cleaned {len(df_clean)} logistics records"
+
+def add_calculated_fields(**context):
+    """Add calculated fields and business metrics"""
+    print(" TRANSFORM PHASE: Adding Calculated Fields")
+    
+    # Load cleaned data
+    df = pd.read_csv('/tmp/cleaned_logistics.csv')
+    df['shipment_date'] = pd.to_datetime(df['shipment_date'])
+    df['delivery_date'] = pd.to_datetime(df['delivery_date'])
+    
+    # Calculate shipping duration
+    df['shipping_duration_days'] = (df['delivery_date'] - df['shipment_date']).dt.days
+    
+    # Calculate cost per kg (assuming shipping_cost contains numeric values)
+    # For demo purposes, we'll create a mock numeric shipping cost
+    df['mock_shipping_cost'] = np.random.uniform(10, 100, len(df))
+    df['cost_per_kg'] = (df['mock_shipping_cost'] / df['package_weight']).round(2)
+    
+    # Determine if shipment is expedited (faster than estimated)
+    df['is_expedited'] = df['shipping_duration_days'] < df['estimated_delivery_time']
+    
+    # Add quarter and year for analysis
+    df['shipment_year'] = df['shipment_date'].dt.year
+    df['shipment_quarter'] = df['shipment_date'].dt.quarter
+    df['shipment_month'] = df['shipment_date'].dt.month
+    
+    # Package size category
+    df['weight_category'] = pd.cut(
+        df['package_weight'], 
+        bins=[0, 10, 30, 50, np.inf], 
+        labels=['Light', 'Medium', 'Heavy', 'Extra Heavy']
+    )
+    
+    print(f" Added calculated fields to {len(df)} records")
+    
+    # Save enhanced data
+    df.to_csv('/tmp/enhanced_logistics.csv', index=False)
+    
+    return f"Added calculated fields to {len(df)} records"
+
+def load_to_postgres(**context):
+    """Load processed data to PostgreSQL"""
+    print(" LOAD PHASE: Loading to PostgreSQL")
+    
+    # Read the enhanced data
+    df = pd.read_csv('/tmp/enhanced_logistics.csv')
+    
+    # Get PostgreSQL connection
+    postgres_hook = PostgresHook(postgres_conn_id='hag_postgres')
+    engine = postgres_hook.get_sqlalchemy_engine()
+    
+    # Load data to PostgreSQL
+    try:
+        df.to_sql(
+            name='logistics_shipments',
+            con=engine,
+            schema='shipping_airflow',
+            if_exists='replace',  # Use 'append' for production
+            index=False,
+            method='multi'
+        )
+        print(f" Successfully loaded {len(df)} records to shipping_airflow.logistics_shipments")
+    except Exception as e:
+        print(f" Error loading to database: {e}")
+        raise
+    
+    # Cleanup temporary files
+    
+    temp_files = ['/tmp/cleaned_logistics.csv', '/tmp/enhanced_logistics.csv']
+    for temp_file in temp_files:
+        if os.path.exists(temp_file):
+            os.remove(temp_file)
+    
+    print(" Temporary files cleaned up")
+    return f"Successfully loaded {len(df)} records to PostgreSQL"
+
+# Create schema task
+create_schema_task = PostgresOperator(
+    task_id='create_schema',
+    postgres_conn_id='hag_postgres',
+    sql="""
+    CREATE SCHEMA IF NOT EXISTS shipping_airflow;
+    """,
+    dag=dag
+)
+
+# Create table task
+create_table_task = PostgresOperator(
+    task_id='create_logistics_table',
+    postgres_conn_id='hag_postgres',
+    sql="""
+    CREATE TABLE IF NOT EXISTS shipping_airflow.logistics_shipments (
+        shipment_id INTEGER,
+        tracking_number VARCHAR(50),
+        shipment_date DATE,
+        delivery_date DATE,
+        origin_country VARCHAR(100),
+        destination_country VARCHAR(100),
+        shipping_company VARCHAR(100),
+        shipping_method VARCHAR(20),
+        package_weight DECIMAL(10,2),
+        package_dimensions VARCHAR(20),
+        shipping_cost VARCHAR(50),
+        customs_value VARCHAR(50),
+        delivery_status VARCHAR(20),
+        recipient_name VARCHAR(200),
+        recipient_address TEXT,
+        recipient_city VARCHAR(100),
+        recipient_postal_code VARCHAR(20),
+        recipient_phone VARCHAR(20),
+        delivery_signature BOOLEAN,
+        estimated_delivery_time INTEGER,
+        shipping_duration_days INTEGER,
+        mock_shipping_cost DECIMAL(10,2),
+        cost_per_kg DECIMAL(10,2),
+        is_expedited BOOLEAN,
+        shipment_year INTEGER,
+        shipment_quarter INTEGER,
+        shipment_month INTEGER,
+        weight_category VARCHAR(20),
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    );
+    """,
+    dag=dag
+)
+
+# Python tasks
+extract_clean_task = PythonOperator(
+    task_id='extract_and_clean',
+    python_callable=extract_and_clean_logistics_data,
+    dag=dag
+)
+
+add_fields_task = PythonOperator(
+    task_id='add_calculated_fields',
+    python_callable=add_calculated_fields,
+    dag=dag
+)
+
+load_task = PythonOperator(
+    task_id='load_to_postgres',
+    python_callable=load_to_postgres,
+    dag=dag
+)
+
+# Task dependencies
+create_schema_task >> create_table_task >> extract_clean_task >> add_fields_task >> load_task

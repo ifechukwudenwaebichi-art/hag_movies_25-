@@ -1,0 +1,7 @@
+[2025-09-15T11:05:37.924+0000] {processor.py:157} INFO - Started process (PID=176) to work on /opt/airflow/dags/superstore_dag.py
+[2025-09-15T11:05:37.930+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/superstore_dag.py for tasks to queue
+[2025-09-15T11:05:37.934+0000] {logging_mixin.py:149} INFO - [2025-09-15T11:05:37.934+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/superstore_dag.py
+[2025-09-15T11:05:42.016+0000] {processor.py:836} INFO - DAG(s) dict_keys(['superstore_etl_pipeline']) retrieved from /opt/airflow/dags/superstore_dag.py
+[2025-09-15T11:05:43.014+0000] {logging_mixin.py:149} INFO - [2025-09-15T11:05:43.013+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-15T11:05:43.096+0000] {logging_mixin.py:149} INFO - [2025-09-15T11:05:43.096+0000] {dag.py:3490} INFO - Setting next_dagrun for superstore_etl_pipeline to 2025-09-15T00:00:00+00:00, run_after=2025-09-16T00:00:00+00:00
+[2025-09-15T11:05:43.172+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/superstore_dag.py took 5.279 seconds

@@ -1,0 +1,193 @@
+[2025-09-28T22:45:23.990+0000] {processor.py:157} INFO - Started process (PID=37873) to work on /opt/airflow/dags/mock_logistic_dag2.py
+[2025-09-28T22:45:23.991+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/mock_logistic_dag2.py for tasks to queue
+[2025-09-28T22:45:23.992+0000] {logging_mixin.py:149} INFO - [2025-09-28T22:45:23.991+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/mock_logistic_dag2.py
+[2025-09-28T22:45:24.541+0000] {processor.py:836} INFO - DAG(s) dict_keys(['logistics_data_etl_pipeline_v4']) retrieved from /opt/airflow/dags/mock_logistic_dag2.py
+[2025-09-28T22:45:24.671+0000] {logging_mixin.py:149} INFO - [2025-09-28T22:45:24.671+0000] {manager.py:504} INFO - Created Permission View: can read on DAG:logistics_data_etl_pipeline_v4
+[2025-09-28T22:45:24.683+0000] {logging_mixin.py:149} INFO - [2025-09-28T22:45:24.683+0000] {manager.py:504} INFO - Created Permission View: can delete on DAG:logistics_data_etl_pipeline_v4
+[2025-09-28T22:45:24.693+0000] {logging_mixin.py:149} INFO - [2025-09-28T22:45:24.692+0000] {manager.py:504} INFO - Created Permission View: can edit on DAG:logistics_data_etl_pipeline_v4
+[2025-09-28T22:45:24.710+0000] {logging_mixin.py:149} INFO - [2025-09-28T22:45:24.709+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-28T22:45:24.722+0000] {logging_mixin.py:149} INFO - [2025-09-28T22:45:24.721+0000] {dag.py:2747} INFO - Creating ORM DAG for logistics_data_etl_pipeline_v4
+[2025-09-28T22:45:24.732+0000] {logging_mixin.py:149} INFO - [2025-09-28T22:45:24.732+0000] {dag.py:3490} INFO - Setting next_dagrun for logistics_data_etl_pipeline_v4 to 2025-09-28T10:00:00+00:00, run_after=2025-09-29T10:00:00+00:00
+[2025-09-28T22:45:24.753+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/mock_logistic_dag2.py took 0.767 seconds
+[2025-09-28T22:45:55.167+0000] {processor.py:157} INFO - Started process (PID=38187) to work on /opt/airflow/dags/mock_logistic_dag2.py
+[2025-09-28T22:45:55.168+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/mock_logistic_dag2.py for tasks to queue
+[2025-09-28T22:45:55.169+0000] {logging_mixin.py:149} INFO - [2025-09-28T22:45:55.169+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/mock_logistic_dag2.py
+[2025-09-28T22:45:55.696+0000] {processor.py:836} INFO - DAG(s) dict_keys(['logistics_data_etl_pipeline_v4']) retrieved from /opt/airflow/dags/mock_logistic_dag2.py
+[2025-09-28T22:45:55.718+0000] {logging_mixin.py:149} INFO - [2025-09-28T22:45:55.717+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-28T22:45:55.742+0000] {logging_mixin.py:149} INFO - [2025-09-28T22:45:55.741+0000] {dag.py:3490} INFO - Setting next_dagrun for logistics_data_etl_pipeline_v4 to 2025-09-28T10:00:00+00:00, run_after=2025-09-29T10:00:00+00:00
+[2025-09-28T22:45:55.759+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/mock_logistic_dag2.py took 0.596 seconds
+[2025-09-28T22:46:26.152+0000] {processor.py:157} INFO - Started process (PID=38494) to work on /opt/airflow/dags/mock_logistic_dag2.py
+[2025-09-28T22:46:26.153+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/mock_logistic_dag2.py for tasks to queue
+[2025-09-28T22:46:26.154+0000] {logging_mixin.py:149} INFO - [2025-09-28T22:46:26.154+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/mock_logistic_dag2.py
+[2025-09-28T22:46:26.707+0000] {processor.py:836} INFO - DAG(s) dict_keys(['logistics_data_etl_pipeline_v4']) retrieved from /opt/airflow/dags/mock_logistic_dag2.py
+[2025-09-28T22:46:26.729+0000] {logging_mixin.py:149} INFO - [2025-09-28T22:46:26.728+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-28T22:46:26.751+0000] {logging_mixin.py:149} INFO - [2025-09-28T22:46:26.751+0000] {dag.py:3490} INFO - Setting next_dagrun for logistics_data_etl_pipeline_v4 to 2025-09-28T10:00:00+00:00, run_after=2025-09-29T10:00:00+00:00
+[2025-09-28T22:46:26.770+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/mock_logistic_dag2.py took 0.622 seconds
+[2025-09-28T22:46:56.822+0000] {processor.py:157} INFO - Started process (PID=38801) to work on /opt/airflow/dags/mock_logistic_dag2.py
+[2025-09-28T22:46:56.823+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/mock_logistic_dag2.py for tasks to queue
+[2025-09-28T22:46:56.824+0000] {logging_mixin.py:149} INFO - [2025-09-28T22:46:56.824+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/mock_logistic_dag2.py
+[2025-09-28T22:46:57.362+0000] {processor.py:836} INFO - DAG(s) dict_keys(['logistics_data_etl_pipeline_v4']) retrieved from /opt/airflow/dags/mock_logistic_dag2.py
+[2025-09-28T22:46:57.384+0000] {logging_mixin.py:149} INFO - [2025-09-28T22:46:57.384+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-28T22:46:57.408+0000] {logging_mixin.py:149} INFO - [2025-09-28T22:46:57.408+0000] {dag.py:3490} INFO - Setting next_dagrun for logistics_data_etl_pipeline_v4 to 2025-09-28T10:00:00+00:00, run_after=2025-09-29T10:00:00+00:00
+[2025-09-28T22:46:57.427+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/mock_logistic_dag2.py took 0.610 seconds
+[2025-09-28T22:47:27.534+0000] {processor.py:157} INFO - Started process (PID=39108) to work on /opt/airflow/dags/mock_logistic_dag2.py
+[2025-09-28T22:47:27.535+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/mock_logistic_dag2.py for tasks to queue
+[2025-09-28T22:47:27.536+0000] {logging_mixin.py:149} INFO - [2025-09-28T22:47:27.536+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/mock_logistic_dag2.py
+[2025-09-28T22:47:28.057+0000] {processor.py:836} INFO - DAG(s) dict_keys(['logistics_data_etl_pipeline_v4']) retrieved from /opt/airflow/dags/mock_logistic_dag2.py
+[2025-09-28T22:47:28.078+0000] {logging_mixin.py:149} INFO - [2025-09-28T22:47:28.078+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-28T22:47:28.103+0000] {logging_mixin.py:149} INFO - [2025-09-28T22:47:28.103+0000] {dag.py:3490} INFO - Setting next_dagrun for logistics_data_etl_pipeline_v4 to 2025-09-28T10:00:00+00:00, run_after=2025-09-29T10:00:00+00:00
+[2025-09-28T22:47:28.123+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/mock_logistic_dag2.py took 0.593 seconds
+[2025-09-28T22:47:58.356+0000] {processor.py:157} INFO - Started process (PID=39415) to work on /opt/airflow/dags/mock_logistic_dag2.py
+[2025-09-28T22:47:58.357+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/mock_logistic_dag2.py for tasks to queue
+[2025-09-28T22:47:58.358+0000] {logging_mixin.py:149} INFO - [2025-09-28T22:47:58.358+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/mock_logistic_dag2.py
+[2025-09-28T22:47:58.869+0000] {processor.py:836} INFO - DAG(s) dict_keys(['logistics_data_etl_pipeline_v4']) retrieved from /opt/airflow/dags/mock_logistic_dag2.py
+[2025-09-28T22:47:58.890+0000] {logging_mixin.py:149} INFO - [2025-09-28T22:47:58.890+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-28T22:47:58.913+0000] {logging_mixin.py:149} INFO - [2025-09-28T22:47:58.913+0000] {dag.py:3490} INFO - Setting next_dagrun for logistics_data_etl_pipeline_v4 to 2025-09-28T10:00:00+00:00, run_after=2025-09-29T10:00:00+00:00
+[2025-09-28T22:47:58.932+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/mock_logistic_dag2.py took 0.579 seconds
+[2025-09-28T22:48:28.996+0000] {processor.py:157} INFO - Started process (PID=39722) to work on /opt/airflow/dags/mock_logistic_dag2.py
+[2025-09-28T22:48:28.997+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/mock_logistic_dag2.py for tasks to queue
+[2025-09-28T22:48:28.998+0000] {logging_mixin.py:149} INFO - [2025-09-28T22:48:28.998+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/mock_logistic_dag2.py
+[2025-09-28T22:48:29.523+0000] {processor.py:836} INFO - DAG(s) dict_keys(['logistics_data_etl_pipeline_v4']) retrieved from /opt/airflow/dags/mock_logistic_dag2.py
+[2025-09-28T22:48:29.546+0000] {logging_mixin.py:149} INFO - [2025-09-28T22:48:29.545+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-28T22:48:29.569+0000] {logging_mixin.py:149} INFO - [2025-09-28T22:48:29.569+0000] {dag.py:3490} INFO - Setting next_dagrun for logistics_data_etl_pipeline_v4 to 2025-09-28T10:00:00+00:00, run_after=2025-09-29T10:00:00+00:00
+[2025-09-28T22:48:29.589+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/mock_logistic_dag2.py took 0.598 seconds
+[2025-09-28T22:48:59.961+0000] {processor.py:157} INFO - Started process (PID=40029) to work on /opt/airflow/dags/mock_logistic_dag2.py
+[2025-09-28T22:48:59.962+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/mock_logistic_dag2.py for tasks to queue
+[2025-09-28T22:48:59.963+0000] {logging_mixin.py:149} INFO - [2025-09-28T22:48:59.963+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/mock_logistic_dag2.py
+[2025-09-28T22:49:00.371+0000] {processor.py:836} INFO - DAG(s) dict_keys(['logistics_data_etl_pipeline_v4']) retrieved from /opt/airflow/dags/mock_logistic_dag2.py
+[2025-09-28T22:49:00.398+0000] {logging_mixin.py:149} INFO - [2025-09-28T22:49:00.398+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-28T22:49:00.426+0000] {logging_mixin.py:149} INFO - [2025-09-28T22:49:00.426+0000] {dag.py:3490} INFO - Setting next_dagrun for logistics_data_etl_pipeline_v4 to 2025-09-28T10:00:00+00:00, run_after=2025-09-29T10:00:00+00:00
+[2025-09-28T22:49:00.446+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/mock_logistic_dag2.py took 0.489 seconds
+[2025-09-28T22:49:30.975+0000] {processor.py:157} INFO - Started process (PID=40336) to work on /opt/airflow/dags/mock_logistic_dag2.py
+[2025-09-28T22:49:30.977+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/mock_logistic_dag2.py for tasks to queue
+[2025-09-28T22:49:30.978+0000] {logging_mixin.py:149} INFO - [2025-09-28T22:49:30.977+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/mock_logistic_dag2.py
+[2025-09-28T22:49:31.396+0000] {processor.py:836} INFO - DAG(s) dict_keys(['logistics_data_etl_pipeline_v4']) retrieved from /opt/airflow/dags/mock_logistic_dag2.py
+[2025-09-28T22:49:31.425+0000] {logging_mixin.py:149} INFO - [2025-09-28T22:49:31.424+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-28T22:49:31.451+0000] {logging_mixin.py:149} INFO - [2025-09-28T22:49:31.450+0000] {dag.py:3490} INFO - Setting next_dagrun for logistics_data_etl_pipeline_v4 to 2025-09-28T10:00:00+00:00, run_after=2025-09-29T10:00:00+00:00
+[2025-09-28T22:49:31.471+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/mock_logistic_dag2.py took 0.500 seconds
+[2025-09-28T22:50:01.659+0000] {processor.py:157} INFO - Started process (PID=40643) to work on /opt/airflow/dags/mock_logistic_dag2.py
+[2025-09-28T22:50:01.660+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/mock_logistic_dag2.py for tasks to queue
+[2025-09-28T22:50:01.661+0000] {logging_mixin.py:149} INFO - [2025-09-28T22:50:01.660+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/mock_logistic_dag2.py
+[2025-09-28T22:50:02.069+0000] {processor.py:836} INFO - DAG(s) dict_keys(['logistics_data_etl_pipeline_v4']) retrieved from /opt/airflow/dags/mock_logistic_dag2.py
+[2025-09-28T22:50:02.095+0000] {logging_mixin.py:149} INFO - [2025-09-28T22:50:02.095+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-28T22:50:02.120+0000] {logging_mixin.py:149} INFO - [2025-09-28T22:50:02.120+0000] {dag.py:3490} INFO - Setting next_dagrun for logistics_data_etl_pipeline_v4 to 2025-09-28T10:00:00+00:00, run_after=2025-09-29T10:00:00+00:00
+[2025-09-28T22:50:02.141+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/mock_logistic_dag2.py took 0.486 seconds
+[2025-09-28T22:50:32.187+0000] {processor.py:157} INFO - Started process (PID=40950) to work on /opt/airflow/dags/mock_logistic_dag2.py
+[2025-09-28T22:50:32.188+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/mock_logistic_dag2.py for tasks to queue
+[2025-09-28T22:50:32.189+0000] {logging_mixin.py:149} INFO - [2025-09-28T22:50:32.189+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/mock_logistic_dag2.py
+[2025-09-28T22:50:32.607+0000] {processor.py:836} INFO - DAG(s) dict_keys(['logistics_data_etl_pipeline_v4']) retrieved from /opt/airflow/dags/mock_logistic_dag2.py
+[2025-09-28T22:50:32.633+0000] {logging_mixin.py:149} INFO - [2025-09-28T22:50:32.633+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-28T22:50:32.659+0000] {logging_mixin.py:149} INFO - [2025-09-28T22:50:32.659+0000] {dag.py:3490} INFO - Setting next_dagrun for logistics_data_etl_pipeline_v4 to 2025-09-28T10:00:00+00:00, run_after=2025-09-29T10:00:00+00:00
+[2025-09-28T22:50:32.679+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/mock_logistic_dag2.py took 0.495 seconds
+[2025-09-28T22:51:03.044+0000] {processor.py:157} INFO - Started process (PID=41257) to work on /opt/airflow/dags/mock_logistic_dag2.py
+[2025-09-28T22:51:03.045+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/mock_logistic_dag2.py for tasks to queue
+[2025-09-28T22:51:03.046+0000] {logging_mixin.py:149} INFO - [2025-09-28T22:51:03.046+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/mock_logistic_dag2.py
+[2025-09-28T22:51:03.510+0000] {processor.py:836} INFO - DAG(s) dict_keys(['logistics_data_etl_pipeline_v4']) retrieved from /opt/airflow/dags/mock_logistic_dag2.py
+[2025-09-28T22:51:03.540+0000] {logging_mixin.py:149} INFO - [2025-09-28T22:51:03.539+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-28T22:51:03.586+0000] {logging_mixin.py:149} INFO - [2025-09-28T22:51:03.585+0000] {dag.py:3490} INFO - Setting next_dagrun for logistics_data_etl_pipeline_v4 to 2025-09-28T10:00:00+00:00, run_after=2025-09-29T10:00:00+00:00
+[2025-09-28T22:51:03.606+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/mock_logistic_dag2.py took 0.565 seconds
+[2025-09-28T22:51:34.072+0000] {processor.py:157} INFO - Started process (PID=41564) to work on /opt/airflow/dags/mock_logistic_dag2.py
+[2025-09-28T22:51:34.073+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/mock_logistic_dag2.py for tasks to queue
+[2025-09-28T22:51:34.074+0000] {logging_mixin.py:149} INFO - [2025-09-28T22:51:34.074+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/mock_logistic_dag2.py
+[2025-09-28T22:51:34.471+0000] {processor.py:836} INFO - DAG(s) dict_keys(['logistics_data_etl_pipeline_v4']) retrieved from /opt/airflow/dags/mock_logistic_dag2.py
+[2025-09-28T22:51:34.497+0000] {logging_mixin.py:149} INFO - [2025-09-28T22:51:34.496+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-28T22:51:34.523+0000] {logging_mixin.py:149} INFO - [2025-09-28T22:51:34.523+0000] {dag.py:3490} INFO - Setting next_dagrun for logistics_data_etl_pipeline_v4 to 2025-09-28T10:00:00+00:00, run_after=2025-09-29T10:00:00+00:00
+[2025-09-28T22:51:34.544+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/mock_logistic_dag2.py took 0.477 seconds
+[2025-09-28T22:52:04.623+0000] {processor.py:157} INFO - Started process (PID=41871) to work on /opt/airflow/dags/mock_logistic_dag2.py
+[2025-09-28T22:52:04.624+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/mock_logistic_dag2.py for tasks to queue
+[2025-09-28T22:52:04.625+0000] {logging_mixin.py:149} INFO - [2025-09-28T22:52:04.624+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/mock_logistic_dag2.py
+[2025-09-28T22:52:05.023+0000] {processor.py:836} INFO - DAG(s) dict_keys(['logistics_data_etl_pipeline_v4']) retrieved from /opt/airflow/dags/mock_logistic_dag2.py
+[2025-09-28T22:52:05.049+0000] {logging_mixin.py:149} INFO - [2025-09-28T22:52:05.048+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-28T22:52:05.079+0000] {logging_mixin.py:149} INFO - [2025-09-28T22:52:05.079+0000] {dag.py:3490} INFO - Setting next_dagrun for logistics_data_etl_pipeline_v4 to 2025-09-28T10:00:00+00:00, run_after=2025-09-29T10:00:00+00:00
+[2025-09-28T22:52:05.100+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/mock_logistic_dag2.py took 0.481 seconds
+[2025-09-28T22:52:35.575+0000] {processor.py:157} INFO - Started process (PID=42178) to work on /opt/airflow/dags/mock_logistic_dag2.py
+[2025-09-28T22:52:35.576+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/mock_logistic_dag2.py for tasks to queue
+[2025-09-28T22:52:35.578+0000] {logging_mixin.py:149} INFO - [2025-09-28T22:52:35.577+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/mock_logistic_dag2.py
+[2025-09-28T22:52:36.004+0000] {processor.py:836} INFO - DAG(s) dict_keys(['logistics_data_etl_pipeline_v4']) retrieved from /opt/airflow/dags/mock_logistic_dag2.py
+[2025-09-28T22:52:36.028+0000] {logging_mixin.py:149} INFO - [2025-09-28T22:52:36.027+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-28T22:52:36.054+0000] {logging_mixin.py:149} INFO - [2025-09-28T22:52:36.054+0000] {dag.py:3490} INFO - Setting next_dagrun for logistics_data_etl_pipeline_v4 to 2025-09-28T10:00:00+00:00, run_after=2025-09-29T10:00:00+00:00
+[2025-09-28T22:52:36.074+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/mock_logistic_dag2.py took 0.503 seconds
+[2025-09-28T22:53:06.526+0000] {processor.py:157} INFO - Started process (PID=42485) to work on /opt/airflow/dags/mock_logistic_dag2.py
+[2025-09-28T22:53:06.527+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/mock_logistic_dag2.py for tasks to queue
+[2025-09-28T22:53:06.528+0000] {logging_mixin.py:149} INFO - [2025-09-28T22:53:06.528+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/mock_logistic_dag2.py
+[2025-09-28T22:53:06.934+0000] {processor.py:836} INFO - DAG(s) dict_keys(['logistics_data_etl_pipeline_v4']) retrieved from /opt/airflow/dags/mock_logistic_dag2.py
+[2025-09-28T22:53:06.960+0000] {logging_mixin.py:149} INFO - [2025-09-28T22:53:06.960+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-28T22:53:06.986+0000] {logging_mixin.py:149} INFO - [2025-09-28T22:53:06.985+0000] {dag.py:3490} INFO - Setting next_dagrun for logistics_data_etl_pipeline_v4 to 2025-09-28T10:00:00+00:00, run_after=2025-09-29T10:00:00+00:00
+[2025-09-28T22:53:07.005+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/mock_logistic_dag2.py took 0.484 seconds
+[2025-09-28T22:53:37.254+0000] {processor.py:157} INFO - Started process (PID=42792) to work on /opt/airflow/dags/mock_logistic_dag2.py
+[2025-09-28T22:53:37.255+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/mock_logistic_dag2.py for tasks to queue
+[2025-09-28T22:53:37.256+0000] {logging_mixin.py:149} INFO - [2025-09-28T22:53:37.256+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/mock_logistic_dag2.py
+[2025-09-28T22:53:37.657+0000] {processor.py:836} INFO - DAG(s) dict_keys(['logistics_data_etl_pipeline_v4']) retrieved from /opt/airflow/dags/mock_logistic_dag2.py
+[2025-09-28T22:53:37.682+0000] {logging_mixin.py:149} INFO - [2025-09-28T22:53:37.681+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-28T22:53:37.839+0000] {logging_mixin.py:149} INFO - [2025-09-28T22:53:37.839+0000] {dag.py:3490} INFO - Setting next_dagrun for logistics_data_etl_pipeline_v4 to 2025-09-28T10:00:00+00:00, run_after=2025-09-29T10:00:00+00:00
+[2025-09-28T22:53:37.861+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/mock_logistic_dag2.py took 0.612 seconds
+[2025-09-28T22:54:08.118+0000] {processor.py:157} INFO - Started process (PID=43099) to work on /opt/airflow/dags/mock_logistic_dag2.py
+[2025-09-28T22:54:08.119+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/mock_logistic_dag2.py for tasks to queue
+[2025-09-28T22:54:08.120+0000] {logging_mixin.py:149} INFO - [2025-09-28T22:54:08.120+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/mock_logistic_dag2.py
+[2025-09-28T22:54:08.537+0000] {processor.py:836} INFO - DAG(s) dict_keys(['logistics_data_etl_pipeline_v4']) retrieved from /opt/airflow/dags/mock_logistic_dag2.py
+[2025-09-28T22:54:08.561+0000] {logging_mixin.py:149} INFO - [2025-09-28T22:54:08.560+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-28T22:54:08.590+0000] {logging_mixin.py:149} INFO - [2025-09-28T22:54:08.590+0000] {dag.py:3490} INFO - Setting next_dagrun for logistics_data_etl_pipeline_v4 to 2025-09-28T10:00:00+00:00, run_after=2025-09-29T10:00:00+00:00
+[2025-09-28T22:54:08.722+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/mock_logistic_dag2.py took 0.607 seconds
+[2025-09-28T22:54:39.062+0000] {processor.py:157} INFO - Started process (PID=43406) to work on /opt/airflow/dags/mock_logistic_dag2.py
+[2025-09-28T22:54:39.063+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/mock_logistic_dag2.py for tasks to queue
+[2025-09-28T22:54:39.064+0000] {logging_mixin.py:149} INFO - [2025-09-28T22:54:39.064+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/mock_logistic_dag2.py
+[2025-09-28T22:54:39.469+0000] {processor.py:836} INFO - DAG(s) dict_keys(['logistics_data_etl_pipeline_v4']) retrieved from /opt/airflow/dags/mock_logistic_dag2.py
+[2025-09-28T22:54:39.621+0000] {logging_mixin.py:149} INFO - [2025-09-28T22:54:39.620+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-28T22:54:39.648+0000] {logging_mixin.py:149} INFO - [2025-09-28T22:54:39.648+0000] {dag.py:3490} INFO - Setting next_dagrun for logistics_data_etl_pipeline_v4 to 2025-09-28T10:00:00+00:00, run_after=2025-09-29T10:00:00+00:00
+[2025-09-28T22:54:39.666+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/mock_logistic_dag2.py took 0.608 seconds
+[2025-09-28T23:09:25.556+0000] {processor.py:157} INFO - Started process (PID=43712) to work on /opt/airflow/dags/mock_logistic_dag2.py
+[2025-09-28T23:09:25.557+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/mock_logistic_dag2.py for tasks to queue
+[2025-09-28T23:09:25.559+0000] {logging_mixin.py:149} INFO - [2025-09-28T23:09:25.559+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/mock_logistic_dag2.py
+[2025-09-28T23:09:26.800+0000] {processor.py:836} INFO - DAG(s) dict_keys(['logistics_data_etl_pipeline_v4']) retrieved from /opt/airflow/dags/mock_logistic_dag2.py
+[2025-09-28T23:09:26.873+0000] {logging_mixin.py:149} INFO - [2025-09-28T23:09:26.872+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-28T23:09:26.943+0000] {logging_mixin.py:149} INFO - [2025-09-28T23:09:26.943+0000] {dag.py:3490} INFO - Setting next_dagrun for logistics_data_etl_pipeline_v4 to 2025-09-28T10:00:00+00:00, run_after=2025-09-29T10:00:00+00:00
+[2025-09-28T23:09:26.987+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/mock_logistic_dag2.py took 1.435 seconds
+[2025-09-28T23:09:57.489+0000] {processor.py:157} INFO - Started process (PID=44019) to work on /opt/airflow/dags/mock_logistic_dag2.py
+[2025-09-28T23:09:57.491+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/mock_logistic_dag2.py for tasks to queue
+[2025-09-28T23:09:57.492+0000] {logging_mixin.py:149} INFO - [2025-09-28T23:09:57.492+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/mock_logistic_dag2.py
+[2025-09-28T23:09:58.042+0000] {processor.py:836} INFO - DAG(s) dict_keys(['logistics_data_etl_pipeline_v4']) retrieved from /opt/airflow/dags/mock_logistic_dag2.py
+[2025-09-28T23:09:58.064+0000] {logging_mixin.py:149} INFO - [2025-09-28T23:09:58.063+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-28T23:09:58.089+0000] {logging_mixin.py:149} INFO - [2025-09-28T23:09:58.089+0000] {dag.py:3490} INFO - Setting next_dagrun for logistics_data_etl_pipeline_v4 to 2025-09-28T10:00:00+00:00, run_after=2025-09-29T10:00:00+00:00
+[2025-09-28T23:09:58.115+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/mock_logistic_dag2.py took 0.630 seconds
+[2025-09-28T23:10:28.675+0000] {processor.py:157} INFO - Started process (PID=44326) to work on /opt/airflow/dags/mock_logistic_dag2.py
+[2025-09-28T23:10:28.677+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/mock_logistic_dag2.py for tasks to queue
+[2025-09-28T23:10:28.678+0000] {logging_mixin.py:149} INFO - [2025-09-28T23:10:28.677+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/mock_logistic_dag2.py
+[2025-09-28T23:10:29.223+0000] {processor.py:836} INFO - DAG(s) dict_keys(['logistics_data_etl_pipeline_v4']) retrieved from /opt/airflow/dags/mock_logistic_dag2.py
+[2025-09-28T23:10:29.245+0000] {logging_mixin.py:149} INFO - [2025-09-28T23:10:29.244+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-28T23:10:29.268+0000] {logging_mixin.py:149} INFO - [2025-09-28T23:10:29.268+0000] {dag.py:3490} INFO - Setting next_dagrun for logistics_data_etl_pipeline_v4 to 2025-09-28T10:00:00+00:00, run_after=2025-09-29T10:00:00+00:00
+[2025-09-28T23:10:29.293+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/mock_logistic_dag2.py took 0.622 seconds
+[2025-09-28T23:10:59.595+0000] {processor.py:157} INFO - Started process (PID=44633) to work on /opt/airflow/dags/mock_logistic_dag2.py
+[2025-09-28T23:10:59.596+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/mock_logistic_dag2.py for tasks to queue
+[2025-09-28T23:10:59.597+0000] {logging_mixin.py:149} INFO - [2025-09-28T23:10:59.596+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/mock_logistic_dag2.py
+[2025-09-28T23:11:00.151+0000] {processor.py:836} INFO - DAG(s) dict_keys(['logistics_data_etl_pipeline_v4']) retrieved from /opt/airflow/dags/mock_logistic_dag2.py
+[2025-09-28T23:11:00.173+0000] {logging_mixin.py:149} INFO - [2025-09-28T23:11:00.173+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-28T23:11:00.195+0000] {logging_mixin.py:149} INFO - [2025-09-28T23:11:00.195+0000] {dag.py:3490} INFO - Setting next_dagrun for logistics_data_etl_pipeline_v4 to 2025-09-28T10:00:00+00:00, run_after=2025-09-29T10:00:00+00:00
+[2025-09-28T23:11:00.218+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/mock_logistic_dag2.py took 0.628 seconds
+[2025-09-28T23:11:30.573+0000] {processor.py:157} INFO - Started process (PID=44940) to work on /opt/airflow/dags/mock_logistic_dag2.py
+[2025-09-28T23:11:30.574+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/mock_logistic_dag2.py for tasks to queue
+[2025-09-28T23:11:30.575+0000] {logging_mixin.py:149} INFO - [2025-09-28T23:11:30.575+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/mock_logistic_dag2.py
+[2025-09-28T23:11:31.147+0000] {processor.py:836} INFO - DAG(s) dict_keys(['logistics_data_etl_pipeline_v4']) retrieved from /opt/airflow/dags/mock_logistic_dag2.py
+[2025-09-28T23:11:31.168+0000] {logging_mixin.py:149} INFO - [2025-09-28T23:11:31.168+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-28T23:11:31.191+0000] {logging_mixin.py:149} INFO - [2025-09-28T23:11:31.191+0000] {dag.py:3490} INFO - Setting next_dagrun for logistics_data_etl_pipeline_v4 to 2025-09-28T10:00:00+00:00, run_after=2025-09-29T10:00:00+00:00
+[2025-09-28T23:11:31.214+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/mock_logistic_dag2.py took 0.645 seconds
+[2025-09-28T23:12:01.550+0000] {processor.py:157} INFO - Started process (PID=45247) to work on /opt/airflow/dags/mock_logistic_dag2.py
+[2025-09-28T23:12:01.551+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/mock_logistic_dag2.py for tasks to queue
+[2025-09-28T23:12:01.552+0000] {logging_mixin.py:149} INFO - [2025-09-28T23:12:01.552+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/mock_logistic_dag2.py
+[2025-09-28T23:12:02.141+0000] {processor.py:836} INFO - DAG(s) dict_keys(['logistics_data_etl_pipeline_v4']) retrieved from /opt/airflow/dags/mock_logistic_dag2.py
+[2025-09-28T23:12:02.163+0000] {logging_mixin.py:149} INFO - [2025-09-28T23:12:02.163+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-28T23:12:02.188+0000] {logging_mixin.py:149} INFO - [2025-09-28T23:12:02.188+0000] {dag.py:3490} INFO - Setting next_dagrun for logistics_data_etl_pipeline_v4 to 2025-09-28T10:00:00+00:00, run_after=2025-09-29T10:00:00+00:00
+[2025-09-28T23:12:02.210+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/mock_logistic_dag2.py took 0.664 seconds
+[2025-09-28T23:57:15.374+0000] {processor.py:157} INFO - Started process (PID=45343) to work on /opt/airflow/dags/mock_logistic_dag2.py
+[2025-09-28T23:57:15.378+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/mock_logistic_dag2.py for tasks to queue
+[2025-09-28T23:57:15.382+0000] {logging_mixin.py:149} INFO - [2025-09-28T23:57:15.381+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/mock_logistic_dag2.py
+[2025-09-28T23:57:16.438+0000] {processor.py:836} INFO - DAG(s) dict_keys(['logistics_data_etl_pipeline_v4']) retrieved from /opt/airflow/dags/mock_logistic_dag2.py
+[2025-09-28T23:57:16.486+0000] {logging_mixin.py:149} INFO - [2025-09-28T23:57:16.486+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-28T23:57:16.530+0000] {logging_mixin.py:149} INFO - [2025-09-28T23:57:16.530+0000] {dag.py:3490} INFO - Setting next_dagrun for logistics_data_etl_pipeline_v4 to 2025-09-28T10:00:00+00:00, run_after=2025-09-29T10:00:00+00:00
+[2025-09-28T23:57:16.564+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/mock_logistic_dag2.py took 1.198 seconds
+[2025-09-28T23:57:55.887+0000] {processor.py:157} INFO - Started process (PID=45645) to work on /opt/airflow/dags/mock_logistic_dag2.py
+[2025-09-28T23:57:55.906+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/mock_logistic_dag2.py for tasks to queue
+[2025-09-28T23:57:55.928+0000] {logging_mixin.py:149} INFO - [2025-09-28T23:57:55.925+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/mock_logistic_dag2.py
+[2025-09-28T23:58:08.829+0000] {processor.py:836} INFO - DAG(s) dict_keys(['logistics_data_etl_pipeline_v4']) retrieved from /opt/airflow/dags/mock_logistic_dag2.py
+[2025-09-28T23:58:09.469+0000] {logging_mixin.py:149} INFO - [2025-09-28T23:58:09.454+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-28T23:58:10.099+0000] {logging_mixin.py:149} INFO - [2025-09-28T23:58:10.098+0000] {dag.py:3490} INFO - Setting next_dagrun for logistics_data_etl_pipeline_v4 to 2025-09-28T10:00:00+00:00, run_after=2025-09-29T10:00:00+00:00
+[2025-09-28T23:58:10.501+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/mock_logistic_dag2.py took 14.687 seconds

@@ -1,0 +1,5 @@
+[2025-07-11T18:49:18.548+0000] {processor.py:157} INFO - Started process (PID=420) to work on /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_python_operator.py
+[2025-07-11T18:49:18.551+0000] {processor.py:826} INFO - Processing file /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_python_operator.py for tasks to queue
+[2025-07-11T18:49:18.553+0000] {logging_mixin.py:149} INFO - [2025-07-11T18:49:18.552+0000] {dagbag.py:541} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_python_operator.py
+[2025-07-11T18:49:18.574+0000] {processor.py:836} INFO - DAG(s) dict_keys(['example_python_operator']) retrieved from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_python_operator.py
+[2025-07-11T18:49:19.265+0000] {logging_mixin.py:149} INFO - [2025-07-11T18:49:19.264+0000] {process_utils.py:258} INFO - Waiting up to 5 seconds for processes to exit...

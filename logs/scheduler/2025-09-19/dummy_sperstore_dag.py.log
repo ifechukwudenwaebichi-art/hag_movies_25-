@@ -1,0 +1,490 @@
+[2025-09-19T09:17:17.875+0000] {processor.py:157} INFO - Started process (PID=174) to work on /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:17:17.876+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dummy_sperstore_dag.py for tasks to queue
+[2025-09-19T09:17:17.878+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:17:17.878+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:17:19.061+0000] {processor.py:836} INFO - DAG(s) dict_keys(['pandas_dummy_superstore_etl']) retrieved from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:17:19.268+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:17:19.267+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-19T09:17:19.302+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:17:19.302+0000] {dag.py:3490} INFO - Setting next_dagrun for pandas_dummy_superstore_etl to 2025-09-19T00:00:00+00:00, run_after=2025-09-20T00:00:00+00:00
+[2025-09-19T09:17:19.331+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dummy_sperstore_dag.py took 1.460 seconds
+[2025-09-19T09:17:49.550+0000] {processor.py:157} INFO - Started process (PID=455) to work on /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:17:49.552+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dummy_sperstore_dag.py for tasks to queue
+[2025-09-19T09:17:49.555+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:17:49.555+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:17:50.260+0000] {processor.py:836} INFO - DAG(s) dict_keys(['pandas_dummy_superstore_etl']) retrieved from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:17:50.282+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:17:50.282+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-19T09:17:50.317+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:17:50.317+0000] {dag.py:3490} INFO - Setting next_dagrun for pandas_dummy_superstore_etl to 2025-09-19T00:00:00+00:00, run_after=2025-09-20T00:00:00+00:00
+[2025-09-19T09:17:50.339+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dummy_sperstore_dag.py took 0.797 seconds
+[2025-09-19T09:18:20.942+0000] {processor.py:157} INFO - Started process (PID=743) to work on /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:18:20.943+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dummy_sperstore_dag.py for tasks to queue
+[2025-09-19T09:18:20.947+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:18:20.947+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:18:21.354+0000] {processor.py:836} INFO - DAG(s) dict_keys(['pandas_dummy_superstore_etl']) retrieved from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:18:21.379+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:18:21.379+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-19T09:18:21.408+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:18:21.408+0000] {dag.py:3490} INFO - Setting next_dagrun for pandas_dummy_superstore_etl to 2025-09-19T00:00:00+00:00, run_after=2025-09-20T00:00:00+00:00
+[2025-09-19T09:18:21.431+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dummy_sperstore_dag.py took 0.492 seconds
+[2025-09-19T09:18:51.973+0000] {processor.py:157} INFO - Started process (PID=1024) to work on /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:18:51.974+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dummy_sperstore_dag.py for tasks to queue
+[2025-09-19T09:18:51.975+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:18:51.975+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:18:52.415+0000] {processor.py:836} INFO - DAG(s) dict_keys(['pandas_dummy_superstore_etl']) retrieved from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:18:52.443+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:18:52.443+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-19T09:18:52.478+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:18:52.477+0000] {dag.py:3490} INFO - Setting next_dagrun for pandas_dummy_superstore_etl to 2025-09-19T00:00:00+00:00, run_after=2025-09-20T00:00:00+00:00
+[2025-09-19T09:18:52.499+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dummy_sperstore_dag.py took 0.530 seconds
+[2025-09-19T09:19:22.765+0000] {processor.py:157} INFO - Started process (PID=1305) to work on /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:19:22.766+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dummy_sperstore_dag.py for tasks to queue
+[2025-09-19T09:19:22.767+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:19:22.767+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:19:23.225+0000] {processor.py:836} INFO - DAG(s) dict_keys(['pandas_dummy_superstore_etl']) retrieved from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:19:23.250+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:19:23.250+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-19T09:19:23.281+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:19:23.281+0000] {dag.py:3490} INFO - Setting next_dagrun for pandas_dummy_superstore_etl to 2025-09-19T00:00:00+00:00, run_after=2025-09-20T00:00:00+00:00
+[2025-09-19T09:19:23.305+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dummy_sperstore_dag.py took 0.544 seconds
+[2025-09-19T09:19:53.786+0000] {processor.py:157} INFO - Started process (PID=1586) to work on /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:19:53.787+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dummy_sperstore_dag.py for tasks to queue
+[2025-09-19T09:19:53.788+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:19:53.787+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:19:54.216+0000] {processor.py:836} INFO - DAG(s) dict_keys(['pandas_dummy_superstore_etl']) retrieved from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:19:54.242+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:19:54.241+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-19T09:19:54.271+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:19:54.271+0000] {dag.py:3490} INFO - Setting next_dagrun for pandas_dummy_superstore_etl to 2025-09-19T00:00:00+00:00, run_after=2025-09-20T00:00:00+00:00
+[2025-09-19T09:19:54.292+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dummy_sperstore_dag.py took 0.510 seconds
+[2025-09-19T09:20:24.825+0000] {processor.py:157} INFO - Started process (PID=1867) to work on /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:20:24.827+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dummy_sperstore_dag.py for tasks to queue
+[2025-09-19T09:20:24.828+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:20:24.828+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:20:25.271+0000] {processor.py:836} INFO - DAG(s) dict_keys(['pandas_dummy_superstore_etl']) retrieved from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:20:25.297+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:20:25.297+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-19T09:20:25.331+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:20:25.331+0000] {dag.py:3490} INFO - Setting next_dagrun for pandas_dummy_superstore_etl to 2025-09-19T00:00:00+00:00, run_after=2025-09-20T00:00:00+00:00
+[2025-09-19T09:20:25.352+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dummy_sperstore_dag.py took 0.530 seconds
+[2025-09-19T09:20:55.793+0000] {processor.py:157} INFO - Started process (PID=2148) to work on /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:20:55.795+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dummy_sperstore_dag.py for tasks to queue
+[2025-09-19T09:20:55.796+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:20:55.796+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:20:56.250+0000] {processor.py:836} INFO - DAG(s) dict_keys(['pandas_dummy_superstore_etl']) retrieved from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:20:56.278+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:20:56.277+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-19T09:20:56.307+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:20:56.307+0000] {dag.py:3490} INFO - Setting next_dagrun for pandas_dummy_superstore_etl to 2025-09-19T00:00:00+00:00, run_after=2025-09-20T00:00:00+00:00
+[2025-09-19T09:20:56.330+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dummy_sperstore_dag.py took 0.541 seconds
+[2025-09-19T09:21:26.453+0000] {processor.py:157} INFO - Started process (PID=2430) to work on /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:21:26.454+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dummy_sperstore_dag.py for tasks to queue
+[2025-09-19T09:21:26.455+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:21:26.455+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:21:26.906+0000] {processor.py:836} INFO - DAG(s) dict_keys(['pandas_dummy_superstore_etl']) retrieved from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:21:26.933+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:21:26.932+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-19T09:21:26.963+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:21:26.963+0000] {dag.py:3490} INFO - Setting next_dagrun for pandas_dummy_superstore_etl to 2025-09-19T00:00:00+00:00, run_after=2025-09-20T00:00:00+00:00
+[2025-09-19T09:21:26.985+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dummy_sperstore_dag.py took 0.535 seconds
+[2025-09-19T09:21:57.382+0000] {processor.py:157} INFO - Started process (PID=2711) to work on /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:21:57.383+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dummy_sperstore_dag.py for tasks to queue
+[2025-09-19T09:21:57.383+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:21:57.383+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:21:57.813+0000] {processor.py:836} INFO - DAG(s) dict_keys(['pandas_dummy_superstore_etl']) retrieved from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:21:57.839+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:21:57.839+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-19T09:21:57.871+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:21:57.871+0000] {dag.py:3490} INFO - Setting next_dagrun for pandas_dummy_superstore_etl to 2025-09-19T00:00:00+00:00, run_after=2025-09-20T00:00:00+00:00
+[2025-09-19T09:21:57.892+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dummy_sperstore_dag.py took 0.514 seconds
+[2025-09-19T09:22:28.338+0000] {processor.py:157} INFO - Started process (PID=2992) to work on /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:22:28.341+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dummy_sperstore_dag.py for tasks to queue
+[2025-09-19T09:22:28.344+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:22:28.343+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:22:28.800+0000] {processor.py:836} INFO - DAG(s) dict_keys(['pandas_dummy_superstore_etl']) retrieved from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:22:28.832+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:22:28.832+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-19T09:22:28.860+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:22:28.860+0000] {dag.py:3490} INFO - Setting next_dagrun for pandas_dummy_superstore_etl to 2025-09-19T00:00:00+00:00, run_after=2025-09-20T00:00:00+00:00
+[2025-09-19T09:22:28.883+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dummy_sperstore_dag.py took 0.548 seconds
+[2025-09-19T09:22:59.137+0000] {processor.py:157} INFO - Started process (PID=3273) to work on /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:22:59.139+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dummy_sperstore_dag.py for tasks to queue
+[2025-09-19T09:22:59.141+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:22:59.141+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:22:59.604+0000] {processor.py:836} INFO - DAG(s) dict_keys(['pandas_dummy_superstore_etl']) retrieved from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:22:59.629+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:22:59.629+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-19T09:22:59.657+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:22:59.657+0000] {dag.py:3490} INFO - Setting next_dagrun for pandas_dummy_superstore_etl to 2025-09-19T00:00:00+00:00, run_after=2025-09-20T00:00:00+00:00
+[2025-09-19T09:22:59.780+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dummy_sperstore_dag.py took 0.647 seconds
+[2025-09-19T09:23:30.253+0000] {processor.py:157} INFO - Started process (PID=3554) to work on /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:23:30.255+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dummy_sperstore_dag.py for tasks to queue
+[2025-09-19T09:23:30.257+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:23:30.257+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:23:30.838+0000] {processor.py:836} INFO - DAG(s) dict_keys(['pandas_dummy_superstore_etl']) retrieved from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:23:30.866+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:23:30.866+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-19T09:23:30.900+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:23:30.900+0000] {dag.py:3490} INFO - Setting next_dagrun for pandas_dummy_superstore_etl to 2025-09-19T00:00:00+00:00, run_after=2025-09-20T00:00:00+00:00
+[2025-09-19T09:23:30.921+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dummy_sperstore_dag.py took 0.671 seconds
+[2025-09-19T09:24:01.331+0000] {processor.py:157} INFO - Started process (PID=3835) to work on /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:24:01.332+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dummy_sperstore_dag.py for tasks to queue
+[2025-09-19T09:24:01.333+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:24:01.333+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:24:01.789+0000] {processor.py:836} INFO - DAG(s) dict_keys(['pandas_dummy_superstore_etl']) retrieved from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:24:01.820+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:24:01.819+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-19T09:24:01.999+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:24:01.999+0000] {dag.py:3490} INFO - Setting next_dagrun for pandas_dummy_superstore_etl to 2025-09-19T00:00:00+00:00, run_after=2025-09-20T00:00:00+00:00
+[2025-09-19T09:24:02.022+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dummy_sperstore_dag.py took 0.695 seconds
+[2025-09-19T09:24:32.240+0000] {processor.py:157} INFO - Started process (PID=4116) to work on /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:24:32.241+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dummy_sperstore_dag.py for tasks to queue
+[2025-09-19T09:24:32.242+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:24:32.242+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:24:32.695+0000] {processor.py:836} INFO - DAG(s) dict_keys(['pandas_dummy_superstore_etl']) retrieved from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:24:32.847+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:24:32.847+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-19T09:24:32.879+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:24:32.879+0000] {dag.py:3490} INFO - Setting next_dagrun for pandas_dummy_superstore_etl to 2025-09-19T00:00:00+00:00, run_after=2025-09-20T00:00:00+00:00
+[2025-09-19T09:24:32.898+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dummy_sperstore_dag.py took 0.662 seconds
+[2025-09-19T09:25:03.474+0000] {processor.py:157} INFO - Started process (PID=4397) to work on /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:25:03.475+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dummy_sperstore_dag.py for tasks to queue
+[2025-09-19T09:25:03.475+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:25:03.475+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:25:03.897+0000] {processor.py:836} INFO - DAG(s) dict_keys(['pandas_dummy_superstore_etl']) retrieved from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:25:04.043+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:25:04.042+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-19T09:25:04.075+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:25:04.074+0000] {dag.py:3490} INFO - Setting next_dagrun for pandas_dummy_superstore_etl to 2025-09-19T00:00:00+00:00, run_after=2025-09-20T00:00:00+00:00
+[2025-09-19T09:25:04.096+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dummy_sperstore_dag.py took 0.626 seconds
+[2025-09-19T09:25:34.403+0000] {processor.py:157} INFO - Started process (PID=4678) to work on /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:25:34.404+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dummy_sperstore_dag.py for tasks to queue
+[2025-09-19T09:25:34.405+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:25:34.405+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:25:34.960+0000] {processor.py:836} INFO - DAG(s) dict_keys(['pandas_dummy_superstore_etl']) retrieved from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:25:34.985+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:25:34.985+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-19T09:25:35.012+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:25:35.012+0000] {dag.py:3490} INFO - Setting next_dagrun for pandas_dummy_superstore_etl to 2025-09-19T00:00:00+00:00, run_after=2025-09-20T00:00:00+00:00
+[2025-09-19T09:25:35.035+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dummy_sperstore_dag.py took 0.638 seconds
+[2025-09-19T09:26:05.383+0000] {processor.py:157} INFO - Started process (PID=4959) to work on /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:26:05.385+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dummy_sperstore_dag.py for tasks to queue
+[2025-09-19T09:26:05.386+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:26:05.386+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:26:05.932+0000] {processor.py:836} INFO - DAG(s) dict_keys(['pandas_dummy_superstore_etl']) retrieved from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:26:05.961+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:26:05.961+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-19T09:26:05.989+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:26:05.989+0000] {dag.py:3490} INFO - Setting next_dagrun for pandas_dummy_superstore_etl to 2025-09-19T00:00:00+00:00, run_after=2025-09-20T00:00:00+00:00
+[2025-09-19T09:26:06.008+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dummy_sperstore_dag.py took 0.628 seconds
+[2025-09-19T09:26:36.427+0000] {processor.py:157} INFO - Started process (PID=5240) to work on /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:26:36.428+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dummy_sperstore_dag.py for tasks to queue
+[2025-09-19T09:26:36.429+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:26:36.429+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:26:36.991+0000] {processor.py:836} INFO - DAG(s) dict_keys(['pandas_dummy_superstore_etl']) retrieved from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:26:37.011+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:26:37.011+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-19T09:26:37.038+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:26:37.037+0000] {dag.py:3490} INFO - Setting next_dagrun for pandas_dummy_superstore_etl to 2025-09-19T00:00:00+00:00, run_after=2025-09-20T00:00:00+00:00
+[2025-09-19T09:26:37.060+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dummy_sperstore_dag.py took 0.639 seconds
+[2025-09-19T09:27:07.227+0000] {processor.py:157} INFO - Started process (PID=5521) to work on /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:27:07.228+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dummy_sperstore_dag.py for tasks to queue
+[2025-09-19T09:27:07.229+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:27:07.229+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:27:07.773+0000] {processor.py:836} INFO - DAG(s) dict_keys(['pandas_dummy_superstore_etl']) retrieved from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:27:07.793+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:27:07.793+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-19T09:27:07.819+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:27:07.819+0000] {dag.py:3490} INFO - Setting next_dagrun for pandas_dummy_superstore_etl to 2025-09-19T00:00:00+00:00, run_after=2025-09-20T00:00:00+00:00
+[2025-09-19T09:27:07.842+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dummy_sperstore_dag.py took 0.619 seconds
+[2025-09-19T09:27:38.209+0000] {processor.py:157} INFO - Started process (PID=5802) to work on /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:27:38.210+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dummy_sperstore_dag.py for tasks to queue
+[2025-09-19T09:27:38.211+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:27:38.211+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:27:38.748+0000] {processor.py:836} INFO - DAG(s) dict_keys(['pandas_dummy_superstore_etl']) retrieved from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:27:38.770+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:27:38.769+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-19T09:27:38.795+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:27:38.795+0000] {dag.py:3490} INFO - Setting next_dagrun for pandas_dummy_superstore_etl to 2025-09-19T00:00:00+00:00, run_after=2025-09-20T00:00:00+00:00
+[2025-09-19T09:27:38.816+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dummy_sperstore_dag.py took 0.611 seconds
+[2025-09-19T09:28:09.015+0000] {processor.py:157} INFO - Started process (PID=6083) to work on /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:28:09.019+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dummy_sperstore_dag.py for tasks to queue
+[2025-09-19T09:28:09.020+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:28:09.020+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:28:09.573+0000] {processor.py:836} INFO - DAG(s) dict_keys(['pandas_dummy_superstore_etl']) retrieved from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:28:09.595+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:28:09.594+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-19T09:28:09.621+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:28:09.621+0000] {dag.py:3490} INFO - Setting next_dagrun for pandas_dummy_superstore_etl to 2025-09-19T00:00:00+00:00, run_after=2025-09-20T00:00:00+00:00
+[2025-09-19T09:28:09.643+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dummy_sperstore_dag.py took 0.633 seconds
+[2025-09-19T09:28:39.959+0000] {processor.py:157} INFO - Started process (PID=6364) to work on /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:28:39.960+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dummy_sperstore_dag.py for tasks to queue
+[2025-09-19T09:28:39.961+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:28:39.961+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:28:40.522+0000] {processor.py:836} INFO - DAG(s) dict_keys(['pandas_dummy_superstore_etl']) retrieved from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:28:40.544+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:28:40.543+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-19T09:28:40.571+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:28:40.570+0000] {dag.py:3490} INFO - Setting next_dagrun for pandas_dummy_superstore_etl to 2025-09-19T00:00:00+00:00, run_after=2025-09-20T00:00:00+00:00
+[2025-09-19T09:28:40.591+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dummy_sperstore_dag.py took 0.637 seconds
+[2025-09-19T09:29:10.848+0000] {processor.py:157} INFO - Started process (PID=6645) to work on /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:29:10.850+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dummy_sperstore_dag.py for tasks to queue
+[2025-09-19T09:29:10.851+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:29:10.851+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:29:11.398+0000] {processor.py:836} INFO - DAG(s) dict_keys(['pandas_dummy_superstore_etl']) retrieved from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:29:11.422+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:29:11.421+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-19T09:29:11.448+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:29:11.448+0000] {dag.py:3490} INFO - Setting next_dagrun for pandas_dummy_superstore_etl to 2025-09-19T00:00:00+00:00, run_after=2025-09-20T00:00:00+00:00
+[2025-09-19T09:29:11.471+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dummy_sperstore_dag.py took 0.628 seconds
+[2025-09-19T09:29:41.777+0000] {processor.py:157} INFO - Started process (PID=6926) to work on /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:29:41.778+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dummy_sperstore_dag.py for tasks to queue
+[2025-09-19T09:29:41.780+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:29:41.779+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:29:42.332+0000] {processor.py:836} INFO - DAG(s) dict_keys(['pandas_dummy_superstore_etl']) retrieved from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:29:42.357+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:29:42.356+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-19T09:29:42.383+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:29:42.382+0000] {dag.py:3490} INFO - Setting next_dagrun for pandas_dummy_superstore_etl to 2025-09-19T00:00:00+00:00, run_after=2025-09-20T00:00:00+00:00
+[2025-09-19T09:29:42.402+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dummy_sperstore_dag.py took 0.629 seconds
+[2025-09-19T09:30:12.533+0000] {processor.py:157} INFO - Started process (PID=7207) to work on /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:30:12.533+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dummy_sperstore_dag.py for tasks to queue
+[2025-09-19T09:30:12.536+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:30:12.536+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:30:13.120+0000] {processor.py:836} INFO - DAG(s) dict_keys(['pandas_dummy_superstore_etl']) retrieved from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:30:13.150+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:30:13.150+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-19T09:30:13.182+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:30:13.182+0000] {dag.py:3490} INFO - Setting next_dagrun for pandas_dummy_superstore_etl to 2025-09-19T00:00:00+00:00, run_after=2025-09-20T00:00:00+00:00
+[2025-09-19T09:30:13.206+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dummy_sperstore_dag.py took 0.677 seconds
+[2025-09-19T09:30:43.401+0000] {processor.py:157} INFO - Started process (PID=7488) to work on /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:30:43.402+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dummy_sperstore_dag.py for tasks to queue
+[2025-09-19T09:30:43.404+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:30:43.403+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:30:44.018+0000] {processor.py:836} INFO - DAG(s) dict_keys(['pandas_dummy_superstore_etl']) retrieved from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:30:44.041+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:30:44.041+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-19T09:30:44.067+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:30:44.067+0000] {dag.py:3490} INFO - Setting next_dagrun for pandas_dummy_superstore_etl to 2025-09-19T00:00:00+00:00, run_after=2025-09-20T00:00:00+00:00
+[2025-09-19T09:30:44.087+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dummy_sperstore_dag.py took 0.690 seconds
+[2025-09-19T09:31:14.364+0000] {processor.py:157} INFO - Started process (PID=7769) to work on /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:31:14.366+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dummy_sperstore_dag.py for tasks to queue
+[2025-09-19T09:31:14.367+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:31:14.366+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:31:14.916+0000] {processor.py:836} INFO - DAG(s) dict_keys(['pandas_dummy_superstore_etl']) retrieved from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:31:14.937+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:31:14.937+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-19T09:31:14.963+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:31:14.962+0000] {dag.py:3490} INFO - Setting next_dagrun for pandas_dummy_superstore_etl to 2025-09-19T00:00:00+00:00, run_after=2025-09-20T00:00:00+00:00
+[2025-09-19T09:31:14.987+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dummy_sperstore_dag.py took 0.627 seconds
+[2025-09-19T09:31:45.324+0000] {processor.py:157} INFO - Started process (PID=8050) to work on /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:31:45.325+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dummy_sperstore_dag.py for tasks to queue
+[2025-09-19T09:31:45.326+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:31:45.326+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:31:45.923+0000] {processor.py:836} INFO - DAG(s) dict_keys(['pandas_dummy_superstore_etl']) retrieved from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:31:45.954+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:31:45.953+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-19T09:31:45.993+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:31:45.993+0000] {dag.py:3490} INFO - Setting next_dagrun for pandas_dummy_superstore_etl to 2025-09-19T00:00:00+00:00, run_after=2025-09-20T00:00:00+00:00
+[2025-09-19T09:31:46.021+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dummy_sperstore_dag.py took 0.702 seconds
+[2025-09-19T09:32:16.237+0000] {processor.py:157} INFO - Started process (PID=8331) to work on /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:32:16.238+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dummy_sperstore_dag.py for tasks to queue
+[2025-09-19T09:32:16.239+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:32:16.239+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:32:16.804+0000] {processor.py:836} INFO - DAG(s) dict_keys(['pandas_dummy_superstore_etl']) retrieved from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:32:16.825+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:32:16.824+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-19T09:32:16.852+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:32:16.852+0000] {dag.py:3490} INFO - Setting next_dagrun for pandas_dummy_superstore_etl to 2025-09-19T00:00:00+00:00, run_after=2025-09-20T00:00:00+00:00
+[2025-09-19T09:32:16.870+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dummy_sperstore_dag.py took 0.637 seconds
+[2025-09-19T09:32:47.294+0000] {processor.py:157} INFO - Started process (PID=8612) to work on /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:32:47.295+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dummy_sperstore_dag.py for tasks to queue
+[2025-09-19T09:32:47.296+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:32:47.296+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:32:47.877+0000] {processor.py:836} INFO - DAG(s) dict_keys(['pandas_dummy_superstore_etl']) retrieved from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:32:47.907+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:32:47.907+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-19T09:32:47.936+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:32:47.936+0000] {dag.py:3490} INFO - Setting next_dagrun for pandas_dummy_superstore_etl to 2025-09-19T00:00:00+00:00, run_after=2025-09-20T00:00:00+00:00
+[2025-09-19T09:32:47.960+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dummy_sperstore_dag.py took 0.671 seconds
+[2025-09-19T09:33:18.308+0000] {processor.py:157} INFO - Started process (PID=8893) to work on /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:33:18.309+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dummy_sperstore_dag.py for tasks to queue
+[2025-09-19T09:33:18.310+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:33:18.310+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:33:18.850+0000] {processor.py:836} INFO - DAG(s) dict_keys(['pandas_dummy_superstore_etl']) retrieved from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:33:18.874+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:33:18.873+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-19T09:33:18.900+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:33:18.900+0000] {dag.py:3490} INFO - Setting next_dagrun for pandas_dummy_superstore_etl to 2025-09-19T00:00:00+00:00, run_after=2025-09-20T00:00:00+00:00
+[2025-09-19T09:33:18.922+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dummy_sperstore_dag.py took 0.618 seconds
+[2025-09-19T09:33:49.005+0000] {processor.py:157} INFO - Started process (PID=9174) to work on /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:33:49.006+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dummy_sperstore_dag.py for tasks to queue
+[2025-09-19T09:33:49.007+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:33:49.007+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:33:49.533+0000] {processor.py:836} INFO - DAG(s) dict_keys(['pandas_dummy_superstore_etl']) retrieved from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:33:49.555+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:33:49.555+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-19T09:33:49.581+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:33:49.581+0000] {dag.py:3490} INFO - Setting next_dagrun for pandas_dummy_superstore_etl to 2025-09-19T00:00:00+00:00, run_after=2025-09-20T00:00:00+00:00
+[2025-09-19T09:33:49.602+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dummy_sperstore_dag.py took 0.600 seconds
+[2025-09-19T09:34:19.913+0000] {processor.py:157} INFO - Started process (PID=9455) to work on /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:34:19.914+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dummy_sperstore_dag.py for tasks to queue
+[2025-09-19T09:34:19.915+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:34:19.915+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:34:20.450+0000] {processor.py:836} INFO - DAG(s) dict_keys(['pandas_dummy_superstore_etl']) retrieved from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:34:20.470+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:34:20.469+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-19T09:34:20.496+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:34:20.496+0000] {dag.py:3490} INFO - Setting next_dagrun for pandas_dummy_superstore_etl to 2025-09-19T00:00:00+00:00, run_after=2025-09-20T00:00:00+00:00
+[2025-09-19T09:34:20.516+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dummy_sperstore_dag.py took 0.607 seconds
+[2025-09-19T09:34:50.818+0000] {processor.py:157} INFO - Started process (PID=9736) to work on /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:34:50.820+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dummy_sperstore_dag.py for tasks to queue
+[2025-09-19T09:34:50.821+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:34:50.821+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:34:51.411+0000] {processor.py:836} INFO - DAG(s) dict_keys(['pandas_dummy_superstore_etl']) retrieved from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:34:51.434+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:34:51.433+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-19T09:34:51.464+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:34:51.464+0000] {dag.py:3490} INFO - Setting next_dagrun for pandas_dummy_superstore_etl to 2025-09-19T00:00:00+00:00, run_after=2025-09-20T00:00:00+00:00
+[2025-09-19T09:34:51.487+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dummy_sperstore_dag.py took 0.674 seconds
+[2025-09-19T09:35:22.065+0000] {processor.py:157} INFO - Started process (PID=10017) to work on /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:35:22.066+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dummy_sperstore_dag.py for tasks to queue
+[2025-09-19T09:35:22.067+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:35:22.067+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:35:22.604+0000] {processor.py:836} INFO - DAG(s) dict_keys(['pandas_dummy_superstore_etl']) retrieved from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:35:22.624+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:35:22.623+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-19T09:35:22.650+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:35:22.650+0000] {dag.py:3490} INFO - Setting next_dagrun for pandas_dummy_superstore_etl to 2025-09-19T00:00:00+00:00, run_after=2025-09-20T00:00:00+00:00
+[2025-09-19T09:35:22.671+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dummy_sperstore_dag.py took 0.609 seconds
+[2025-09-19T09:35:52.790+0000] {processor.py:157} INFO - Started process (PID=10304) to work on /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:35:52.791+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dummy_sperstore_dag.py for tasks to queue
+[2025-09-19T09:35:52.792+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:35:52.792+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:35:53.342+0000] {processor.py:836} INFO - DAG(s) dict_keys(['pandas_dummy_superstore_etl']) retrieved from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:35:53.364+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:35:53.363+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-19T09:35:53.390+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:35:53.390+0000] {dag.py:3490} INFO - Setting next_dagrun for pandas_dummy_superstore_etl to 2025-09-19T00:00:00+00:00, run_after=2025-09-20T00:00:00+00:00
+[2025-09-19T09:35:53.411+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dummy_sperstore_dag.py took 0.625 seconds
+[2025-09-19T09:36:23.578+0000] {processor.py:157} INFO - Started process (PID=10586) to work on /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:36:23.579+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dummy_sperstore_dag.py for tasks to queue
+[2025-09-19T09:36:23.580+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:36:23.580+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:36:24.150+0000] {processor.py:836} INFO - DAG(s) dict_keys(['pandas_dummy_superstore_etl']) retrieved from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:36:24.174+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:36:24.173+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-19T09:36:24.204+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:36:24.204+0000] {dag.py:3490} INFO - Setting next_dagrun for pandas_dummy_superstore_etl to 2025-09-19T00:00:00+00:00, run_after=2025-09-20T00:00:00+00:00
+[2025-09-19T09:36:24.223+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dummy_sperstore_dag.py took 0.649 seconds
+[2025-09-19T09:36:54.377+0000] {processor.py:157} INFO - Started process (PID=10867) to work on /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:36:54.378+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dummy_sperstore_dag.py for tasks to queue
+[2025-09-19T09:36:54.379+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:36:54.379+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:36:54.919+0000] {processor.py:836} INFO - DAG(s) dict_keys(['pandas_dummy_superstore_etl']) retrieved from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:36:54.940+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:36:54.939+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-19T09:36:54.966+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:36:54.966+0000] {dag.py:3490} INFO - Setting next_dagrun for pandas_dummy_superstore_etl to 2025-09-19T00:00:00+00:00, run_after=2025-09-20T00:00:00+00:00
+[2025-09-19T09:36:54.985+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dummy_sperstore_dag.py took 0.613 seconds
+[2025-09-19T09:37:25.172+0000] {processor.py:157} INFO - Started process (PID=11148) to work on /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:37:25.173+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dummy_sperstore_dag.py for tasks to queue
+[2025-09-19T09:37:25.174+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:37:25.173+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:37:25.706+0000] {processor.py:836} INFO - DAG(s) dict_keys(['pandas_dummy_superstore_etl']) retrieved from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:37:25.729+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:37:25.728+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-19T09:37:25.754+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:37:25.754+0000] {dag.py:3490} INFO - Setting next_dagrun for pandas_dummy_superstore_etl to 2025-09-19T00:00:00+00:00, run_after=2025-09-20T00:00:00+00:00
+[2025-09-19T09:37:25.775+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dummy_sperstore_dag.py took 0.607 seconds
+[2025-09-19T09:37:56.621+0000] {processor.py:157} INFO - Started process (PID=11429) to work on /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:37:56.622+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dummy_sperstore_dag.py for tasks to queue
+[2025-09-19T09:37:56.623+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:37:56.623+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:37:57.166+0000] {processor.py:836} INFO - DAG(s) dict_keys(['pandas_dummy_superstore_etl']) retrieved from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:37:57.188+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:37:57.187+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-19T09:37:57.214+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:37:57.214+0000] {dag.py:3490} INFO - Setting next_dagrun for pandas_dummy_superstore_etl to 2025-09-19T00:00:00+00:00, run_after=2025-09-20T00:00:00+00:00
+[2025-09-19T09:37:57.238+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dummy_sperstore_dag.py took 0.620 seconds
+[2025-09-19T09:38:27.743+0000] {processor.py:157} INFO - Started process (PID=11717) to work on /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:38:27.744+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dummy_sperstore_dag.py for tasks to queue
+[2025-09-19T09:38:27.746+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:38:27.745+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:38:28.169+0000] {processor.py:836} INFO - DAG(s) dict_keys(['pandas_dummy_superstore_etl']) retrieved from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:38:28.203+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:38:28.202+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-19T09:38:28.234+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:38:28.234+0000] {dag.py:3490} INFO - Setting next_dagrun for pandas_dummy_superstore_etl to 2025-09-19T00:00:00+00:00, run_after=2025-09-20T00:00:00+00:00
+[2025-09-19T09:38:28.260+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dummy_sperstore_dag.py took 0.522 seconds
+[2025-09-19T09:38:58.741+0000] {processor.py:157} INFO - Started process (PID=11991) to work on /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:38:58.742+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dummy_sperstore_dag.py for tasks to queue
+[2025-09-19T09:38:58.743+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:38:58.743+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:38:59.170+0000] {processor.py:836} INFO - DAG(s) dict_keys(['pandas_dummy_superstore_etl']) retrieved from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:38:59.195+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:38:59.195+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-19T09:38:59.223+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:38:59.223+0000] {dag.py:3490} INFO - Setting next_dagrun for pandas_dummy_superstore_etl to 2025-09-19T00:00:00+00:00, run_after=2025-09-20T00:00:00+00:00
+[2025-09-19T09:38:59.244+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dummy_sperstore_dag.py took 0.506 seconds
+[2025-09-19T09:39:29.778+0000] {processor.py:157} INFO - Started process (PID=12272) to work on /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:39:29.779+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dummy_sperstore_dag.py for tasks to queue
+[2025-09-19T09:39:29.781+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:39:29.781+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:39:30.211+0000] {processor.py:836} INFO - DAG(s) dict_keys(['pandas_dummy_superstore_etl']) retrieved from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:39:30.236+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:39:30.236+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-19T09:39:30.266+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:39:30.266+0000] {dag.py:3490} INFO - Setting next_dagrun for pandas_dummy_superstore_etl to 2025-09-19T00:00:00+00:00, run_after=2025-09-20T00:00:00+00:00
+[2025-09-19T09:39:30.288+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dummy_sperstore_dag.py took 0.514 seconds
+[2025-09-19T09:40:00.772+0000] {processor.py:157} INFO - Started process (PID=12553) to work on /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:40:00.773+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dummy_sperstore_dag.py for tasks to queue
+[2025-09-19T09:40:00.774+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:40:00.774+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:40:01.271+0000] {processor.py:836} INFO - DAG(s) dict_keys(['pandas_dummy_superstore_etl']) retrieved from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:40:01.296+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:40:01.296+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-19T09:40:01.324+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:40:01.324+0000] {dag.py:3490} INFO - Setting next_dagrun for pandas_dummy_superstore_etl to 2025-09-19T00:00:00+00:00, run_after=2025-09-20T00:00:00+00:00
+[2025-09-19T09:40:01.346+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dummy_sperstore_dag.py took 0.577 seconds
+[2025-09-19T09:40:31.530+0000] {processor.py:157} INFO - Started process (PID=12834) to work on /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:40:31.531+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dummy_sperstore_dag.py for tasks to queue
+[2025-09-19T09:40:31.532+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:40:31.531+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:40:31.959+0000] {processor.py:836} INFO - DAG(s) dict_keys(['pandas_dummy_superstore_etl']) retrieved from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:40:31.990+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:40:31.989+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-19T09:40:32.019+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:40:32.019+0000] {dag.py:3490} INFO - Setting next_dagrun for pandas_dummy_superstore_etl to 2025-09-19T00:00:00+00:00, run_after=2025-09-20T00:00:00+00:00
+[2025-09-19T09:40:32.042+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dummy_sperstore_dag.py took 0.516 seconds
+[2025-09-19T09:41:02.309+0000] {processor.py:157} INFO - Started process (PID=13115) to work on /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:41:02.311+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dummy_sperstore_dag.py for tasks to queue
+[2025-09-19T09:41:02.311+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:41:02.311+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:41:02.742+0000] {processor.py:836} INFO - DAG(s) dict_keys(['pandas_dummy_superstore_etl']) retrieved from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:41:02.773+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:41:02.772+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-19T09:41:02.801+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:41:02.801+0000] {dag.py:3490} INFO - Setting next_dagrun for pandas_dummy_superstore_etl to 2025-09-19T00:00:00+00:00, run_after=2025-09-20T00:00:00+00:00
+[2025-09-19T09:41:02.825+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dummy_sperstore_dag.py took 0.520 seconds
+[2025-09-19T09:41:33.031+0000] {processor.py:157} INFO - Started process (PID=13395) to work on /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:41:33.032+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dummy_sperstore_dag.py for tasks to queue
+[2025-09-19T09:41:33.033+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:41:33.033+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:41:33.460+0000] {processor.py:836} INFO - DAG(s) dict_keys(['pandas_dummy_superstore_etl']) retrieved from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:41:33.485+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:41:33.485+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-19T09:41:33.513+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:41:33.513+0000] {dag.py:3490} INFO - Setting next_dagrun for pandas_dummy_superstore_etl to 2025-09-19T00:00:00+00:00, run_after=2025-09-20T00:00:00+00:00
+[2025-09-19T09:41:33.537+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dummy_sperstore_dag.py took 0.509 seconds
+[2025-09-19T09:42:03.685+0000] {processor.py:157} INFO - Started process (PID=13676) to work on /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:42:03.686+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dummy_sperstore_dag.py for tasks to queue
+[2025-09-19T09:42:03.689+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:42:03.689+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:42:04.134+0000] {processor.py:836} INFO - DAG(s) dict_keys(['pandas_dummy_superstore_etl']) retrieved from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:42:04.163+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:42:04.163+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-19T09:42:04.200+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:42:04.200+0000] {dag.py:3490} INFO - Setting next_dagrun for pandas_dummy_superstore_etl to 2025-09-19T00:00:00+00:00, run_after=2025-09-20T00:00:00+00:00
+[2025-09-19T09:42:04.228+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dummy_sperstore_dag.py took 0.547 seconds
+[2025-09-19T09:42:34.711+0000] {processor.py:157} INFO - Started process (PID=13957) to work on /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:42:34.712+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dummy_sperstore_dag.py for tasks to queue
+[2025-09-19T09:42:34.713+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:42:34.713+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:42:35.138+0000] {processor.py:836} INFO - DAG(s) dict_keys(['pandas_dummy_superstore_etl']) retrieved from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:42:35.163+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:42:35.163+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-19T09:42:35.193+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:42:35.193+0000] {dag.py:3490} INFO - Setting next_dagrun for pandas_dummy_superstore_etl to 2025-09-19T00:00:00+00:00, run_after=2025-09-20T00:00:00+00:00
+[2025-09-19T09:42:35.216+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dummy_sperstore_dag.py took 0.509 seconds
+[2025-09-19T09:43:05.630+0000] {processor.py:157} INFO - Started process (PID=14238) to work on /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:43:05.631+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dummy_sperstore_dag.py for tasks to queue
+[2025-09-19T09:43:05.632+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:43:05.632+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:43:06.075+0000] {processor.py:836} INFO - DAG(s) dict_keys(['pandas_dummy_superstore_etl']) retrieved from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:43:06.098+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:43:06.098+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-19T09:43:06.127+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:43:06.127+0000] {dag.py:3490} INFO - Setting next_dagrun for pandas_dummy_superstore_etl to 2025-09-19T00:00:00+00:00, run_after=2025-09-20T00:00:00+00:00
+[2025-09-19T09:43:06.153+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dummy_sperstore_dag.py took 0.527 seconds
+[2025-09-19T09:43:36.239+0000] {processor.py:157} INFO - Started process (PID=14519) to work on /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:43:36.240+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dummy_sperstore_dag.py for tasks to queue
+[2025-09-19T09:43:36.241+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:43:36.241+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:43:36.702+0000] {processor.py:836} INFO - DAG(s) dict_keys(['pandas_dummy_superstore_etl']) retrieved from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:43:36.728+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:43:36.728+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-19T09:43:36.757+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:43:36.757+0000] {dag.py:3490} INFO - Setting next_dagrun for pandas_dummy_superstore_etl to 2025-09-19T00:00:00+00:00, run_after=2025-09-20T00:00:00+00:00
+[2025-09-19T09:43:36.889+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dummy_sperstore_dag.py took 0.654 seconds
+[2025-09-19T09:44:07.258+0000] {processor.py:157} INFO - Started process (PID=14800) to work on /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:44:07.260+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dummy_sperstore_dag.py for tasks to queue
+[2025-09-19T09:44:07.262+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:44:07.262+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:44:07.706+0000] {processor.py:836} INFO - DAG(s) dict_keys(['pandas_dummy_superstore_etl']) retrieved from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:44:07.737+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:44:07.737+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-19T09:44:07.767+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:44:07.767+0000] {dag.py:3490} INFO - Setting next_dagrun for pandas_dummy_superstore_etl to 2025-09-19T00:00:00+00:00, run_after=2025-09-20T00:00:00+00:00
+[2025-09-19T09:44:07.787+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dummy_sperstore_dag.py took 0.534 seconds
+[2025-09-19T09:44:38.102+0000] {processor.py:157} INFO - Started process (PID=15081) to work on /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:44:38.103+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dummy_sperstore_dag.py for tasks to queue
+[2025-09-19T09:44:38.104+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:44:38.104+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:44:38.541+0000] {processor.py:836} INFO - DAG(s) dict_keys(['pandas_dummy_superstore_etl']) retrieved from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:44:38.567+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:44:38.566+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-19T09:44:38.717+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:44:38.717+0000] {dag.py:3490} INFO - Setting next_dagrun for pandas_dummy_superstore_etl to 2025-09-19T00:00:00+00:00, run_after=2025-09-20T00:00:00+00:00
+[2025-09-19T09:44:38.738+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dummy_sperstore_dag.py took 0.640 seconds
+[2025-09-19T09:45:09.290+0000] {processor.py:157} INFO - Started process (PID=15362) to work on /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:45:09.291+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dummy_sperstore_dag.py for tasks to queue
+[2025-09-19T09:45:09.292+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:45:09.292+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:45:09.716+0000] {processor.py:836} INFO - DAG(s) dict_keys(['pandas_dummy_superstore_etl']) retrieved from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:45:09.861+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:45:09.860+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-19T09:45:09.894+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:45:09.894+0000] {dag.py:3490} INFO - Setting next_dagrun for pandas_dummy_superstore_etl to 2025-09-19T00:00:00+00:00, run_after=2025-09-20T00:00:00+00:00
+[2025-09-19T09:45:09.916+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dummy_sperstore_dag.py took 0.629 seconds
+[2025-09-19T09:45:40.377+0000] {processor.py:157} INFO - Started process (PID=15644) to work on /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:45:40.378+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dummy_sperstore_dag.py for tasks to queue
+[2025-09-19T09:45:40.379+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:45:40.379+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:45:40.923+0000] {processor.py:836} INFO - DAG(s) dict_keys(['pandas_dummy_superstore_etl']) retrieved from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:45:40.952+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:45:40.951+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-19T09:45:40.989+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:45:40.989+0000] {dag.py:3490} INFO - Setting next_dagrun for pandas_dummy_superstore_etl to 2025-09-19T00:00:00+00:00, run_after=2025-09-20T00:00:00+00:00
+[2025-09-19T09:45:41.015+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dummy_sperstore_dag.py took 0.642 seconds
+[2025-09-19T09:46:11.611+0000] {processor.py:157} INFO - Started process (PID=15933) to work on /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:46:11.612+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dummy_sperstore_dag.py for tasks to queue
+[2025-09-19T09:46:11.613+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:46:11.613+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:46:12.166+0000] {processor.py:836} INFO - DAG(s) dict_keys(['pandas_dummy_superstore_etl']) retrieved from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:46:12.187+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:46:12.187+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-19T09:46:12.217+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:46:12.217+0000] {dag.py:3490} INFO - Setting next_dagrun for pandas_dummy_superstore_etl to 2025-09-19T00:00:00+00:00, run_after=2025-09-20T00:00:00+00:00
+[2025-09-19T09:46:12.237+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dummy_sperstore_dag.py took 0.629 seconds
+[2025-09-19T09:46:42.318+0000] {processor.py:157} INFO - Started process (PID=16214) to work on /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:46:42.320+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dummy_sperstore_dag.py for tasks to queue
+[2025-09-19T09:46:42.321+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:46:42.321+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:46:42.853+0000] {processor.py:836} INFO - DAG(s) dict_keys(['pandas_dummy_superstore_etl']) retrieved from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:46:42.873+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:46:42.873+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-19T09:46:42.900+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:46:42.900+0000] {dag.py:3490} INFO - Setting next_dagrun for pandas_dummy_superstore_etl to 2025-09-19T00:00:00+00:00, run_after=2025-09-20T00:00:00+00:00
+[2025-09-19T09:46:42.919+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dummy_sperstore_dag.py took 0.606 seconds
+[2025-09-19T09:47:13.062+0000] {processor.py:157} INFO - Started process (PID=16495) to work on /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:47:13.065+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dummy_sperstore_dag.py for tasks to queue
+[2025-09-19T09:47:13.066+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:47:13.065+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:47:13.601+0000] {processor.py:836} INFO - DAG(s) dict_keys(['pandas_dummy_superstore_etl']) retrieved from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:47:13.622+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:47:13.622+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-19T09:47:13.648+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:47:13.647+0000] {dag.py:3490} INFO - Setting next_dagrun for pandas_dummy_superstore_etl to 2025-09-19T00:00:00+00:00, run_after=2025-09-20T00:00:00+00:00
+[2025-09-19T09:47:13.674+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dummy_sperstore_dag.py took 0.616 seconds
+[2025-09-19T09:47:44.073+0000] {processor.py:157} INFO - Started process (PID=16791) to work on /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:47:44.074+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dummy_sperstore_dag.py for tasks to queue
+[2025-09-19T09:47:44.074+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:47:44.074+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:47:44.607+0000] {processor.py:836} INFO - DAG(s) dict_keys(['pandas_dummy_superstore_etl']) retrieved from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T09:47:44.634+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:47:44.633+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-19T09:47:44.662+0000] {logging_mixin.py:149} INFO - [2025-09-19T09:47:44.662+0000] {dag.py:3490} INFO - Setting next_dagrun for pandas_dummy_superstore_etl to 2025-09-19T00:00:00+00:00, run_after=2025-09-20T00:00:00+00:00
+[2025-09-19T09:47:44.683+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dummy_sperstore_dag.py took 0.614 seconds
+[2025-09-19T10:02:29.964+0000] {processor.py:157} INFO - Started process (PID=17056) to work on /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T10:02:29.967+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dummy_sperstore_dag.py for tasks to queue
+[2025-09-19T10:02:29.972+0000] {logging_mixin.py:149} INFO - [2025-09-19T10:02:29.972+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T10:02:31.258+0000] {processor.py:836} INFO - DAG(s) dict_keys(['pandas_dummy_superstore_etl']) retrieved from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T10:02:31.298+0000] {logging_mixin.py:149} INFO - [2025-09-19T10:02:31.297+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-19T10:02:31.353+0000] {logging_mixin.py:149} INFO - [2025-09-19T10:02:31.353+0000] {dag.py:3490} INFO - Setting next_dagrun for pandas_dummy_superstore_etl to 2025-09-19T00:00:00+00:00, run_after=2025-09-20T00:00:00+00:00
+[2025-09-19T10:02:31.385+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dummy_sperstore_dag.py took 1.428 seconds
+[2025-09-19T10:03:01.604+0000] {processor.py:157} INFO - Started process (PID=17338) to work on /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T10:03:01.607+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dummy_sperstore_dag.py for tasks to queue
+[2025-09-19T10:03:01.607+0000] {logging_mixin.py:149} INFO - [2025-09-19T10:03:01.607+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T10:03:02.144+0000] {processor.py:836} INFO - DAG(s) dict_keys(['pandas_dummy_superstore_etl']) retrieved from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T10:03:02.169+0000] {logging_mixin.py:149} INFO - [2025-09-19T10:03:02.168+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-19T10:03:02.199+0000] {logging_mixin.py:149} INFO - [2025-09-19T10:03:02.199+0000] {dag.py:3490} INFO - Setting next_dagrun for pandas_dummy_superstore_etl to 2025-09-19T00:00:00+00:00, run_after=2025-09-20T00:00:00+00:00
+[2025-09-19T10:03:02.219+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dummy_sperstore_dag.py took 0.619 seconds
+[2025-09-19T10:18:54.850+0000] {processor.py:157} INFO - Started process (PID=17504) to work on /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T10:18:54.859+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dummy_sperstore_dag.py for tasks to queue
+[2025-09-19T10:18:54.869+0000] {logging_mixin.py:149} INFO - [2025-09-19T10:18:54.866+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T10:18:55.798+0000] {processor.py:836} INFO - DAG(s) dict_keys(['pandas_dummy_superstore_etl']) retrieved from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T10:18:55.834+0000] {logging_mixin.py:149} INFO - [2025-09-19T10:18:55.833+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-19T10:18:55.881+0000] {logging_mixin.py:149} INFO - [2025-09-19T10:18:55.881+0000] {dag.py:3490} INFO - Setting next_dagrun for pandas_dummy_superstore_etl to 2025-09-19T00:00:00+00:00, run_after=2025-09-20T00:00:00+00:00
+[2025-09-19T10:18:55.916+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dummy_sperstore_dag.py took 1.076 seconds
+[2025-09-19T10:24:37.608+0000] {processor.py:157} INFO - Started process (PID=17765) to work on /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T10:24:37.620+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dummy_sperstore_dag.py for tasks to queue
+[2025-09-19T10:24:37.625+0000] {logging_mixin.py:149} INFO - [2025-09-19T10:24:37.625+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T10:24:38.520+0000] {processor.py:836} INFO - DAG(s) dict_keys(['pandas_dummy_superstore_etl']) retrieved from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T10:24:38.559+0000] {logging_mixin.py:149} INFO - [2025-09-19T10:24:38.558+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-19T10:24:38.610+0000] {logging_mixin.py:149} INFO - [2025-09-19T10:24:38.609+0000] {dag.py:3490} INFO - Setting next_dagrun for pandas_dummy_superstore_etl to 2025-09-19T00:00:00+00:00, run_after=2025-09-20T00:00:00+00:00
+[2025-09-19T10:24:38.647+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dummy_sperstore_dag.py took 1.044 seconds
+[2025-09-19T10:26:30.948+0000] {processor.py:157} INFO - Started process (PID=18045) to work on /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T10:26:30.951+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dummy_sperstore_dag.py for tasks to queue
+[2025-09-19T10:26:30.956+0000] {logging_mixin.py:149} INFO - [2025-09-19T10:26:30.956+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T10:26:32.088+0000] {processor.py:836} INFO - DAG(s) dict_keys(['pandas_dummy_superstore_etl']) retrieved from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T10:26:32.133+0000] {logging_mixin.py:149} INFO - [2025-09-19T10:26:32.133+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-19T10:26:32.185+0000] {logging_mixin.py:149} INFO - [2025-09-19T10:26:32.184+0000] {dag.py:3490} INFO - Setting next_dagrun for pandas_dummy_superstore_etl to 2025-09-19T00:00:00+00:00, run_after=2025-09-20T00:00:00+00:00
+[2025-09-19T10:26:32.234+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dummy_sperstore_dag.py took 1.292 seconds
+[2025-09-19T10:27:03.263+0000] {processor.py:157} INFO - Started process (PID=18328) to work on /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T10:27:03.285+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dummy_sperstore_dag.py for tasks to queue
+[2025-09-19T10:27:03.302+0000] {logging_mixin.py:149} INFO - [2025-09-19T10:27:03.299+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T10:27:15.898+0000] {processor.py:836} INFO - DAG(s) dict_keys(['pandas_dummy_superstore_etl']) retrieved from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T10:27:16.404+0000] {logging_mixin.py:149} INFO - [2025-09-19T10:27:16.396+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-19T10:27:17.259+0000] {logging_mixin.py:149} INFO - [2025-09-19T10:27:17.257+0000] {dag.py:3490} INFO - Setting next_dagrun for pandas_dummy_superstore_etl to 2025-09-19T00:00:00+00:00, run_after=2025-09-20T00:00:00+00:00
+[2025-09-19T10:27:17.863+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dummy_sperstore_dag.py took 14.676 seconds
+[2025-09-19T10:42:18.071+0000] {processor.py:157} INFO - Started process (PID=18623) to work on /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T10:42:18.074+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dummy_sperstore_dag.py for tasks to queue
+[2025-09-19T10:42:18.078+0000] {logging_mixin.py:149} INFO - [2025-09-19T10:42:18.078+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T10:42:18.978+0000] {processor.py:836} INFO - DAG(s) dict_keys(['pandas_dummy_superstore_etl']) retrieved from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T10:42:19.030+0000] {logging_mixin.py:149} INFO - [2025-09-19T10:42:19.027+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-19T10:42:19.077+0000] {logging_mixin.py:149} INFO - [2025-09-19T10:42:19.077+0000] {dag.py:3490} INFO - Setting next_dagrun for pandas_dummy_superstore_etl to 2025-09-19T00:00:00+00:00, run_after=2025-09-20T00:00:00+00:00
+[2025-09-19T10:42:19.123+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dummy_sperstore_dag.py took 1.056 seconds
+[2025-09-19T10:42:50.354+0000] {processor.py:157} INFO - Started process (PID=18904) to work on /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T10:42:50.383+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dummy_sperstore_dag.py for tasks to queue
+[2025-09-19T10:42:50.404+0000] {logging_mixin.py:149} INFO - [2025-09-19T10:42:50.399+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T10:43:03.811+0000] {processor.py:836} INFO - DAG(s) dict_keys(['pandas_dummy_superstore_etl']) retrieved from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T10:43:04.284+0000] {logging_mixin.py:149} INFO - [2025-09-19T10:43:04.277+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-19T10:43:05.080+0000] {logging_mixin.py:149} INFO - [2025-09-19T10:43:05.073+0000] {dag.py:3490} INFO - Setting next_dagrun for pandas_dummy_superstore_etl to 2025-09-19T00:00:00+00:00, run_after=2025-09-20T00:00:00+00:00
+[2025-09-19T10:43:05.738+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dummy_sperstore_dag.py took 15.472 seconds
+[2025-09-19T10:43:36.188+0000] {processor.py:157} INFO - Started process (PID=19184) to work on /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T10:43:36.192+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dummy_sperstore_dag.py for tasks to queue
+[2025-09-19T10:43:36.195+0000] {logging_mixin.py:149} INFO - [2025-09-19T10:43:36.194+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T10:43:37.541+0000] {processor.py:836} INFO - DAG(s) dict_keys(['pandas_dummy_superstore_etl']) retrieved from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T10:43:37.604+0000] {logging_mixin.py:149} INFO - [2025-09-19T10:43:37.603+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-19T10:43:37.681+0000] {logging_mixin.py:149} INFO - [2025-09-19T10:43:37.680+0000] {dag.py:3490} INFO - Setting next_dagrun for pandas_dummy_superstore_etl to 2025-09-19T00:00:00+00:00, run_after=2025-09-20T00:00:00+00:00
+[2025-09-19T10:43:37.739+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dummy_sperstore_dag.py took 1.560 seconds
+[2025-09-19T10:44:07.924+0000] {processor.py:157} INFO - Started process (PID=19465) to work on /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T10:44:07.926+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/dummy_sperstore_dag.py for tasks to queue
+[2025-09-19T10:44:07.929+0000] {logging_mixin.py:149} INFO - [2025-09-19T10:44:07.928+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T10:44:08.624+0000] {processor.py:836} INFO - DAG(s) dict_keys(['pandas_dummy_superstore_etl']) retrieved from /opt/airflow/dags/dummy_sperstore_dag.py
+[2025-09-19T10:44:08.655+0000] {logging_mixin.py:149} INFO - [2025-09-19T10:44:08.655+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2025-09-19T10:44:08.681+0000] {logging_mixin.py:149} INFO - [2025-09-19T10:44:08.681+0000] {dag.py:3490} INFO - Setting next_dagrun for pandas_dummy_superstore_etl to 2025-09-19T00:00:00+00:00, run_after=2025-09-20T00:00:00+00:00
+[2025-09-19T10:44:08.710+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/dummy_sperstore_dag.py took 0.791 seconds

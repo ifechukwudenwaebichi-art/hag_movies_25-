@@ -1,0 +1,17 @@
+[2025-09-12T08:24:29.027+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: my_second_dag.extract scheduled__2025-09-12T04:24:24.747136+00:00 [queued]>
+[2025-09-12T08:24:29.044+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: my_second_dag.extract scheduled__2025-09-12T04:24:24.747136+00:00 [queued]>
+[2025-09-12T08:24:29.046+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 3
+[2025-09-12T08:24:29.085+0000] {taskinstance.py:1327} INFO - Executing <Task(BashOperator): extract> on 2025-09-12 04:24:24.747136+00:00
+[2025-09-12T08:24:29.095+0000] {standard_task_runner.py:57} INFO - Started process 268 to run task
+[2025-09-12T08:24:29.100+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'my_second_dag', 'extract', 'scheduled__2025-09-12T04:24:24.747136+00:00', '--job-id', '226', '--raw', '--subdir', 'DAGS_FOLDER/my_demo_dag_1.py', '--cfg-path', '/tmp/tmp81oupn2m']
+[2025-09-12T08:24:29.104+0000] {standard_task_runner.py:85} INFO - Job 226: Subtask extract
+[2025-09-12T08:24:29.217+0000] {task_command.py:410} INFO - Running <TaskInstance: my_second_dag.extract scheduled__2025-09-12T04:24:24.747136+00:00 [running]> on host 7b23436a6b61
+[2025-09-12T08:24:29.456+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='trialmail@randommail.com' AIRFLOW_CTX_DAG_OWNER='Dav_E_vangel' AIRFLOW_CTX_DAG_ID='my_second_dag' AIRFLOW_CTX_TASK_ID='extract' AIRFLOW_CTX_EXECUTION_DATE='2025-09-12T04:24:24.747136+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-09-12T04:24:24.747136+00:00'
+[2025-09-12T08:24:29.462+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-09-12T08:24:29.464+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'echo "Connecting to datasource..."']
+[2025-09-12T08:24:29.489+0000] {subprocess.py:86} INFO - Output:
+[2025-09-12T08:24:29.492+0000] {subprocess.py:93} INFO - Connecting to datasource...
+[2025-09-12T08:24:29.492+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-09-12T08:24:29.549+0000] {taskinstance.py:1350} INFO - Marking task as SUCCESS. dag_id=my_second_dag, task_id=extract, execution_date=20250912T042424, start_date=20250912T082429, end_date=20250912T082429
+[2025-09-12T08:24:29.608+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 0
+[2025-09-12T08:24:29.681+0000] {taskinstance.py:2653} INFO - 3 downstream tasks scheduled from follow-on schedule check

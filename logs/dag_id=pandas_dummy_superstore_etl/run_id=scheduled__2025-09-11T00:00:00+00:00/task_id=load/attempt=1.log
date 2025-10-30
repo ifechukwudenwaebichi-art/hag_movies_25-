@@ -1,0 +1,25 @@
+[2025-09-12T08:24:42.771+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: pandas_dummy_superstore_etl.load scheduled__2025-09-11T00:00:00+00:00 [queued]>
+[2025-09-12T08:24:42.781+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: pandas_dummy_superstore_etl.load scheduled__2025-09-11T00:00:00+00:00 [queued]>
+[2025-09-12T08:24:42.782+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 3
+[2025-09-12T08:24:42.797+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): load> on 2025-09-11 00:00:00+00:00
+[2025-09-12T08:24:42.804+0000] {standard_task_runner.py:57} INFO - Started process 658 to run task
+[2025-09-12T08:24:42.809+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'pandas_dummy_superstore_etl', 'load', 'scheduled__2025-09-11T00:00:00+00:00', '--job-id', '243', '--raw', '--subdir', 'DAGS_FOLDER/dummy_sperstore_dag.py', '--cfg-path', '/tmp/tmpmgyapk8d']
+[2025-09-12T08:24:42.810+0000] {standard_task_runner.py:85} INFO - Job 243: Subtask load
+[2025-09-12T08:24:42.889+0000] {task_command.py:410} INFO - Running <TaskInstance: pandas_dummy_superstore_etl.load scheduled__2025-09-11T00:00:00+00:00 [running]> on host 7b23436a6b61
+[2025-09-12T08:24:43.021+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='random@gmail.com' AIRFLOW_CTX_DAG_OWNER='FarsH' AIRFLOW_CTX_DAG_ID='pandas_dummy_superstore_etl' AIRFLOW_CTX_TASK_ID='load' AIRFLOW_CTX_EXECUTION_DATE='2025-09-11T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-09-11T00:00:00+00:00'
+[2025-09-12T08:24:43.024+0000] {logging_mixin.py:149} INFO - Loading processed data and generating reports...
+[2025-09-12T08:24:43.036+0000] {logging_mixin.py:149} INFO - === PROCESSING COMPLETE ===
+[2025-09-12T08:24:43.037+0000] {logging_mixin.py:149} INFO - Processed Records: 100
+[2025-09-12T08:24:43.037+0000] {logging_mixin.py:149} INFO - Summary Records: 12
+[2025-09-12T08:24:43.038+0000] {logging_mixin.py:149} INFO - 
+Top 5 Category-Region combinations by total sales:
+[2025-09-12T08:24:43.057+0000] {logging_mixin.py:149} INFO -            Category Region  Sales_sum
+10       Technology  South   19806.75
+2         Furniture  South   17606.00
+6   Office Supplies  South   17606.00
+9        Technology   East   13504.50
+1         Furniture   East   12004.00
+[2025-09-12T08:24:43.057+0000] {python.py:183} INFO - Done. Returned value was: Data loading completed successfully
+[2025-09-12T08:24:43.084+0000] {taskinstance.py:1350} INFO - Marking task as SUCCESS. dag_id=pandas_dummy_superstore_etl, task_id=load, execution_date=20250911T000000, start_date=20250912T082442, end_date=20250912T082443
+[2025-09-12T08:24:43.111+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 0
+[2025-09-12T08:24:43.132+0000] {taskinstance.py:2653} INFO - 0 downstream tasks scheduled from follow-on schedule check

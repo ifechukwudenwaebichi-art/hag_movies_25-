@@ -1,0 +1,17 @@
+[2025-09-09T07:45:35.148+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: my_second_dag.filter scheduled__2025-09-08T15:21:14.471255+00:00 [queued]>
+[2025-09-09T07:45:35.172+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: my_second_dag.filter scheduled__2025-09-08T15:21:14.471255+00:00 [queued]>
+[2025-09-09T07:45:35.173+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 3
+[2025-09-09T07:45:35.210+0000] {taskinstance.py:1327} INFO - Executing <Task(BashOperator): filter> on 2025-09-08 15:21:14.471255+00:00
+[2025-09-09T07:45:35.224+0000] {standard_task_runner.py:57} INFO - Started process 425 to run task
+[2025-09-09T07:45:35.242+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'my_second_dag', 'filter', 'scheduled__2025-09-08T15:21:14.471255+00:00', '--job-id', '210', '--raw', '--subdir', 'DAGS_FOLDER/my_demo_dag_1.py', '--cfg-path', '/tmp/tmpb5agamc5']
+[2025-09-09T07:45:35.248+0000] {standard_task_runner.py:85} INFO - Job 210: Subtask filter
+[2025-09-09T07:45:35.435+0000] {task_command.py:410} INFO - Running <TaskInstance: my_second_dag.filter scheduled__2025-09-08T15:21:14.471255+00:00 [running]> on host 7b23436a6b61
+[2025-09-09T07:45:35.662+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='trialmail@randommail.com' AIRFLOW_CTX_DAG_OWNER='Dav_E_vangel' AIRFLOW_CTX_DAG_ID='my_second_dag' AIRFLOW_CTX_TASK_ID='filter' AIRFLOW_CTX_EXECUTION_DATE='2025-09-08T15:21:14.471255+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-09-08T15:21:14.471255+00:00'
+[2025-09-09T07:45:35.667+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-09-09T07:45:35.670+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'echo "Filtering data based on business rules"']
+[2025-09-09T07:45:35.693+0000] {subprocess.py:86} INFO - Output:
+[2025-09-09T07:45:35.696+0000] {subprocess.py:93} INFO - Filtering data based on business rules
+[2025-09-09T07:45:35.696+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-09-09T07:45:35.772+0000] {taskinstance.py:1350} INFO - Marking task as SUCCESS. dag_id=my_second_dag, task_id=filter, execution_date=20250908T152114, start_date=20250909T074535, end_date=20250909T074535
+[2025-09-09T07:45:35.864+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 0
+[2025-09-09T07:45:35.974+0000] {taskinstance.py:2653} INFO - 0 downstream tasks scheduled from follow-on schedule check

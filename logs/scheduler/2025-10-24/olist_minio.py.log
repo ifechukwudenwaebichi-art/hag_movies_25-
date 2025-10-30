@@ -1,0 +1,546 @@
+[2025-10-24T06:34:40.534+0000] {processor.py:157} INFO - Started process (PID=15222) to work on /opt/airflow/dags/olist_minio.py
+[2025-10-24T06:34:40.535+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/olist_minio.py for tasks to queue
+[2025-10-24T06:34:40.536+0000] {logging_mixin.py:149} INFO - [2025-10-24T06:34:40.536+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/olist_minio.py
+[2025-10-24T06:34:40.548+0000] {logging_mixin.py:149} INFO - [2025-10-24T06:34:40.545+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/olist_minio.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/olist_minio.py", line 5, in <module>
+    from airflow.providers.amazon.hooks.s3 import S3Hook
+ModuleNotFoundError: No module named 'airflow.providers.amazon.hooks'
+[2025-10-24T06:34:40.548+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/olist_minio.py
+[2025-10-24T06:34:40.571+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/olist_minio.py took 0.040 seconds
+[2025-10-24T06:35:10.878+0000] {processor.py:157} INFO - Started process (PID=15534) to work on /opt/airflow/dags/olist_minio.py
+[2025-10-24T06:35:10.879+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/olist_minio.py for tasks to queue
+[2025-10-24T06:35:10.880+0000] {logging_mixin.py:149} INFO - [2025-10-24T06:35:10.880+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/olist_minio.py
+[2025-10-24T06:35:10.888+0000] {logging_mixin.py:149} INFO - [2025-10-24T06:35:10.886+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/olist_minio.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/olist_minio.py", line 5, in <module>
+    from airflow.providers.amazon.hooks.s3 import S3Hook
+ModuleNotFoundError: No module named 'airflow.providers.amazon.hooks'
+[2025-10-24T06:35:10.888+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/olist_minio.py
+[2025-10-24T06:35:10.911+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/olist_minio.py took 0.038 seconds
+[2025-10-24T06:35:41.039+0000] {processor.py:157} INFO - Started process (PID=15846) to work on /opt/airflow/dags/olist_minio.py
+[2025-10-24T06:35:41.040+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/olist_minio.py for tasks to queue
+[2025-10-24T06:35:41.041+0000] {logging_mixin.py:149} INFO - [2025-10-24T06:35:41.041+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/olist_minio.py
+[2025-10-24T06:35:41.047+0000] {logging_mixin.py:149} INFO - [2025-10-24T06:35:41.045+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/olist_minio.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/olist_minio.py", line 5, in <module>
+    from airflow.providers.amazon.hooks.s3 import S3Hook
+ModuleNotFoundError: No module named 'airflow.providers.amazon.hooks'
+[2025-10-24T06:35:41.047+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/olist_minio.py
+[2025-10-24T06:35:41.069+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/olist_minio.py took 0.034 seconds
+[2025-10-24T06:36:11.322+0000] {processor.py:157} INFO - Started process (PID=16158) to work on /opt/airflow/dags/olist_minio.py
+[2025-10-24T06:36:11.323+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/olist_minio.py for tasks to queue
+[2025-10-24T06:36:11.324+0000] {logging_mixin.py:149} INFO - [2025-10-24T06:36:11.324+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/olist_minio.py
+[2025-10-24T06:36:11.330+0000] {logging_mixin.py:149} INFO - [2025-10-24T06:36:11.328+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/olist_minio.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/olist_minio.py", line 5, in <module>
+    from airflow.providers.amazon.hooks.s3 import S3Hook
+ModuleNotFoundError: No module named 'airflow.providers.amazon.hooks'
+[2025-10-24T06:36:11.330+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/olist_minio.py
+[2025-10-24T06:36:11.351+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/olist_minio.py took 0.033 seconds
+[2025-10-24T06:36:41.413+0000] {processor.py:157} INFO - Started process (PID=16470) to work on /opt/airflow/dags/olist_minio.py
+[2025-10-24T06:36:41.414+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/olist_minio.py for tasks to queue
+[2025-10-24T06:36:41.415+0000] {logging_mixin.py:149} INFO - [2025-10-24T06:36:41.415+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/olist_minio.py
+[2025-10-24T06:36:41.420+0000] {logging_mixin.py:149} INFO - [2025-10-24T06:36:41.419+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/olist_minio.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/olist_minio.py", line 5, in <module>
+    from airflow.providers.amazon.hooks.s3 import S3Hook
+ModuleNotFoundError: No module named 'airflow.providers.amazon.hooks'
+[2025-10-24T06:36:41.421+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/olist_minio.py
+[2025-10-24T06:36:41.442+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/olist_minio.py took 0.033 seconds
+[2025-10-24T06:37:11.958+0000] {processor.py:157} INFO - Started process (PID=16782) to work on /opt/airflow/dags/olist_minio.py
+[2025-10-24T06:37:11.959+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/olist_minio.py for tasks to queue
+[2025-10-24T06:37:11.960+0000] {logging_mixin.py:149} INFO - [2025-10-24T06:37:11.960+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/olist_minio.py
+[2025-10-24T06:37:11.966+0000] {logging_mixin.py:149} INFO - [2025-10-24T06:37:11.965+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/olist_minio.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/olist_minio.py", line 5, in <module>
+    from airflow.providers.amazon.hooks.s3 import S3Hook
+ModuleNotFoundError: No module named 'airflow.providers.amazon.hooks'
+[2025-10-24T06:37:11.967+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/olist_minio.py
+[2025-10-24T06:37:11.991+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/olist_minio.py took 0.037 seconds
+[2025-10-24T06:37:42.279+0000] {processor.py:157} INFO - Started process (PID=17094) to work on /opt/airflow/dags/olist_minio.py
+[2025-10-24T06:37:42.280+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/olist_minio.py for tasks to queue
+[2025-10-24T06:37:42.281+0000] {logging_mixin.py:149} INFO - [2025-10-24T06:37:42.281+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/olist_minio.py
+[2025-10-24T06:37:42.287+0000] {logging_mixin.py:149} INFO - [2025-10-24T06:37:42.285+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/olist_minio.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/olist_minio.py", line 5, in <module>
+    from airflow.providers.amazon.hooks.s3 import S3Hook
+ModuleNotFoundError: No module named 'airflow.providers.amazon.hooks'
+[2025-10-24T06:37:42.287+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/olist_minio.py
+[2025-10-24T06:37:42.309+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/olist_minio.py took 0.034 seconds
+[2025-10-24T06:38:12.722+0000] {processor.py:157} INFO - Started process (PID=17406) to work on /opt/airflow/dags/olist_minio.py
+[2025-10-24T06:38:12.723+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/olist_minio.py for tasks to queue
+[2025-10-24T06:38:12.724+0000] {logging_mixin.py:149} INFO - [2025-10-24T06:38:12.724+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/olist_minio.py
+[2025-10-24T06:38:12.731+0000] {logging_mixin.py:149} INFO - [2025-10-24T06:38:12.729+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/olist_minio.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/olist_minio.py", line 5, in <module>
+    from airflow.providers.amazon.hooks.s3 import S3Hook
+ModuleNotFoundError: No module named 'airflow.providers.amazon.hooks'
+[2025-10-24T06:38:12.732+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/olist_minio.py
+[2025-10-24T06:38:12.753+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/olist_minio.py took 0.036 seconds
+[2025-10-24T06:38:42.965+0000] {processor.py:157} INFO - Started process (PID=17718) to work on /opt/airflow/dags/olist_minio.py
+[2025-10-24T06:38:42.966+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/olist_minio.py for tasks to queue
+[2025-10-24T06:38:42.967+0000] {logging_mixin.py:149} INFO - [2025-10-24T06:38:42.967+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/olist_minio.py
+[2025-10-24T06:38:42.974+0000] {logging_mixin.py:149} INFO - [2025-10-24T06:38:42.972+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/olist_minio.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/olist_minio.py", line 5, in <module>
+    from airflow.providers.amazon.hooks.s3 import S3Hook
+ModuleNotFoundError: No module named 'airflow.providers.amazon.hooks'
+[2025-10-24T06:38:42.975+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/olist_minio.py
+[2025-10-24T06:38:43.001+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/olist_minio.py took 0.039 seconds
+[2025-10-24T06:39:13.249+0000] {processor.py:157} INFO - Started process (PID=18017) to work on /opt/airflow/dags/olist_minio.py
+[2025-10-24T06:39:13.251+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/olist_minio.py for tasks to queue
+[2025-10-24T06:39:13.252+0000] {logging_mixin.py:149} INFO - [2025-10-24T06:39:13.252+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/olist_minio.py
+[2025-10-24T06:39:13.259+0000] {logging_mixin.py:149} INFO - [2025-10-24T06:39:13.256+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/olist_minio.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/olist_minio.py", line 5, in <module>
+    from airflow.providers.amazon.hooks.s3 import S3Hook
+ModuleNotFoundError: No module named 'airflow.providers.amazon.hooks'
+[2025-10-24T06:39:13.259+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/olist_minio.py
+[2025-10-24T06:39:13.315+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/olist_minio.py took 0.070 seconds
+[2025-10-24T06:39:43.728+0000] {processor.py:157} INFO - Started process (PID=18329) to work on /opt/airflow/dags/olist_minio.py
+[2025-10-24T06:39:43.729+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/olist_minio.py for tasks to queue
+[2025-10-24T06:39:43.729+0000] {logging_mixin.py:149} INFO - [2025-10-24T06:39:43.729+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/olist_minio.py
+[2025-10-24T06:39:43.735+0000] {logging_mixin.py:149} INFO - [2025-10-24T06:39:43.733+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/olist_minio.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/olist_minio.py", line 5, in <module>
+    from airflow.providers.amazon.hooks.s3 import S3Hook
+ModuleNotFoundError: No module named 'airflow.providers.amazon.hooks'
+[2025-10-24T06:39:43.735+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/olist_minio.py
+[2025-10-24T06:39:43.756+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/olist_minio.py took 0.033 seconds
+[2025-10-24T06:40:14.639+0000] {processor.py:157} INFO - Started process (PID=18584) to work on /opt/airflow/dags/olist_minio.py
+[2025-10-24T06:40:14.640+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/olist_minio.py for tasks to queue
+[2025-10-24T06:40:14.641+0000] {logging_mixin.py:149} INFO - [2025-10-24T06:40:14.641+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/olist_minio.py
+[2025-10-24T06:40:14.647+0000] {logging_mixin.py:149} INFO - [2025-10-24T06:40:14.645+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/olist_minio.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/olist_minio.py", line 5, in <module>
+    from airflow.providers.amazon.hooks.s3 import S3Hook
+ModuleNotFoundError: No module named 'airflow.providers.amazon.hooks'
+[2025-10-24T06:40:14.647+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/olist_minio.py
+[2025-10-24T06:40:14.777+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/olist_minio.py took 0.141 seconds
+[2025-10-24T06:40:44.966+0000] {processor.py:157} INFO - Started process (PID=18891) to work on /opt/airflow/dags/olist_minio.py
+[2025-10-24T06:40:44.967+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/olist_minio.py for tasks to queue
+[2025-10-24T06:40:44.968+0000] {logging_mixin.py:149} INFO - [2025-10-24T06:40:44.968+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/olist_minio.py
+[2025-10-24T06:40:44.975+0000] {logging_mixin.py:149} INFO - [2025-10-24T06:40:44.973+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/olist_minio.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/olist_minio.py", line 5, in <module>
+    from airflow.providers.amazon.hooks.s3 import S3Hook
+ModuleNotFoundError: No module named 'airflow.providers.amazon.hooks'
+[2025-10-24T06:40:44.975+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/olist_minio.py
+[2025-10-24T06:40:44.998+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/olist_minio.py took 0.036 seconds
+[2025-10-24T06:41:15.136+0000] {processor.py:157} INFO - Started process (PID=19198) to work on /opt/airflow/dags/olist_minio.py
+[2025-10-24T06:41:15.136+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/olist_minio.py for tasks to queue
+[2025-10-24T06:41:15.138+0000] {logging_mixin.py:149} INFO - [2025-10-24T06:41:15.138+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/olist_minio.py
+[2025-10-24T06:41:15.147+0000] {logging_mixin.py:149} INFO - [2025-10-24T06:41:15.145+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/olist_minio.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/olist_minio.py", line 5, in <module>
+    from airflow.providers.amazon.hooks.s3 import S3Hook
+ModuleNotFoundError: No module named 'airflow.providers.amazon.hooks'
+[2025-10-24T06:41:15.147+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/olist_minio.py
+[2025-10-24T06:41:15.178+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/olist_minio.py took 0.046 seconds
+[2025-10-24T06:41:45.884+0000] {processor.py:157} INFO - Started process (PID=19468) to work on /opt/airflow/dags/olist_minio.py
+[2025-10-24T06:41:45.886+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/olist_minio.py for tasks to queue
+[2025-10-24T06:41:45.888+0000] {logging_mixin.py:149} INFO - [2025-10-24T06:41:45.888+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/olist_minio.py
+[2025-10-24T06:41:45.898+0000] {logging_mixin.py:149} INFO - [2025-10-24T06:41:45.897+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/olist_minio.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/olist_minio.py", line 5, in <module>
+    from airflow.providers.amazon.hooks.s3 import S3Hook
+ModuleNotFoundError: No module named 'airflow.providers.amazon.hooks'
+[2025-10-24T06:41:45.899+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/olist_minio.py
+[2025-10-24T06:41:45.926+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/olist_minio.py took 0.046 seconds
+[2025-10-24T06:42:16.990+0000] {processor.py:157} INFO - Started process (PID=19775) to work on /opt/airflow/dags/olist_minio.py
+[2025-10-24T06:42:16.991+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/olist_minio.py for tasks to queue
+[2025-10-24T06:42:16.994+0000] {logging_mixin.py:149} INFO - [2025-10-24T06:42:16.994+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/olist_minio.py
+[2025-10-24T06:42:17.001+0000] {logging_mixin.py:149} INFO - [2025-10-24T06:42:16.999+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/olist_minio.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/olist_minio.py", line 5, in <module>
+    from airflow.providers.amazon.hooks.s3 import S3Hook
+ModuleNotFoundError: No module named 'airflow.providers.amazon.hooks'
+[2025-10-24T06:42:17.001+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/olist_minio.py
+[2025-10-24T06:42:17.025+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/olist_minio.py took 0.038 seconds
+[2025-10-24T06:42:48.478+0000] {processor.py:157} INFO - Started process (PID=20077) to work on /opt/airflow/dags/olist_minio.py
+[2025-10-24T06:42:48.479+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/olist_minio.py for tasks to queue
+[2025-10-24T06:42:48.480+0000] {logging_mixin.py:149} INFO - [2025-10-24T06:42:48.480+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/olist_minio.py
+[2025-10-24T06:42:48.485+0000] {logging_mixin.py:149} INFO - [2025-10-24T06:42:48.484+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/olist_minio.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/olist_minio.py", line 5, in <module>
+    from airflow.providers.amazon.hooks.s3 import S3Hook
+ModuleNotFoundError: No module named 'airflow.providers.amazon.hooks'
+[2025-10-24T06:42:48.486+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/olist_minio.py
+[2025-10-24T06:42:48.507+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/olist_minio.py took 0.032 seconds
+[2025-10-24T06:43:19.323+0000] {processor.py:157} INFO - Started process (PID=20364) to work on /opt/airflow/dags/olist_minio.py
+[2025-10-24T06:43:19.324+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/olist_minio.py for tasks to queue
+[2025-10-24T06:43:19.324+0000] {logging_mixin.py:149} INFO - [2025-10-24T06:43:19.324+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/olist_minio.py
+[2025-10-24T06:43:19.334+0000] {logging_mixin.py:149} INFO - [2025-10-24T06:43:19.332+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/olist_minio.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/olist_minio.py", line 5, in <module>
+    from airflow.providers.amazon.hooks.s3 import S3Hook
+ModuleNotFoundError: No module named 'airflow.providers.amazon.hooks'
+[2025-10-24T06:43:19.335+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/olist_minio.py
+[2025-10-24T06:43:19.358+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/olist_minio.py took 0.039 seconds
+[2025-10-24T06:43:49.426+0000] {processor.py:157} INFO - Started process (PID=20610) to work on /opt/airflow/dags/olist_minio.py
+[2025-10-24T06:43:49.427+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/olist_minio.py for tasks to queue
+[2025-10-24T06:43:49.429+0000] {logging_mixin.py:149} INFO - [2025-10-24T06:43:49.429+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/olist_minio.py
+[2025-10-24T06:43:49.440+0000] {logging_mixin.py:149} INFO - [2025-10-24T06:43:49.437+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/olist_minio.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/olist_minio.py", line 5, in <module>
+    from airflow.providers.amazon.hooks.s3 import S3Hook
+ModuleNotFoundError: No module named 'airflow.providers.amazon.hooks'
+[2025-10-24T06:43:49.440+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/olist_minio.py
+[2025-10-24T06:43:49.503+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/olist_minio.py took 0.082 seconds
+[2025-10-24T06:44:19.596+0000] {processor.py:157} INFO - Started process (PID=20922) to work on /opt/airflow/dags/olist_minio.py
+[2025-10-24T06:44:19.597+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/olist_minio.py for tasks to queue
+[2025-10-24T06:44:19.598+0000] {logging_mixin.py:149} INFO - [2025-10-24T06:44:19.598+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/olist_minio.py
+[2025-10-24T06:44:19.604+0000] {logging_mixin.py:149} INFO - [2025-10-24T06:44:19.602+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/olist_minio.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/olist_minio.py", line 5, in <module>
+    from airflow.providers.amazon.hooks.s3 import S3Hook
+ModuleNotFoundError: No module named 'airflow.providers.amazon.hooks'
+[2025-10-24T06:44:19.604+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/olist_minio.py
+[2025-10-24T06:44:19.625+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/olist_minio.py took 0.032 seconds
+[2025-10-24T06:44:49.920+0000] {processor.py:157} INFO - Started process (PID=21185) to work on /opt/airflow/dags/olist_minio.py
+[2025-10-24T06:44:49.921+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/olist_minio.py for tasks to queue
+[2025-10-24T06:44:49.922+0000] {logging_mixin.py:149} INFO - [2025-10-24T06:44:49.922+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/olist_minio.py
+[2025-10-24T06:44:49.932+0000] {logging_mixin.py:149} INFO - [2025-10-24T06:44:49.930+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/olist_minio.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/olist_minio.py", line 5, in <module>
+    from airflow.providers.amazon.hooks.s3 import S3Hook
+ModuleNotFoundError: No module named 'airflow.providers.amazon.hooks'
+[2025-10-24T06:44:49.936+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/olist_minio.py
+[2025-10-24T06:44:49.971+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/olist_minio.py took 0.055 seconds
+[2025-10-24T06:45:20.524+0000] {processor.py:157} INFO - Started process (PID=21497) to work on /opt/airflow/dags/olist_minio.py
+[2025-10-24T06:45:20.525+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/olist_minio.py for tasks to queue
+[2025-10-24T06:45:20.526+0000] {logging_mixin.py:149} INFO - [2025-10-24T06:45:20.526+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/olist_minio.py
+[2025-10-24T06:45:20.537+0000] {logging_mixin.py:149} INFO - [2025-10-24T06:45:20.536+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/olist_minio.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/olist_minio.py", line 5, in <module>
+    from airflow.providers.amazon.hooks.s3 import S3Hook
+ModuleNotFoundError: No module named 'airflow.providers.amazon.hooks'
+[2025-10-24T06:45:20.538+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/olist_minio.py
+[2025-10-24T06:45:20.565+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/olist_minio.py took 0.045 seconds
+[2025-10-24T06:45:50.717+0000] {processor.py:157} INFO - Started process (PID=21809) to work on /opt/airflow/dags/olist_minio.py
+[2025-10-24T06:45:50.718+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/olist_minio.py for tasks to queue
+[2025-10-24T06:45:50.720+0000] {logging_mixin.py:149} INFO - [2025-10-24T06:45:50.720+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/olist_minio.py
+[2025-10-24T06:45:50.728+0000] {logging_mixin.py:149} INFO - [2025-10-24T06:45:50.725+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/olist_minio.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/olist_minio.py", line 5, in <module>
+    from airflow.providers.amazon.hooks.s3 import S3Hook
+ModuleNotFoundError: No module named 'airflow.providers.amazon.hooks'
+[2025-10-24T06:45:50.729+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/olist_minio.py
+[2025-10-24T06:45:50.750+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/olist_minio.py took 0.038 seconds
+[2025-10-24T06:46:21.242+0000] {processor.py:157} INFO - Started process (PID=22121) to work on /opt/airflow/dags/olist_minio.py
+[2025-10-24T06:46:21.243+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/olist_minio.py for tasks to queue
+[2025-10-24T06:46:21.244+0000] {logging_mixin.py:149} INFO - [2025-10-24T06:46:21.244+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/olist_minio.py
+[2025-10-24T06:46:21.251+0000] {logging_mixin.py:149} INFO - [2025-10-24T06:46:21.249+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/olist_minio.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/olist_minio.py", line 5, in <module>
+    from airflow.providers.amazon.hooks.s3 import S3Hook
+ModuleNotFoundError: No module named 'airflow.providers.amazon.hooks'
+[2025-10-24T06:46:21.253+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/olist_minio.py
+[2025-10-24T06:46:21.274+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/olist_minio.py took 0.037 seconds
+[2025-10-24T06:46:51.889+0000] {processor.py:157} INFO - Started process (PID=22433) to work on /opt/airflow/dags/olist_minio.py
+[2025-10-24T06:46:51.890+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/olist_minio.py for tasks to queue
+[2025-10-24T06:46:51.891+0000] {logging_mixin.py:149} INFO - [2025-10-24T06:46:51.891+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/olist_minio.py
+[2025-10-24T06:46:51.897+0000] {logging_mixin.py:149} INFO - [2025-10-24T06:46:51.895+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/olist_minio.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/olist_minio.py", line 5, in <module>
+    from airflow.providers.amazon.hooks.s3 import S3Hook
+ModuleNotFoundError: No module named 'airflow.providers.amazon.hooks'
+[2025-10-24T06:46:51.898+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/olist_minio.py
+[2025-10-24T06:46:51.920+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/olist_minio.py took 0.035 seconds
+[2025-10-24T06:47:22.526+0000] {processor.py:157} INFO - Started process (PID=22745) to work on /opt/airflow/dags/olist_minio.py
+[2025-10-24T06:47:22.527+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/olist_minio.py for tasks to queue
+[2025-10-24T06:47:22.528+0000] {logging_mixin.py:149} INFO - [2025-10-24T06:47:22.527+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/olist_minio.py
+[2025-10-24T06:47:22.533+0000] {logging_mixin.py:149} INFO - [2025-10-24T06:47:22.532+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/olist_minio.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/olist_minio.py", line 5, in <module>
+    from airflow.providers.amazon.hooks.s3 import S3Hook
+ModuleNotFoundError: No module named 'airflow.providers.amazon.hooks'
+[2025-10-24T06:47:22.534+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/olist_minio.py
+[2025-10-24T06:47:22.559+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/olist_minio.py took 0.038 seconds
+[2025-10-24T06:47:52.998+0000] {processor.py:157} INFO - Started process (PID=23057) to work on /opt/airflow/dags/olist_minio.py
+[2025-10-24T06:47:52.999+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/olist_minio.py for tasks to queue
+[2025-10-24T06:47:53.000+0000] {logging_mixin.py:149} INFO - [2025-10-24T06:47:53.000+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/olist_minio.py
+[2025-10-24T06:47:53.010+0000] {logging_mixin.py:149} INFO - [2025-10-24T06:47:53.007+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/olist_minio.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/olist_minio.py", line 5, in <module>
+    from airflow.providers.amazon.hooks.s3 import S3Hook
+ModuleNotFoundError: No module named 'airflow.providers.amazon.hooks'
+[2025-10-24T06:47:53.010+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/olist_minio.py
+[2025-10-24T06:47:53.031+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/olist_minio.py took 0.038 seconds
+[2025-10-24T06:48:23.624+0000] {processor.py:157} INFO - Started process (PID=23369) to work on /opt/airflow/dags/olist_minio.py
+[2025-10-24T06:48:23.625+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/olist_minio.py for tasks to queue
+[2025-10-24T06:48:23.626+0000] {logging_mixin.py:149} INFO - [2025-10-24T06:48:23.626+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/olist_minio.py
+[2025-10-24T06:48:23.636+0000] {logging_mixin.py:149} INFO - [2025-10-24T06:48:23.633+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/olist_minio.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/olist_minio.py", line 5, in <module>
+    from airflow.providers.amazon.hooks.s3 import S3Hook
+ModuleNotFoundError: No module named 'airflow.providers.amazon.hooks'
+[2025-10-24T06:48:23.636+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/olist_minio.py
+[2025-10-24T06:48:23.659+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/olist_minio.py took 0.039 seconds
+[2025-10-24T07:33:52.595+0000] {processor.py:157} INFO - Started process (PID=23687) to work on /opt/airflow/dags/olist_minio.py
+[2025-10-24T07:33:52.597+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/olist_minio.py for tasks to queue
+[2025-10-24T07:33:52.599+0000] {logging_mixin.py:149} INFO - [2025-10-24T07:33:52.599+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/olist_minio.py
+[2025-10-24T07:33:52.615+0000] {logging_mixin.py:149} INFO - [2025-10-24T07:33:52.610+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/olist_minio.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/olist_minio.py", line 5, in <module>
+    from airflow.providers.amazon.hooks.s3 import S3Hook
+ModuleNotFoundError: No module named 'airflow.providers.amazon.hooks'
+[2025-10-24T07:33:52.616+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/olist_minio.py
+[2025-10-24T07:33:52.698+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/olist_minio.py took 0.109 seconds
+[2025-10-24T07:34:23.348+0000] {processor.py:157} INFO - Started process (PID=23999) to work on /opt/airflow/dags/olist_minio.py
+[2025-10-24T07:34:23.362+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/olist_minio.py for tasks to queue
+[2025-10-24T07:34:23.376+0000] {logging_mixin.py:149} INFO - [2025-10-24T07:34:23.373+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/olist_minio.py
+[2025-10-24T07:34:23.451+0000] {logging_mixin.py:149} INFO - [2025-10-24T07:34:23.430+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/olist_minio.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/olist_minio.py", line 5, in <module>
+    from airflow.providers.amazon.hooks.s3 import S3Hook
+ModuleNotFoundError: No module named 'airflow.providers.amazon.hooks'
+[2025-10-24T07:34:23.460+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/olist_minio.py
+[2025-10-24T07:34:23.771+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/olist_minio.py took 0.483 seconds
+[2025-10-24T07:34:54.995+0000] {processor.py:157} INFO - Started process (PID=24071) to work on /opt/airflow/dags/olist_minio.py
+[2025-10-24T07:34:55.002+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/olist_minio.py for tasks to queue
+[2025-10-24T07:34:55.011+0000] {logging_mixin.py:149} INFO - [2025-10-24T07:34:55.010+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/olist_minio.py
+[2025-10-24T07:34:55.056+0000] {logging_mixin.py:149} INFO - [2025-10-24T07:34:55.046+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/olist_minio.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/olist_minio.py", line 5, in <module>
+    from airflow.providers.amazon.hooks.s3 import S3Hook
+ModuleNotFoundError: No module named 'airflow.providers.amazon.hooks'
+[2025-10-24T07:34:55.060+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/olist_minio.py
+[2025-10-24T07:34:55.199+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/olist_minio.py took 0.227 seconds
+[2025-10-24T08:28:02.010+0000] {processor.py:157} INFO - Started process (PID=24348) to work on /opt/airflow/dags/olist_minio.py
+[2025-10-24T08:28:02.013+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/olist_minio.py for tasks to queue
+[2025-10-24T08:28:02.016+0000] {logging_mixin.py:149} INFO - [2025-10-24T08:28:02.015+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/olist_minio.py
+[2025-10-24T08:28:02.039+0000] {logging_mixin.py:149} INFO - [2025-10-24T08:28:02.033+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/olist_minio.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/olist_minio.py", line 5, in <module>
+    from airflow.providers.amazon.hooks.s3 import S3Hook
+ModuleNotFoundError: No module named 'airflow.providers.amazon.hooks'
+[2025-10-24T08:28:02.042+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/olist_minio.py
+[2025-10-24T08:28:02.123+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/olist_minio.py took 0.120 seconds
+[2025-10-24T08:49:27.999+0000] {processor.py:157} INFO - Started process (PID=24662) to work on /opt/airflow/dags/olist_minio.py
+[2025-10-24T08:49:28.005+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/olist_minio.py for tasks to queue
+[2025-10-24T08:49:28.007+0000] {logging_mixin.py:149} INFO - [2025-10-24T08:49:28.007+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/olist_minio.py
+[2025-10-24T08:49:28.038+0000] {logging_mixin.py:149} INFO - [2025-10-24T08:49:28.030+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/olist_minio.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/olist_minio.py", line 5, in <module>
+    from airflow.providers.amazon.hooks.s3 import S3Hook
+ModuleNotFoundError: No module named 'airflow.providers.amazon.hooks'
+[2025-10-24T08:49:28.039+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/olist_minio.py
+[2025-10-24T08:49:28.113+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/olist_minio.py took 0.123 seconds
+[2025-10-24T08:49:58.714+0000] {processor.py:157} INFO - Started process (PID=24973) to work on /opt/airflow/dags/olist_minio.py
+[2025-10-24T08:49:58.736+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/olist_minio.py for tasks to queue
+[2025-10-24T08:49:58.765+0000] {logging_mixin.py:149} INFO - [2025-10-24T08:49:58.759+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/olist_minio.py
+[2025-10-24T08:49:58.888+0000] {logging_mixin.py:149} INFO - [2025-10-24T08:49:58.848+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/olist_minio.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/olist_minio.py", line 5, in <module>
+    from airflow.providers.amazon.hooks.s3 import S3Hook
+ModuleNotFoundError: No module named 'airflow.providers.amazon.hooks'
+[2025-10-24T08:49:58.899+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/olist_minio.py
+[2025-10-24T08:49:59.454+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/olist_minio.py took 0.834 seconds
+[2025-10-24T09:32:16.846+0000] {processor.py:157} INFO - Started process (PID=25016) to work on /opt/airflow/dags/olist_minio.py
+[2025-10-24T09:32:16.848+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/olist_minio.py for tasks to queue
+[2025-10-24T09:32:16.850+0000] {logging_mixin.py:149} INFO - [2025-10-24T09:32:16.850+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/olist_minio.py
+[2025-10-24T09:32:16.862+0000] {logging_mixin.py:149} INFO - [2025-10-24T09:32:16.858+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/olist_minio.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/olist_minio.py", line 5, in <module>
+    from airflow.providers.amazon.hooks.s3 import S3Hook
+ModuleNotFoundError: No module named 'airflow.providers.amazon.hooks'
+[2025-10-24T09:32:16.863+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/olist_minio.py
+[2025-10-24T09:32:16.910+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/olist_minio.py took 0.073 seconds
+[2025-10-24T09:32:46.983+0000] {processor.py:157} INFO - Started process (PID=25328) to work on /opt/airflow/dags/olist_minio.py
+[2025-10-24T09:32:46.984+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/olist_minio.py for tasks to queue
+[2025-10-24T09:32:46.985+0000] {logging_mixin.py:149} INFO - [2025-10-24T09:32:46.985+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/olist_minio.py
+[2025-10-24T09:32:46.990+0000] {logging_mixin.py:149} INFO - [2025-10-24T09:32:46.989+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/olist_minio.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/olist_minio.py", line 5, in <module>
+    from airflow.providers.amazon.hooks.s3 import S3Hook
+ModuleNotFoundError: No module named 'airflow.providers.amazon.hooks'
+[2025-10-24T09:32:46.990+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/olist_minio.py
+[2025-10-24T09:32:47.011+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/olist_minio.py took 0.032 seconds
+[2025-10-24T09:59:14.520+0000] {processor.py:157} INFO - Started process (PID=25629) to work on /opt/airflow/dags/olist_minio.py
+[2025-10-24T09:59:14.521+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/olist_minio.py for tasks to queue
+[2025-10-24T09:59:14.525+0000] {logging_mixin.py:149} INFO - [2025-10-24T09:59:14.525+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/olist_minio.py
+[2025-10-24T09:59:14.555+0000] {logging_mixin.py:149} INFO - [2025-10-24T09:59:14.552+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/olist_minio.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/olist_minio.py", line 5, in <module>
+    from airflow.providers.amazon.hooks.s3 import S3Hook
+ModuleNotFoundError: No module named 'airflow.providers.amazon.hooks'
+[2025-10-24T09:59:14.558+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/olist_minio.py
+[2025-10-24T09:59:14.724+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/olist_minio.py took 0.208 seconds
+[2025-10-24T11:33:38.077+0000] {processor.py:157} INFO - Started process (PID=25943) to work on /opt/airflow/dags/olist_minio.py
+[2025-10-24T11:33:38.081+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/olist_minio.py for tasks to queue
+[2025-10-24T11:33:38.083+0000] {logging_mixin.py:149} INFO - [2025-10-24T11:33:38.083+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/olist_minio.py
+[2025-10-24T11:33:38.096+0000] {logging_mixin.py:149} INFO - [2025-10-24T11:33:38.093+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/olist_minio.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/olist_minio.py", line 5, in <module>
+    from airflow.providers.amazon.hooks.s3 import S3Hook
+ModuleNotFoundError: No module named 'airflow.providers.amazon.hooks'
+[2025-10-24T11:33:38.097+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/olist_minio.py
+[2025-10-24T11:33:38.170+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/olist_minio.py took 0.103 seconds
+[2025-10-24T12:32:57.840+0000] {processor.py:157} INFO - Started process (PID=26256) to work on /opt/airflow/dags/olist_minio.py
+[2025-10-24T12:32:57.857+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/olist_minio.py for tasks to queue
+[2025-10-24T12:32:57.883+0000] {logging_mixin.py:149} INFO - [2025-10-24T12:32:57.882+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/olist_minio.py
+[2025-10-24T12:32:57.904+0000] {logging_mixin.py:149} INFO - [2025-10-24T12:32:57.894+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/olist_minio.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/olist_minio.py", line 5, in <module>
+    from airflow.providers.amazon.hooks.s3 import S3Hook
+ModuleNotFoundError: No module named 'airflow.providers.amazon.hooks'
+[2025-10-24T12:32:57.907+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/olist_minio.py
+[2025-10-24T12:32:57.993+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/olist_minio.py took 0.169 seconds

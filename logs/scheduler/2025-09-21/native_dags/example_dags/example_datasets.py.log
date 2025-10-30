@@ -1,0 +1,6 @@
+[2025-09-21T09:18:05.981+0000] {processor.py:157} INFO - Started process (PID=262) to work on /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_datasets.py
+[2025-09-21T09:18:05.985+0000] {processor.py:826} INFO - Processing file /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_datasets.py for tasks to queue
+[2025-09-21T09:18:05.986+0000] {logging_mixin.py:149} INFO - [2025-09-21T09:18:05.986+0000] {dagbag.py:541} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_datasets.py
+[2025-09-21T09:18:06.005+0000] {processor.py:836} INFO - DAG(s) dict_keys(['dataset_consumes_1_never_scheduled', 'dataset_produces_2', 'dataset_produces_1', 'dataset_consumes_1_and_2', 'dataset_consumes_unknown_never_scheduled', 'dataset_consumes_1']) retrieved from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_datasets.py
+[2025-09-21T09:18:06.819+0000] {logging_mixin.py:149} INFO - [2025-09-21T09:18:06.818+0000] {process_utils.py:258} INFO - Waiting up to 5 seconds for processes to exit...
+[2025-09-21T09:18:06.831+0000] {logging_mixin.py:149} INFO - [2025-09-21T09:18:06.831+0000] {process_utils.py:258} INFO - Waiting up to 5 seconds for processes to exit...
